@@ -1,15 +1,15 @@
 <DataModel xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="20" gr:y="158" gr:hideAttributes="false" attributeOrder="userOID userName password email">
+  <Entity id="User" name="User" duration="persistent" gr:x="110" gr:y="35" gr:hideAttributes="false" attributeOrder="userOID userName password email">
     <Attribute name="oid" id="userOID" type="integer" key="true"/>
     <Attribute name="userName" id="userName" type="string"/>
     <Attribute name="password" id="password" type="password"/>
     <Attribute name="email" id="email" type="string"/>
   </Entity>
-  <Entity id="Group" name="Group" duration="persistent" gr:x="250" gr:y="178" gr:hideAttributes="false" attributeOrder="groupOID groupName">
+  <Entity id="Group" name="Group" duration="persistent" gr:x="315" gr:y="55" gr:hideAttributes="false" attributeOrder="groupOID groupName">
     <Attribute name="oid" id="groupOID" type="integer" key="true"/>
     <Attribute name="groupName" id="groupName" type="string"/>
   </Entity>
-  <Entity id="Module" name="Module" duration="persistent" gr:x="472" gr:y="167" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName">
+  <Entity id="Module" name="Module" duration="persistent" gr:x="510" gr:y="45" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName">
     <Attribute name="oid" id="moduleOID" type="integer" key="true"/>
     <Attribute name="moduleID" id="moduleID" type="string"/>
     <Attribute name="moduleName" id="moduleName" type="string"/>
@@ -29,5 +29,57 @@
   <Relationship id="Group2Module_Module2Group" name="Group_Module" sourceEntity="Group" targetEntity="Module" gr:bendpoints="110,41,-115,41">
     <RelationshipRole1 id="Group2Module" name="modules" maxCard="N"/>
     <RelationshipRole2 id="Module2Group" name="groups" maxCard="N"/>
+  </Relationship>
+  <Entity gr:x="110" gr:y="235" id="ent1" name="Maker" duration="persistent" attributeOrder="ent1#att1 ent1#att2 ent1#att3 ent1#att5 ent1#att29">
+    <Attribute id="ent1#att1" key="true" name="oid" type="integer"/>
+    <Attribute id="ent1#att2" name="name" type="string"/>
+    <Attribute id="ent1#att3" name="origin" type="string"/>
+    <Attribute id="ent1#att5" name="created" type="integer"/>
+    <Attribute id="ent1#att29" name="makerURL" type="string"/>
+  </Entity>
+  <Entity gr:x="335" gr:y="235" id="ent2" name="Model" duration="persistent" attributeOrder="ent2#att6 ent2#att7 ent2#att8 ent2#att9 ent2#att10 ent2#att11 ent2#att12 ent2#att13 ent2#att16 ent2#att14 ent2#att15 ent2#att17 ent2#att18 ent2#att19 ent2#att20 ent2#att21 ent2#att22 ent2#att23 ent2#att24 ent2#att25 ent2#att28">
+    <Attribute id="ent2#att6" key="true" name="oid" type="integer"/>
+    <Attribute id="ent2#att7" name="name" type="string"/>
+    <Attribute id="ent2#att8" name="price" type="string"/>
+    <Attribute id="ent2#att9" name="relase_date" type="string"/>
+    <Attribute id="ent2#att10" name="size" type="string"/>
+    <Attribute id="ent2#att11" name="cpu" type="string"/>
+    <Attribute id="ent2#att12" name="ram" type="string"/>
+    <Attribute id="ent2#att13" name="rom" type="string"/>
+    <Attribute id="ent2#att14" name="resolution" type="string"/>
+    <Attribute id="ent2#att15" name="conectivity" type="string"/>
+    <Attribute id="ent2#att16" name="screen_size" type="string"/>
+    <Attribute id="ent2#att17" name="weight" type="string"/>
+    <Attribute id="ent2#att18" name="sim" type="string"/>
+    <Attribute id="ent2#att19" name="os" type="string"/>
+    <Attribute id="ent2#att20" name="main_camera" type="string"/>
+    <Attribute id="ent2#att21" name="secondary_camera" type="string"/>
+    <Attribute id="ent2#att22" name="sensors" type="string"/>
+    <Attribute id="ent2#att23" name="features" type="string"/>
+    <Attribute id="ent2#att24" name="battery" type="string"/>
+    <Attribute id="ent2#att25" name="attribute25" type="string"/>
+    <Attribute id="ent2#att28" name="imgURL" type="string"/>
+  </Entity>
+  <Entity gr:x="605" gr:y="235" id="ent3" name="Color" duration="persistent" attributeOrder="ent3#att26 ent3#att27">
+    <Attribute id="ent3#att26" key="true" name="oid" type="integer"/>
+    <Attribute id="ent3#att27" name="name" type="string"/>
+  </Entity>
+  <Relationship id="rel1" name="Maker_Model" sourceEntity="ent1" targetEntity="ent2">
+    <RelationshipRole1 id="rel1#role1" name="MakerToModel" maxCard="N"/>
+    <RelationshipRole2 id="rel1#role2" name="ModelToMaker" maxCard="1"/>
+  </Relationship>
+  <Relationship id="rel2" name="Model_Color" sourceEntity="ent2" targetEntity="ent3">
+    <RelationshipRole1 id="rel2#role3" name="ModelToColor" maxCard="N"/>
+    <RelationshipRole2 id="rel2#role4" name="ColorToModel" maxCard="N"/>
+  </Relationship>
+  <Entity gr:x="605" gr:y="405" id="ent4" name="Size" duration="persistent" attributeOrder="ent4#att30 ent4#att31 ent4#att32 ent4#att33">
+    <Attribute id="ent4#att30" key="true" name="oid" type="integer"/>
+    <Attribute id="ent4#att31" name="width" type="integer"/>
+    <Attribute id="ent4#att32" name="height" type="integer"/>
+    <Attribute id="ent4#att33" name="depth" type="integer"/>
+  </Entity>
+  <Relationship id="rel3" name="Model_Size" sourceEntity="ent2" targetEntity="ent4">
+    <RelationshipRole1 id="rel3#role5" name="ModelToSize" maxCard="N"/>
+    <RelationshipRole2 id="rel3#role6" name="SizeToModel" maxCard="N"/>
   </Relationship>
 </DataModel>
