@@ -1,0 +1,3 @@
+<SiteView id="sv3" name="CRUD" protected="true" secure="true">
+  <OperationUnits/>
+</SiteView>

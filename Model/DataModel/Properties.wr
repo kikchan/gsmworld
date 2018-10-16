@@ -37,7 +37,7 @@
     <Attribute id="ent1#att5" name="created" type="integer"/>
     <Attribute id="ent1#att29" name="makerURL" type="string"/>
   </Entity>
-  <Entity gr:x="335" gr:y="235" id="ent2" name="Model" duration="persistent" attributeOrder="ent2#att6 ent2#att7 ent2#att8 ent2#att9 ent2#att10 ent2#att12 ent2#att13 ent2#att15 ent2#att17 ent2#att18 ent2#att19 ent2#att20 ent2#att21 ent2#att22 ent2#att23 ent2#att24 ent2#att25 ent2#att28">
+  <Entity gr:x="330" gr:y="235" id="ent2" name="Model" duration="persistent" attributeOrder="ent2#att6 ent2#att7 ent2#att9 ent2#att8 ent2#att10 ent2#att17 ent2#att12 ent2#att13 ent2#att19 ent2#att20 ent2#att21 ent2#att24 ent2#att15 ent2#att18 ent2#att47 ent2#att22 ent2#att23 ent2#att28">
     <Attribute id="ent2#att6" key="true" name="oid" type="integer"/>
     <Attribute id="ent2#att7" name="name" type="string"/>
     <Attribute id="ent2#att8" name="price" type="string"/>
@@ -54,8 +54,8 @@
     <Attribute id="ent2#att22" name="sensors" type="string"/>
     <Attribute id="ent2#att23" name="features" type="string"/>
     <Attribute id="ent2#att24" name="battery" type="string"/>
-    <Attribute id="ent2#att25" name="attribute25" type="string"/>
     <Attribute id="ent2#att28" name="imgURL" type="string"/>
+    <Attribute id="ent2#att47" name="cardSlot" type="string"/>
   </Entity>
   <Entity gr:x="605" gr:y="235" id="ent3" name="Color" duration="persistent" attributeOrder="ent3#att26 ent3#att27">
     <Attribute id="ent3#att26" key="true" name="oid" type="integer"/>
@@ -79,12 +79,13 @@
     <RelationshipRole1 id="rel3#role5" name="ModelToSize" maxCard="N"/>
     <RelationshipRole2 id="rel3#role6" name="SizeToModel" maxCard="N"/>
   </Relationship>
-  <Entity gr:x="605" gr:y="510" id="ent5" name="CPU" duration="persistent" attributeOrder="ent5#att34 ent5#att35 ent5#att36 ent5#att37 ent5#att38">
+  <Entity gr:x="605" gr:y="510" id="ent5" name="CPU" duration="persistent" attributeOrder="ent5#att34 ent5#att35 ent5#att36 ent5#att37 ent5#att38 ent5#att46">
     <Attribute id="ent5#att34" key="true" name="oid" type="integer"/>
     <Attribute id="ent5#att35" name="maker" type="string"/>
     <Attribute id="ent5#att36" name="model" type="string"/>
     <Attribute id="ent5#att37" name="cores" type="integer"/>
     <Attribute id="ent5#att38" name="lithography" type="integer"/>
+    <Attribute id="ent5#att46" name="frequency" type="string"/>
   </Entity>
   <Relationship id="rel4" name="Model_CPU" sourceEntity="ent2" targetEntity="ent5">
     <RelationshipRole1 id="rel4#role7" name="ModelToCPU" maxCard="N"/>
