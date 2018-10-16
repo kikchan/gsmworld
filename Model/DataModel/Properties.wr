@@ -37,18 +37,15 @@
     <Attribute id="ent1#att5" name="created" type="integer"/>
     <Attribute id="ent1#att29" name="makerURL" type="string"/>
   </Entity>
-  <Entity gr:x="335" gr:y="235" id="ent2" name="Model" duration="persistent" attributeOrder="ent2#att6 ent2#att7 ent2#att8 ent2#att9 ent2#att10 ent2#att11 ent2#att12 ent2#att13 ent2#att16 ent2#att14 ent2#att15 ent2#att17 ent2#att18 ent2#att19 ent2#att20 ent2#att21 ent2#att22 ent2#att23 ent2#att24 ent2#att25 ent2#att28">
+  <Entity gr:x="335" gr:y="235" id="ent2" name="Model" duration="persistent" attributeOrder="ent2#att6 ent2#att7 ent2#att8 ent2#att9 ent2#att10 ent2#att12 ent2#att13 ent2#att15 ent2#att17 ent2#att18 ent2#att19 ent2#att20 ent2#att21 ent2#att22 ent2#att23 ent2#att24 ent2#att25 ent2#att28">
     <Attribute id="ent2#att6" key="true" name="oid" type="integer"/>
     <Attribute id="ent2#att7" name="name" type="string"/>
     <Attribute id="ent2#att8" name="price" type="string"/>
     <Attribute id="ent2#att9" name="relase_date" type="string"/>
     <Attribute id="ent2#att10" name="size" type="string"/>
-    <Attribute id="ent2#att11" name="cpu" type="string"/>
     <Attribute id="ent2#att12" name="ram" type="string"/>
     <Attribute id="ent2#att13" name="rom" type="string"/>
-    <Attribute id="ent2#att14" name="resolution" type="string"/>
     <Attribute id="ent2#att15" name="conectivity" type="string"/>
-    <Attribute id="ent2#att16" name="screen_size" type="string"/>
     <Attribute id="ent2#att17" name="weight" type="string"/>
     <Attribute id="ent2#att18" name="sim" type="string"/>
     <Attribute id="ent2#att19" name="os" type="string"/>
@@ -72,7 +69,7 @@
     <RelationshipRole1 id="rel2#role3" name="ModelToColor" maxCard="N"/>
     <RelationshipRole2 id="rel2#role4" name="ColorToModel" maxCard="N"/>
   </Relationship>
-  <Entity gr:x="605" gr:y="405" id="ent4" name="Size" duration="persistent" attributeOrder="ent4#att30 ent4#att31 ent4#att32 ent4#att33">
+  <Entity gr:x="605" gr:y="355" id="ent4" name="Size" duration="persistent" attributeOrder="ent4#att30 ent4#att31 ent4#att32 ent4#att33">
     <Attribute id="ent4#att30" key="true" name="oid" type="integer"/>
     <Attribute id="ent4#att31" name="width" type="integer"/>
     <Attribute id="ent4#att32" name="height" type="integer"/>
@@ -81,5 +78,35 @@
   <Relationship id="rel3" name="Model_Size" sourceEntity="ent2" targetEntity="ent4">
     <RelationshipRole1 id="rel3#role5" name="ModelToSize" maxCard="N"/>
     <RelationshipRole2 id="rel3#role6" name="SizeToModel" maxCard="N"/>
+  </Relationship>
+  <Entity gr:x="605" gr:y="510" id="ent5" name="CPU" duration="persistent" attributeOrder="ent5#att34 ent5#att35 ent5#att36 ent5#att37 ent5#att38">
+    <Attribute id="ent5#att34" key="true" name="oid" type="integer"/>
+    <Attribute id="ent5#att35" name="maker" type="string"/>
+    <Attribute id="ent5#att36" name="model" type="string"/>
+    <Attribute id="ent5#att37" name="cores" type="integer"/>
+    <Attribute id="ent5#att38" name="lithography" type="integer"/>
+  </Entity>
+  <Relationship id="rel4" name="Model_CPU" sourceEntity="ent2" targetEntity="ent5">
+    <RelationshipRole1 id="rel4#role7" name="ModelToCPU" maxCard="N"/>
+    <RelationshipRole2 id="rel4#role8" name="CPUToModel" maxCard="N"/>
+  </Relationship>
+  <Entity gr:x="430" gr:y="725" id="ent6" name="Resolution" duration="persistent" attributeOrder="ent6#att39 ent6#att40 ent6#att41">
+    <Attribute id="ent6#att39" key="true" name="oid" type="integer"/>
+    <Attribute id="ent6#att40" name="width" type="integer"/>
+    <Attribute id="ent6#att41" name="height" type="integer"/>
+  </Entity>
+  <Entity gr:x="215" gr:y="715" id="ent7" name="Screen" duration="persistent" attributeOrder="ent7#att42 ent7#att43 ent7#att44 ent7#att45">
+    <Attribute id="ent7#att42" key="true" name="oid" type="integer"/>
+    <Attribute id="ent7#att43" name="size" type="float"/>
+    <Attribute id="ent7#att44" name="ppi" type="integer"/>
+    <Attribute id="ent7#att45" name="protection" type="string"/>
+  </Entity>
+  <Relationship id="rel5" name="Screen_Resolution" sourceEntity="ent7" targetEntity="ent6">
+    <RelationshipRole1 id="rel5#role9" name="ScreenToResolution" maxCard="1"/>
+    <RelationshipRole2 id="rel5#role10" name="ResolutionToScreen" maxCard="N"/>
+  </Relationship>
+  <Relationship id="rel6" name="Model_Screen" sourceEntity="ent2" targetEntity="ent7">
+    <RelationshipRole1 id="rel6#role11" name="ModelToScreen" maxCard="1"/>
+    <RelationshipRole2 id="rel6#role12" name="ScreenToModel" maxCard="N"/>
   </Relationship>
 </DataModel>
