@@ -1,0 +1,49 @@
+[27 oct 2018 12:42:26] DEBUG Executing SQL script
+[27 oct 2018 12:42:26] INFO ================================================================================
+[27 oct 2018 12:42:26] INFO onError= 'stop'
+[27 oct 2018 12:42:26] INFO autoCommit= 'false'
+[27 oct 2018 12:42:26] INFO username= 'root'
+[27 oct 2018 12:42:26] INFO outputPath= 'D:\GitHub\gsmworld\.Temp~\UpdateSQL.xml'
+[27 oct 2018 12:42:26] INFO outputLogPath= 'D:\GitHub\gsmworld\.Temp~\UpdateSQL.xml.log'
+[27 oct 2018 12:42:26] INFO encoding= ''
+[27 oct 2018 12:42:26] INFO driverClass= 'com.mysql.jdbc.Driver'
+[27 oct 2018 12:42:26] INFO sqlScript= 'D:\GitHub\gsmworld\.Temp~\UpdateSQL.sql'
+[27 oct 2018 12:42:26] INFO eventSocketPort= '50001'
+[27 oct 2018 12:42:26] INFO statementSeparator= ';'
+[27 oct 2018 12:42:26] INFO derby.system.home= 'D:\Dropbox\Universidad\5 - Quinto\IW\Proyectos\.metadata\.plugins\com.webratio.commons.db\derby'
+[27 oct 2018 12:42:26] INFO password= 'root'
+[27 oct 2018 12:42:26] INFO url= 'jdbc:mysql://127.0.0.1:3306/gsmworld'
+[27 oct 2018 12:42:26] INFO ================================================================================
+[27 oct 2018 12:42:26] INFO Connecting to the Database...
+[27 oct 2018 12:42:26] INFO Database connection estabilished
+[27 oct 2018 12:42:26] INFO transaction isolation: 4
+[27 oct 2018 12:42:26] DEBUG ================================================================================
+[27 oct 2018 12:42:26] DEBUG Executing SQL script file: D:\GitHub\gsmworld\.Temp~\UpdateSQL.sql
+[27 oct 2018 12:42:26] DEBUG Executing statement:  create table `group` ( `oid`  integer  not null, `groupname`  varchar(255), primary key (`oid`) ) ENGINE=InnoDB
+[27 oct 2018 12:42:26] DEBUG Executing statement:    create table `module` ( `oid`  integer  not null, `moduleid`  varchar(255), `modulename`  varchar(255), primary key (`oid`) ) ENGINE=InnoDB
+[27 oct 2018 12:42:27] DEBUG Executing statement:    create table `user` ( `oid`  integer  not null, `username`  varchar(255), `password`  varchar(255), `email`  varchar(255), primary key (`oid`) ) ENGINE=InnoDB
+[27 oct 2018 12:42:27] DEBUG Executing statement:    create table `maker` ( `oid`  integer  not null, `name`  varchar(255), `origin`  varchar(255), `created`  date, `website`  varchar(255), primary key (`oid`) ) ENGINE=InnoDB
+[27 oct 2018 12:42:27] DEBUG Executing statement:    create table `model` ( `oid`  integer  not null, `name`  varchar(255), `price`  varchar(255), `relase_date`  varchar(255), `ram`  varchar(255), `rom`  varchar(255), `weight`  varchar(255), `sim`  varchar(255), `os`  varchar(255), `main_camera`  varchar(255), `secondary_camera`  varchar(255), `battery`  varchar(255), `imgurl`  varchar(255), `cardslot`  varchar(255), `cpu`  varchar(255), primary key (`oid`) ) ENGINE=InnoDB
+[27 oct 2018 12:42:27] DEBUG Executing statement:    create table `color` ( `oid`  integer  not null, `name`  varchar(255), primary key (`oid`) ) ENGINE=InnoDB
+[27 oct 2018 12:42:27] DEBUG Executing statement:    create table `screen` ( `oid`  integer  not null, `resolution`  varchar(255), primary key (`oid`) ) ENGINE=InnoDB
+[27 oct 2018 12:42:27] DEBUG Executing statement:    alter table `group`  add column  `module_oid`  integer
+[27 oct 2018 12:42:27] DEBUG Executing statement:  alter table `group`   add index fk_group_module (`module_oid`), add constraint fk_group_module foreign key (`module_oid`) references `module` (`oid`)
+[27 oct 2018 12:42:27] DEBUG Executing statement:    create table `group_module` ( `group_oid`  integer not null, `module_oid`  integer not null, primary key (`group_oid`, `module_oid`) ) ENGINE=InnoDB
+[27 oct 2018 12:42:27] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_group (`group_oid`), add constraint fk_group_module_group foreign key (`group_oid`) references `group` (`oid`)
+[27 oct 2018 12:42:27] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_module (`module_oid`), add constraint fk_group_module_module foreign key (`module_oid`) references `module` (`oid`)
+[27 oct 2018 12:42:28] DEBUG Executing statement:    alter table `user`  add column  `group_oid`  integer
+[27 oct 2018 12:42:28] DEBUG Executing statement:  alter table `user`   add index fk_user_group (`group_oid`), add constraint fk_user_group foreign key (`group_oid`) references `group` (`oid`)
+[27 oct 2018 12:42:28] DEBUG Executing statement:    create table `user_group` ( `user_oid`  integer not null, `group_oid`  integer not null, primary key (`user_oid`, `group_oid`) ) ENGINE=InnoDB
+[27 oct 2018 12:42:28] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_user (`user_oid`), add constraint fk_user_group_user foreign key (`user_oid`) references `user` (`oid`)
+[27 oct 2018 12:42:28] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_group (`group_oid`), add constraint fk_user_group_group foreign key (`group_oid`) references `group` (`oid`)
+[27 oct 2018 12:42:28] DEBUG Executing statement:    alter table `model`  add column  `maker_oid`  integer
+[27 oct 2018 12:42:28] DEBUG Executing statement:  alter table `model`   add index fk_model_maker (`maker_oid`), add constraint fk_model_maker foreign key (`maker_oid`) references `maker` (`oid`)
+[27 oct 2018 12:42:28] DEBUG Executing statement:    create table `model_color` ( `model_oid`  integer not null, `color_oid`  integer not null, primary key (`model_oid`, `color_oid`) ) ENGINE=InnoDB
+[27 oct 2018 12:42:29] DEBUG Executing statement:  alter table `model_color`   add index fk_model_color_model (`model_oid`), add constraint fk_model_color_model foreign key (`model_oid`) references `model` (`oid`)
+[27 oct 2018 12:42:29] DEBUG Executing statement:  alter table `model_color`   add index fk_model_color_color (`color_oid`), add constraint fk_model_color_color foreign key (`color_oid`) references `color` (`oid`)
+[27 oct 2018 12:42:29] DEBUG Executing statement:    alter table `model`  add column  `screen_oid`  integer
+[27 oct 2018 12:42:29] DEBUG Executing statement:  alter table `model`   add index fk_model_screen (`screen_oid`), add constraint fk_model_screen foreign key (`screen_oid`) references `screen` (`oid`)
+[27 oct 2018 12:42:29] DEBUG ================================================================================
+[27 oct 2018 12:42:29] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[27 oct 2018 12:42:29] INFO Database connection closed
+[27 oct 2018 12:42:29] DEBUG Total time: 3053 milliseconds

@@ -1,3 +1,6 @@
-<SiteView id="sv2" name="Private" protected="true">
-  <OperationUnits/>
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Admin" protected="true" homePage="sv2#page1" landmarks="sv2#page1" secure="true">
+  <OperationUnits>
+    <CreateUnit gr:x="220" gr:y="405" id="sv2#cru1" name="Add tel&#233;fono" entity="ent2"/>
+    <SelectorUnit gr:x="45" gr:y="75" id="sv2#seu1" name="Selector1" entity="ent7"/>
+  </OperationUnits>
 </SiteView>
