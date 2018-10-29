@@ -86,7 +86,7 @@
     <Attribute id="ent7#att42" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent7#att43" name="resolution" type="string" db:column="resolution"/>
   </Entity>
-  <db:Database id="db1" name="Database" type="MySQL (InnoDB)" url="jdbc:mysql://127.0.0.1:3306/gsmworld" username="root" password="cm9vdA==" cryptedPassword="true">
+  <db:Database id="db1" name="Database" type="MySQL (InnoDB)" url="jdbc:mysql://149.71.238.44:3306/gsmworld" username="usuarioUA" password="dXN1YXJpb1VB" cryptedPassword="true">
   </db:Database>
   <Relationship id="rel2" name="Model_Color" sourceEntity="ent2" targetEntity="ent3" db:database="db1" db:table="model_color">
     <RelationshipRole1 id="rel2#role3" name="ModelToColor" maxCard="N">
