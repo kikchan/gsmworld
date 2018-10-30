@@ -1,0 +1,37 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="425" gr:y="590" id="sv1#page6" name="Login" landmark="true">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv1#page6#enu2" name="User credentials" entity="User" linkOrder="sv1#page6#enu2#ln6">
+      <Field id="sv1#page6#enu2#fld2" name="Username" type="string" modifiable="true" attribute="userName"/>
+      <Field id="sv1#page6#enu2#fld3" name="Password" type="password" modifiable="true" attribute="password"/>
+      <Link id="sv1#page6#enu2#ln6" name="Login" to="sv1#lgu1" type="normal" validate="true">
+        <LinkParameter id="sv1#page6#enu2#ln6#par1" name="Username_Username" source="sv1#page6#enu2#fld2" target="sv1#lgu1.username"/>
+        <LinkParameter id="sv1#page6#enu2#ln6#par2" name="Password_Password" source="sv1#page6#enu2#fld3" target="sv1#lgu1.password"/>
+        <LinkParameter id="sv1#page6#enu2#ln6#par3" name="Key [oid]_PASSING" source="key.userOID" passing="true"/>
+        <LinkParameter id="sv1#page6#enu2#ln6#par4" name="Password_PASSING" source="sv1#page6#enu2#fld3" passing="true"/>
+        <LinkParameter id="sv1#page6#enu2#ln6#par5" name="Username_PASSING" source="sv1#page6#enu2#fld2" passing="true"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page6#enu2">
+          <layout:Field field="sv1#page6#enu2#fld2"/>
+          <layout:Field field="sv1#page6#enu2#fld3"/>
+          <layout:Link link="sv1#page6#enu2#ln6"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

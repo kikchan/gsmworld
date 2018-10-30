@@ -1,3 +1,3 @@
-<SiteView xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4" name="Private" secure="true" layout:style="AdminLTE">
+<SiteView xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4" name="Private" secure="true" layout:style="AdminLTE" homePage="sv4#page8">
   <OperationUnits/>
 </SiteView>

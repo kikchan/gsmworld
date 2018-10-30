@@ -1,6 +1,8 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="425" gr:y="255" id="sv1#page3" name="Makers" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="425" gr:y="255" id="sv1#page3" name="Makers" landmark="true" linkOrder="sv1#page3#ln3">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#page3#pwu2" name="Available makers" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att5 ent1#att29"/>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#page3#pwu2" name="Available makers" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att5 ent1#att29" linkOrder="sv1#page3#pwu2#ln5">
+      <Link id="sv1#page3#pwu2#ln5" name="Details" to="sv1#page4#pwu3" automaticCoupling="true" type="normal" validate="true"/>
+    </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -10,6 +12,7 @@
           <layout:Attribute attribute="ent1#att3"/>
           <layout:Attribute attribute="ent1#att5"/>
           <layout:Attribute attribute="ent1#att29"/>
+          <layout:Link link="sv1#page3#pwu2#ln5"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -25,4 +28,5 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
+  <Link id="sv1#page3#ln3" name="Login" to="sv1#page6" automaticCoupling="true" type="normal" validate="true"/>
 </Page>
