@@ -1,5 +1,5 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="110" gr:y="35" gr:hideAttributes="false" attributeOrder="userOID userName password email" db:database="db1" db:table="user">
+  <Entity id="User" name="User" duration="persistent" gr:x="50" gr:y="35" gr:hideAttributes="false" attributeOrder="userOID userName password email" db:database="db1" db:table="user">
     <Attribute name="oid" id="userOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="userName" id="userName" type="string" db:column="username"/>
     <Attribute name="password" id="password" type="password" db:column="password"/>
@@ -9,7 +9,7 @@
     <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="groupName" id="groupName" type="string" db:column="groupname"/>
   </Entity>
-  <Entity id="Module" name="Module" duration="persistent" gr:x="510" gr:y="45" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db1" db:table="module">
+  <Entity id="Module" name="Module" duration="persistent" gr:x="570" gr:y="45" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db1" db:table="module">
     <Attribute name="oid" id="moduleOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="moduleID" id="moduleID" type="string" db:column="moduleid"/>
     <Attribute name="moduleName" id="moduleName" type="string" db:column="modulename"/>
@@ -46,23 +46,20 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="110" gr:y="235" id="ent1" name="Maker" duration="persistent" attributeOrder="ent1#att1 ent1#att2 ent1#att3 ent1#att5 ent1#att29" db:database="db1" db:table="maker">
+  <Entity gr:x="125" gr:y="235" id="ent1" name="Maker" duration="persistent" attributeOrder="ent1#att1 ent1#att2 ent1#att3 ent1#att5 ent1#att29" db:database="db1" db:table="maker">
     <Attribute id="ent1#att1" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent1#att2" name="Name" type="string" db:column="name"/>
     <Attribute id="ent1#att3" name="Origin" type="string" db:column="origin"/>
     <Attribute id="ent1#att5" name="Created" type="text" db:column="created"/>
     <Attribute id="ent1#att29" name="Website" type="string" db:column="website" contentType="text/html"/>
   </Entity>
-  <Entity gr:x="330" gr:y="235" id="ent2" name="Model" duration="persistent" attributeOrder="ent2#att6 ent2#att7 ent2#att9 ent2#att8 ent2#att17 ent2#att12 ent2#att13 ent2#att19 ent2#att20 ent2#att21 ent2#att24 ent2#att18 ent2#att47 ent2#att28 ent2#att4" db:database="db1" db:table="model">
+  <Entity gr:x="330" gr:y="235" id="ent2" name="Model" duration="persistent" attributeOrder="ent2#att6 ent2#att7 ent2#att9 ent2#att8 ent2#att17 ent2#att20 ent2#att21 ent2#att24 ent2#att18 ent2#att47 ent2#att28 ent2#att4" db:database="db1" db:table="model">
     <Attribute id="ent2#att6" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent2#att7" name="name" type="string" db:column="name"/>
     <Attribute id="ent2#att8" name="price" type="string" db:column="price"/>
-    <Attribute id="ent2#att9" name="relase_date" type="string" db:column="relase_date"/>
-    <Attribute id="ent2#att12" name="ram" type="string" db:column="ram"/>
-    <Attribute id="ent2#att13" name="rom" type="string" db:column="rom"/>
+    <Attribute id="ent2#att9" name="release_date" type="string" db:column="release_date"/>
     <Attribute id="ent2#att17" name="weight" type="string" db:column="weight"/>
     <Attribute id="ent2#att18" name="sim" type="string" db:column="sim"/>
-    <Attribute id="ent2#att19" name="os" type="string" db:column="os"/>
     <Attribute id="ent2#att20" name="main_camera" type="string" db:column="main_camera"/>
     <Attribute id="ent2#att21" name="secondary_camera" type="string" db:column="secondary_camera"/>
     <Attribute id="ent2#att24" name="battery" type="string" db:column="battery"/>
@@ -70,7 +67,7 @@
     <Attribute id="ent2#att47" name="cardSlot" type="string" db:column="cardslot"/>
     <Attribute id="ent2#att4" name="CPU" type="string" db:column="cpu"/>
   </Entity>
-  <Entity gr:x="605" gr:y="235" id="ent3" name="Color" duration="persistent" attributeOrder="ent3#att26 ent3#att27" db:database="db1" db:table="color">
+  <Entity gr:x="610" gr:y="235" id="ent3" name="Color" duration="persistent" attributeOrder="ent3#att26 ent3#att27" db:database="db1" db:table="color">
     <Attribute id="ent3#att26" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent3#att27" name="name" type="string" db:column="name"/>
   </Entity>
@@ -82,17 +79,18 @@
       <db:JoinColumn attribute="ent2#att6" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="115" gr:y="475" id="ent7" name="Screen" duration="persistent" attributeOrder="ent7#att42 ent7#att43" db:database="db1" db:table="screen">
+  <Entity gr:x="105" gr:y="435" id="ent7" name="Screen" duration="persistent" attributeOrder="ent7#att42 ent7#att23 ent7#att43" db:database="db1" db:table="screen">
     <Attribute id="ent7#att42" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent7#att43" name="resolution" type="string" db:column="resolution"/>
+    <Attribute id="ent7#att23" name="size" type="string" db:column="size"/>
   </Entity>
   <db:Database id="db1" name="Database" type="MySQL (InnoDB)" url="jdbc:mysql://192.168.1.10:3306/gsmworld" username="usuarioUA" password="dXN1YXJpb1VB" cryptedPassword="true">
     <Comment xml:space="preserve">jdbc:mysql://149.71.238.44:3306/gsmworld
 
 jdbc:mysql://192.168.1.10:3306/gsmworld</Comment>
   </db:Database>
-  <Relationship id="rel2" name="Model_Color" sourceEntity="ent2" targetEntity="ent3" db:database="db1" db:table="model_color">
-    <RelationshipRole1 id="rel2#role3" name="ModelToColor" maxCard="N">
+  <Relationship id="rel2" name="Model_Color" sourceEntity="ent2" targetEntity="ent3" db:database="db1" db:table="model">
+    <RelationshipRole1 id="rel2#role3" name="ModelToColor" maxCard="1">
       <db:JoinColumn attribute="ent2#att6" name="model_oid"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel2#role4" name="ColorToModel" maxCard="N">
@@ -105,6 +103,42 @@ jdbc:mysql://192.168.1.10:3306/gsmworld</Comment>
     </RelationshipRole1>
     <RelationshipRole2 id="rel3#role6" name="ModelToScreen" maxCard="1">
       <db:JoinColumn attribute="ent2#att6" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="610" gr:y="335" id="ent4" name="RAM" duration="persistent" attributeOrder="ent4#att10 ent4#att11" db:database="db1" db:table="ram">
+    <Attribute id="ent4#att10" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent4#att11" name="cuantity" type="string" db:column="cuantity"/>
+  </Entity>
+  <Entity gr:x="610" gr:y="435" id="ent5" name="ROM" duration="persistent" attributeOrder="ent5#att14 ent5#att15" db:database="db1" db:table="rom">
+    <Attribute id="ent5#att14" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent5#att15" name="cuantity" type="string" db:column="cuantity"/>
+  </Entity>
+  <Relationship id="rel4" name="Model_RAM" sourceEntity="ent2" targetEntity="ent4" db:database="db1" db:table="model">
+    <RelationshipRole1 id="rel4#role7" name="ModelToRAM" maxCard="1">
+      <db:JoinColumn attribute="ent2#att6" name="model_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel4#role8" name="RAMToModel" maxCard="N">
+      <db:JoinColumn attribute="ent4#att10" name="ram_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel5" name="ROM_Model" sourceEntity="ent5" targetEntity="ent2" db:database="db1" db:table="model">
+    <RelationshipRole1 id="rel5#role9" name="ROMToModel" maxCard="N">
+      <db:JoinColumn attribute="ent5#att14" name="rom_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel5#role10" name="ModelToROM" maxCard="1">
+      <db:JoinColumn attribute="ent2#att6" name="model_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="335" gr:y="585" id="ent6" name="OS" duration="persistent" attributeOrder="ent6#att16 ent6#att22" db:database="db1" db:table="os">
+    <Attribute id="ent6#att16" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent6#att22" name="nameAndVersion" type="string" db:column="nameandversion"/>
+  </Entity>
+  <Relationship id="rel6" name="Model_OS" sourceEntity="ent2" targetEntity="ent6" db:database="db1" db:table="model">
+    <RelationshipRole1 id="rel6#role11" name="ModelToOS" maxCard="1">
+      <db:JoinColumn attribute="ent2#att6" name="model_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel6#role12" name="OSToModel" maxCard="N">
+      <db:JoinColumn attribute="ent6#att16" name="os_oid"/>
     </RelationshipRole2>
   </Relationship>
 </DataModel>

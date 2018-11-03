@@ -1,110 +1,22 @@
-[03 Nov 2018 11:26:28] Building database metadata model
-[03 Nov 2018 11:26:28] Properties: {partialRefresh=false, processColumnsUsingSelect=, includePrimaryKeys=true, eventSocketClient=com.webratio.commons.net.EventSocketClient@367ba4f9, includeTables=true, username=usuarioUA, outputLogPath=/home/petrolhead/Desktop/IW/gsmworld/.Temp~/DB.xml.log, readIndexes=null, driverClass=com.mysql.jdbc.Driver, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.MySQLMetaDataProvider, outputPath=/home/petrolhead/Desktop/IW/gsmworld/.Temp~/DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=/home/petrolhead/Dropbox/Universidad/5 - Quinto/IW/Proyectos/.metadata/.plugins/com.webratio.commons.db/derby, url=jdbc:mysql://192.168.1.10:3306/gsmworld, tableRegex=null, readSQLDefinitions=true, includeForeignKeys=false, retrieveAllNames=false, tablesToRefresh=, eventSocketPort=33435}
-[03 Nov 2018 11:26:28] URL: jdbc:mysql://192.168.1.10:3306/gsmworld
-[03 Nov 2018 11:26:28] Product name: MySQL
-[03 Nov 2018 11:26:28] Product version: 5.7.23-log
-[03 Nov 2018 11:26:28] Driver name: MySQL Connector Java
-[03 Nov 2018 11:26:28] Driver version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
-[03 Nov 2018 11:26:28] Driver major version: 5
-[03 Nov 2018 11:26:28] Driver minor version: 1
-[03 Nov 2018 11:26:28] Identifier quote string: 1
-[03 Nov 2018 11:26:28] Retrieving schemas
-[03 Nov 2018 11:26:28] Retrieving [TABLE, VIEW, SYNONYM] for schema ''
-[03 Nov 2018 11:26:29]   Found 'color' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found 'group' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found 'group_module' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found 'maker' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found 'model' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found 'model_color' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found 'module' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found 'screen' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found 'user' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found 'user_group' [type = TABLE]
-[03 Nov 2018 11:26:29] Retrieving columns for 'color' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29] Retrieving primary keys for 'color' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found primary key column: oid
-[03 Nov 2018 11:26:29] Retrieving columns for 'group' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: groupname [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: module_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[03 Nov 2018 11:26:29] Retrieving primary keys for 'group' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found primary key column: oid
-[03 Nov 2018 11:26:29] Retrieving columns for 'group_module' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: module_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[03 Nov 2018 11:26:29] Retrieving primary keys for 'group_module' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found primary key column: group_oid
-[03 Nov 2018 11:26:29]   Found primary key column: module_oid
-[03 Nov 2018 11:26:29] Retrieving columns for 'maker' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: origin [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: created [type = DATE][SQL/XOPEN type = 91][size = 10][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: website [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29] Retrieving primary keys for 'maker' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found primary key column: oid
-[03 Nov 2018 11:26:29] Retrieving columns for 'model' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: price [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: relase_date [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: ram [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: rom [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: weight [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: sim [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: os [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: main_camera [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: secondary_camera [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: battery [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: imgurl [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: cardslot [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: cpu [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: maker_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: screen_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[03 Nov 2018 11:26:29] Retrieving primary keys for 'model' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found primary key column: oid
-[03 Nov 2018 11:26:29] Retrieving columns for 'model_color' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found column: model_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: color_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[03 Nov 2018 11:26:29] Retrieving primary keys for 'model_color' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found primary key column: model_oid
-[03 Nov 2018 11:26:29]   Found primary key column: color_oid
-[03 Nov 2018 11:26:29] Retrieving columns for 'module' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: moduleid [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: modulename [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29] Retrieving primary keys for 'module' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found primary key column: oid
-[03 Nov 2018 11:26:29] Retrieving columns for 'screen' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: resolution [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29] Retrieving primary keys for 'screen' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found primary key column: oid
-[03 Nov 2018 11:26:29] Retrieving columns for 'user' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: username [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: password [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: email [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[03 Nov 2018 11:26:29] Retrieving primary keys for 'user' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found primary key column: oid
-[03 Nov 2018 11:26:29] Retrieving columns for 'user_group' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found column: user_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[03 Nov 2018 11:26:29]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
-[03 Nov 2018 11:26:29] Retrieving primary keys for 'user_group' [type = TABLE]
-[03 Nov 2018 11:26:29]   Found primary key column: user_oid
-[03 Nov 2018 11:26:29]   Found primary key column: group_oid
-[03 Nov 2018 11:26:29] Database metadata retrieved (823 ms)
-[03 Nov 2018 11:26:29] Retrieving auto-increment columns for 'color' [type = TABLE]
-[03 Nov 2018 11:26:29] Retrieving auto-increment columns for 'group' [type = TABLE]
-[03 Nov 2018 11:26:29] Retrieving auto-increment columns for 'group_module' [type = TABLE]
-[03 Nov 2018 11:26:29] Retrieving auto-increment columns for 'maker' [type = TABLE]
-[03 Nov 2018 11:26:29] Retrieving auto-increment columns for 'model' [type = TABLE]
-[03 Nov 2018 11:26:29] Retrieving auto-increment columns for 'model_color' [type = TABLE]
-[03 Nov 2018 11:26:29] Retrieving auto-increment columns for 'module' [type = TABLE]
-[03 Nov 2018 11:26:29] Retrieving auto-increment columns for 'screen' [type = TABLE]
-[03 Nov 2018 11:26:29] Retrieving auto-increment columns for 'user' [type = TABLE]
-[03 Nov 2018 11:26:29] Retrieving auto-increment columns for 'user_group' [type = TABLE]
-[03 Nov 2018 11:26:29] Database connection closed
+[03 Nov 2018 13:38:53] Building database metadata model
+[03 Nov 2018 13:38:53] Properties: {partialRefresh=true, processColumnsUsingSelect=, includePrimaryKeys=true, eventSocketClient=com.webratio.commons.net.EventSocketClient@4b1aeb38, includeTables=true, username=usuarioUA, outputLogPath=/home/petrolhead/Desktop/IW/gsmworld/.Temp~/DB.xml.log, readIndexes=null, driverClass=com.mysql.jdbc.Driver, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.MySQLMetaDataProvider, outputPath=/home/petrolhead/Desktop/IW/gsmworld/.Temp~/DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=/home/petrolhead/Dropbox/Universidad/5 - Quinto/IW/Proyectos/.metadata/.plugins/com.webratio.commons.db/derby, url=jdbc:mysql://192.168.1.10:3306/gsmworld, tableRegex=null, readSQLDefinitions=true, includeForeignKeys=false, retrieveAllNames=false, tablesToRefresh=screen, eventSocketPort=38659}
+[03 Nov 2018 13:38:53] URL: jdbc:mysql://192.168.1.10:3306/gsmworld
+[03 Nov 2018 13:38:53] Product name: MySQL
+[03 Nov 2018 13:38:53] Product version: 5.7.23-log
+[03 Nov 2018 13:38:53] Driver name: MySQL Connector Java
+[03 Nov 2018 13:38:53] Driver version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
+[03 Nov 2018 13:38:53] Driver major version: 5
+[03 Nov 2018 13:38:53] Driver minor version: 1
+[03 Nov 2018 13:38:53] Identifier quote string: 1
+[03 Nov 2018 13:38:53] Retrieving schemas
+[03 Nov 2018 13:38:53] Retrieving [TABLE, VIEW, SYNONYM] for schema ''
+[03 Nov 2018 13:38:53]   Found 'screen' [type = TABLE]
+[03 Nov 2018 13:38:53] Retrieving columns for 'screen' [type = TABLE]
+[03 Nov 2018 13:38:53]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[03 Nov 2018 13:38:53]   Found column: resolution [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[03 Nov 2018 13:38:53]   Found column: size [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[03 Nov 2018 13:38:53] Retrieving primary keys for 'screen' [type = TABLE]
+[03 Nov 2018 13:38:53]   Found primary key column: oid
+[03 Nov 2018 13:38:53] Database metadata retrieved (40 ms)
+[03 Nov 2018 13:38:53] Retrieving auto-increment columns for 'screen' [type = TABLE]
+[03 Nov 2018 13:38:53] Database connection closed

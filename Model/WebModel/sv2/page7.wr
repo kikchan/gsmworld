@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="35" gr:y="230" id="sv2#page7" name="Welcome" landmark="false">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="25" gr:y="25" id="sv2#page7" name="Welcome" landmark="false">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv2#page7#mssu2" name="Message">
       <Message xml:space="preserve">Welcome to the admin section of the site</Message>

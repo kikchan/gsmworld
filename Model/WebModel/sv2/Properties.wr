@@ -1,7 +1,11 @@
 <SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="Admin" protected="true" homePage="sv2#page7" landmarks="sv2#page1 sv2#lou1" secure="false" layout:style="AdminLTE">
   <OperationUnits>
-    <CreateUnit gr:x="400" gr:y="425" id="sv2#cru1" name="Add phone" entity="ent2"/>
-    <SelectorUnit gr:x="45" gr:y="75" id="sv2#seu1" name="Selector1" entity="ent7"/>
-    <LogoutUnit gr:x="340" gr:y="60" id="sv2#lou1" name="Logout" siteView="sv1" landmark="true"/>
+    <CreateUnit gr:x="410" gr:y="310" id="sv2#cru1" name="Add phone" entity="ent2"/>
+    <LogoutUnit gr:x="225" gr:y="25" id="sv2#lou1" name="Logout" siteView="sv1" landmark="true"/>
+    <DeleteUnit gr:x="405" gr:y="190" id="sv2#dlu1" name="Delete phone" entity="ent2">
+      <Selector id="sv2#dlu1#su2" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#dlu1#su2#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+    </DeleteUnit>
   </OperationUnits>
 </SiteView>

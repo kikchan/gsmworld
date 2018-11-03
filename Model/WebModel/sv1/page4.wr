@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="270" gr:y="180" id="sv1#page4" name="Models" layout:style="BootstrapStyle">
   <ContentUnits>
-    <PowerIndexUnit id="sv1#page4#pwu3" name="Phone list" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="rel1#role2.ent1#att2 ent2#att7 ent2#att9 ent2#att8 ent2#att4 ent2#att12 ent2#att13 ent2#att19 ent2#att20 ent2#att21 ent2#att17 ent2#att24 ent2#att18 ent2#att47 ent2#att28"/>
+    <PowerIndexUnit id="sv1#page4#pwu3" name="Phone list" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="rel1#role2.ent1#att2 ent2#att7 ent2#att9 ent2#att8 ent2#att4 ent2#att20 ent2#att21 ent2#att17 ent2#att24 ent2#att18 ent2#att47 ent2#att28"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -11,9 +11,6 @@
           <layout:Attribute attribute="ent2#att9"/>
           <layout:Attribute attribute="ent2#att8"/>
           <layout:Attribute attribute="ent2#att4"/>
-          <layout:Attribute attribute="ent2#att12"/>
-          <layout:Attribute attribute="ent2#att13"/>
-          <layout:Attribute attribute="ent2#att19"/>
           <layout:Attribute attribute="ent2#att20"/>
           <layout:Attribute attribute="ent2#att21"/>
           <layout:Attribute attribute="ent2#att17"/>
