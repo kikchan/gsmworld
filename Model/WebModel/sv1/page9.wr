@@ -14,19 +14,10 @@
         <LinkParameter id="sv1#page9#enu3#ln9#par16" name="Key [oid]_PASSING" source="key.userOID" passing="true"/>
         <LinkParameter id="sv1#page9#enu3#ln9#par17" name="Password_PASSING" source="sv1#page9#enu3#fld6" passing="true"/>
         <LinkParameter id="sv1#page9#enu3#ln9#par18" name="Username_PASSING" source="sv1#page9#enu3#fld4" passing="true"/>
-        <LinkParameter id="sv1#page9#enu3#ln9#par19" name="Group_Group.oid(defaultGroup)" source="sv1#page9#enu3#sfld1" target="sv1#cru2.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="sv1#page9#enu3#ln9#par19" name="Group_Group.oid(defaultGroup)" target="sv1#cru2.User2DefaultGroup.groupOID" sourceValue="2"/>
         <LinkParameter id="sv1#page9#enu3#ln9#par20" name="Key [oid]_oid" source="key.userOID" target="sv1#cru2.userOID"/>
       </Link>
-      <SelectionField id="sv1#page9#enu3#sfld1" name="Group" type="integer" attribute="userOID" role="User2Group"/>
     </EntryUnit>
-    <SelectorUnit gr:x="25" gr:y="140" id="sv1#page9#seu3" name="Group selector" entity="Group">
-      <SortAttribute attribute="groupName" order="ascending"/>
-      <Link id="sv1#page9#seu3#ln10" name="Flow10" to="sv1#page9#enu3" type="transport" validate="true">
-        <LinkParameter id="sv1#page9#seu3#ln10#par6" name="groupName_Group [label]" source="groupNameArray" target="sv1#page9#enu3#sfld1_label"/>
-        <LinkParameter id="sv1#page9#seu3#ln10#par7" name="oid_Group [output]" source="groupOIDArray" target="sv1#page9#enu3#sfld1_output"/>
-        <LinkParameter id="sv1#page9#seu3#ln10#par8" name="groupName_PASSING" source="groupNameArray" passing="true"/>
-      </Link>
-    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -36,7 +27,6 @@
           <layout:Field field="sv1#page9#enu3#fld4"/>
           <layout:Field field="sv1#page9#enu3#fld5"/>
           <layout:Field field="sv1#page9#enu3#fld6"/>
-          <layout:Field field="sv1#page9#enu3#sfld1"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
