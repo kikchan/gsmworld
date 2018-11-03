@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="365" gr:y="235" id="sv2#page1" name="Inicio" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="365" gr:y="235" id="sv2#page1" name="Phones" landmark="true">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="sv2#page1#enu1" name="Crear tel&#233;fono" entity="ent2" linkOrder="sv2#page1#enu1#ln1">
+    <EntryUnit gr:x="0" gr:y="0" id="sv2#page1#enu1" name="Add a new phone" entity="ent2" linkOrder="sv2#page1#enu1#ln1">
       <Field id="sv2#page1#enu1#fld1" name="Field1" type="string" modifiable="true" attribute="ent2#att7"/>
       <Link id="sv2#page1#enu1#ln1" name="Flow1" to="sv2#cru1" automaticCoupling="true" type="normal" validate="true"/>
     </EntryUnit>

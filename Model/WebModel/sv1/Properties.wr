@@ -1,5 +1,6 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Public" homePage="sv1#page2" landmarks="sv1#page2 sv1#page3 sv1#page6" layout:style="BootstrapStyle">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Public" homePage="sv1#page2" landmarks="sv1#page2 sv1#page3 sv1#page6 sv1#page9" layout:style="BootstrapStyle">
   <OperationUnits>
-    <LoginUnit gr:x="745" gr:y="635" id="sv1#lgu1" name="Login"/>
+    <LoginUnit gr:x="130" gr:y="660" id="sv1#lgu1" name="Login"/>
+    <CreateUnit gr:x="555" gr:y="500" id="sv1#cru2" name="Add User" entity="User"/>
   </OperationUnits>
 </SiteView>
