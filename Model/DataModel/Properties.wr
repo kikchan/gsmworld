@@ -71,40 +71,16 @@
     <Attribute id="ent3#att26" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent3#att27" name="name" type="string" db:column="name"/>
   </Entity>
-  <Relationship id="rel1" name="Maker_Model" sourceEntity="ent1" targetEntity="ent2" db:database="db1" db:table="model">
-    <RelationshipRole1 id="rel1#role1" name="MakerToModel" maxCard="N">
-      <db:JoinColumn attribute="ent1#att1" name="maker_oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel1#role2" name="ModelToMaker" maxCard="1">
-      <db:JoinColumn attribute="ent2#att6" name="oid"/>
-    </RelationshipRole2>
-  </Relationship>
   <Entity gr:x="105" gr:y="435" id="ent7" name="Screen" duration="persistent" attributeOrder="ent7#att42 ent7#att23 ent7#att43" db:database="db1" db:table="screen">
     <Attribute id="ent7#att42" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent7#att43" name="resolution" type="string" db:column="resolution"/>
     <Attribute id="ent7#att23" name="size" type="string" db:column="size"/>
   </Entity>
-  <db:Database id="db1" name="Database" type="MySQL (InnoDB)" url="jdbc:mysql://192.168.1.10:3306/gsmworld" username="usuarioUA" password="dXN1YXJpb1VB" cryptedPassword="true">
+  <db:Database id="db1" name="Database" type="MySQL (InnoDB)" url="jdbc:mysql://149.71.238.44:3306/gsmworld" username="usuarioUA" password="dXN1YXJpb1VB" cryptedPassword="true">
     <Comment xml:space="preserve">jdbc:mysql://149.71.238.44:3306/gsmworld
 
 jdbc:mysql://192.168.1.10:3306/gsmworld</Comment>
   </db:Database>
-  <Relationship id="rel2" name="Model_Color" sourceEntity="ent2" targetEntity="ent3" db:database="db1" db:table="model">
-    <RelationshipRole1 id="rel2#role3" name="ModelToColor" maxCard="1">
-      <db:JoinColumn attribute="ent2#att6" name="model_oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel2#role4" name="ColorToModel" maxCard="N">
-      <db:JoinColumn attribute="ent3#att26" name="color_oid"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel3" name="Screen_Model" sourceEntity="ent7" targetEntity="ent2" db:database="db1" db:table="model">
-    <RelationshipRole1 id="rel3#role5" name="ScreenToModel" maxCard="N">
-      <db:JoinColumn attribute="ent7#att42" name="screen_oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel3#role6" name="ModelToScreen" maxCard="1">
-      <db:JoinColumn attribute="ent2#att6" name="oid"/>
-    </RelationshipRole2>
-  </Relationship>
   <Entity gr:x="610" gr:y="335" id="ent4" name="RAM" duration="persistent" attributeOrder="ent4#att10 ent4#att11" db:database="db1" db:table="ram">
     <Attribute id="ent4#att10" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent4#att11" name="cuantity" type="string" db:column="cuantity"/>
@@ -113,32 +89,56 @@ jdbc:mysql://192.168.1.10:3306/gsmworld</Comment>
     <Attribute id="ent5#att14" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent5#att15" name="cuantity" type="string" db:column="cuantity"/>
   </Entity>
-  <Relationship id="rel4" name="Model_RAM" sourceEntity="ent2" targetEntity="ent4" db:database="db1" db:table="model">
-    <RelationshipRole1 id="rel4#role7" name="ModelToRAM" maxCard="1">
-      <db:JoinColumn attribute="ent2#att6" name="model_oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel4#role8" name="RAMToModel" maxCard="N">
-      <db:JoinColumn attribute="ent4#att10" name="ram_oid"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel5" name="ROM_Model" sourceEntity="ent5" targetEntity="ent2" db:database="db1" db:table="model">
-    <RelationshipRole1 id="rel5#role9" name="ROMToModel" maxCard="N">
-      <db:JoinColumn attribute="ent5#att14" name="rom_oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel5#role10" name="ModelToROM" maxCard="1">
-      <db:JoinColumn attribute="ent2#att6" name="model_oid"/>
-    </RelationshipRole2>
-  </Relationship>
   <Entity gr:x="335" gr:y="585" id="ent6" name="OS" duration="persistent" attributeOrder="ent6#att16 ent6#att22" db:database="db1" db:table="os">
     <Attribute id="ent6#att16" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent6#att22" name="nameAndVersion" type="string" db:column="nameandversion"/>
   </Entity>
-  <Relationship id="rel6" name="Model_OS" sourceEntity="ent2" targetEntity="ent6" db:database="db1" db:table="model">
-    <RelationshipRole1 id="rel6#role11" name="ModelToOS" maxCard="1">
-      <db:JoinColumn attribute="ent2#att6" name="model_oid"/>
+  <Relationship id="rel7" name="Maker_Model" sourceEntity="ent1" targetEntity="ent2" db:database="db1" db:table="model">
+    <RelationshipRole1 id="rel7#role13" name="MakerToModel" maxCard="N">
+      <db:JoinColumn attribute="ent1#att1" name="maker_oid_2"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel6#role12" name="OSToModel" maxCard="N">
-      <db:JoinColumn attribute="ent6#att16" name="os_oid"/>
+    <RelationshipRole2 id="rel7#role14" name="ModelToMaker" maxCard="1">
+      <db:JoinColumn attribute="ent2#att6" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel8" name="Screen_Model" sourceEntity="ent7" targetEntity="ent2" db:database="db1" db:table="model">
+    <RelationshipRole1 id="rel8#role15" name="ScreenToModel" maxCard="N">
+      <db:JoinColumn attribute="ent7#att42" name="screen_oid_2"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel8#role16" name="ModelToScreen" maxCard="1">
+      <db:JoinColumn attribute="ent2#att6" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel9" name="OS_Model" sourceEntity="ent6" targetEntity="ent2" db:database="db1" db:table="model">
+    <RelationshipRole1 id="rel9#role17" name="OSToModel" maxCard="N">
+      <db:JoinColumn attribute="ent6#att16" name="os_oid_2"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel9#role18" name="ModelToOS" maxCard="1">
+      <db:JoinColumn attribute="ent2#att6" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel11" name="ROM_Model" sourceEntity="ent5" targetEntity="ent2" db:database="db1" db:table="model">
+    <RelationshipRole1 id="rel11#role21" name="ROMToModel" maxCard="N">
+      <db:JoinColumn attribute="ent5#att14" name="rom_oid_2"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel11#role22" name="ModelToROM" maxCard="1">
+      <db:JoinColumn attribute="ent2#att6" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel12" name="RAM_Model" sourceEntity="ent4" targetEntity="ent2" db:database="db1" db:table="model">
+    <RelationshipRole1 id="rel12#role23" name="RAMToModel" maxCard="N">
+      <db:JoinColumn attribute="ent4#att10" name="ram_oid_2"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel12#role24" name="ModelToRAM" maxCard="1">
+      <db:JoinColumn attribute="ent2#att6" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel13" name="Color_Model" sourceEntity="ent3" targetEntity="ent2" db:database="db1" db:table="model">
+    <RelationshipRole1 id="rel13#role25" name="ColorToModel" maxCard="N">
+      <db:JoinColumn attribute="ent3#att26" name="color_oid_2"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel13#role26" name="ModelToColor" maxCard="1">
+      <db:JoinColumn attribute="ent2#att6" name="oid"/>
     </RelationshipRole2>
   </Relationship>
 </DataModel>

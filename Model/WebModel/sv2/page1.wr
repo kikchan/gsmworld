@@ -31,15 +31,15 @@
       <Field id="sv2#page1#enu1#fld14" name="SIM Card slots" type="string" modifiable="true" attribute="ent2#att18"/>
       <Field id="sv2#page1#enu1#fld15" name="Memory card" type="string" modifiable="true" attribute="ent2#att47"/>
       <Field id="sv2#page1#enu1#fld16" name="CPU" type="string" modifiable="true" attribute="ent2#att4"/>
-      <SelectionField id="sv2#page1#enu1#sfld2" type="integer" name="Maker" attribute="ent2#att6" role="rel1#role2"/>
-      <SelectionField id="sv2#page1#enu1#sfld3" name="Screen resolution" type="integer" attribute="ent2#att6" role="rel3#role6"/>
-      <SelectionField id="sv2#page1#enu1#sfld4" type="integer" name="Operating System" attribute="ent2#att6" role="rel6#role11"/>
-      <SelectionField id="sv2#page1#enu1#sfld5" name="RAM" type="integer" attribute="ent2#att6" role="rel4#role7"/>
-      <SelectionField id="sv2#page1#enu1#sfld6" name="ROM" type="integer" attribute="ent2#att6" role="rel5#role10"/>
-      <SelectionField id="sv2#page1#enu1#sfld7" name="Color" type="integer" attribute="ent2#att6" role="rel2#role3"/>
+      <SelectionField id="sv2#page1#enu1#sfld2" type="integer" name="Maker" attribute="ent2#att6"/>
+      <SelectionField id="sv2#page1#enu1#sfld3" name="Screen resolution" type="integer" attribute="ent2#att6"/>
+      <SelectionField id="sv2#page1#enu1#sfld4" type="integer" name="Operating System" attribute="ent2#att6"/>
+      <SelectionField id="sv2#page1#enu1#sfld5" name="RAM" type="integer" attribute="ent2#att6"/>
+      <SelectionField id="sv2#page1#enu1#sfld6" name="ROM" type="integer" attribute="ent2#att6"/>
+      <SelectionField id="sv2#page1#enu1#sfld7" name="Color" type="integer" attribute="ent2#att6"/>
       <SelectionField id="sv2#page1#enu1#sfld8" name="Screen size" type="string"/>
     </EntryUnit>
-    <PowerIndexUnit gr:x="30" gr:y="0" id="sv2#page1#pwu1" name="All phones" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att6 rel1#role2.ent1#att2 ent2#att7" linkOrder="sv2#page1#pwu1#ln11 sv2#page1#pwu1#ln12">
+    <PowerIndexUnit gr:x="30" gr:y="0" id="sv2#page1#pwu1" name="All phones" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att6 ent2#att7" linkOrder="sv2#page1#pwu1#ln12 sv2#page1#pwu1#ln11">
       <Link id="sv2#page1#pwu1#ln11" name="Delete" to="sv2#dlu1" type="normal" validate="true">
         <LinkParameter id="sv2#page1#pwu1#ln11#par58" name="oid_KeyCondition2 [oid]" source="data[].ent2#att6" target="sv2#dlu1#su2#kcond2.ent2#att6"/>
         <LinkParameter id="sv2#page1#pwu1#ln11#par59" name="oid_PASSING" source="data[].ent2#att6" passing="true"/>
@@ -102,10 +102,9 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#page1#pwu1">
           <layout:Attribute attribute="ent2#att6"/>
-          <layout:Attribute attribute="rel1#role2.ent1#att2"/>
           <layout:Attribute attribute="ent2#att7"/>
-          <layout:Link link="sv2#page1#pwu1#ln11"/>
           <layout:Link link="sv2#page1#pwu1#ln12"/>
+          <layout:Link link="sv2#page1#pwu1#ln11"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
