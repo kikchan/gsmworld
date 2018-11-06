@@ -1,0 +1,98 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="50" gr:y="45" id="mov1#opm1" name="Add or Modify phone">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm1#icu1" gr:x="30" gr:y="55">
+      <InputCollectorParameter id="mov1#opm1#icu1#icp1" name="maker"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp2" name="modelName"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp3" name="ID"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp4" name="price"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp5" name="releaseDate"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp19" name="osOID"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp18" name="screenResOID"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp16" name="colorOID"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp15" name="ramOID"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp14" name="romOID"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp13" name="CPU"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp12" name="cardSlot"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp11" name="imgURL"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp10" name="battery"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp9" name="secondaryCamera"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp8" name="mainCamera"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp7" name="sim"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp6" name="weight"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp20" name="screenSizeOID"/>
+      <OKLink id="mov1#opm1#icu1#oln9" name="OKFlow9" to="mov1#opm1#inn1">
+        <LinkParameter id="mov1#opm1#icu1#oln9#par116" name="ID_Input" source="mov1#opm1#icu1#icp3" target="mov1#opm1#inn1.isnotnull"/>
+        <LinkParameter id="mov1#opm1#icu1#oln9#par117" name="battery_PASSING" source="mov1#opm1#icu1#icp10" passing="true"/>
+        <LinkParameter id="mov1#opm1#icu1#oln9#par118" name="cardSlot_PASSING" source="mov1#opm1#icu1#icp12" passing="true"/>
+        <LinkParameter id="mov1#opm1#icu1#oln9#par119" name="colorOID_PASSING" source="mov1#opm1#icu1#icp16" passing="true"/>
+        <LinkParameter id="mov1#opm1#icu1#oln9#par120" name="CPU_PASSING" source="mov1#opm1#icu1#icp13" passing="true"/>
+        <LinkParameter id="mov1#opm1#icu1#oln9#par121" name="ID_PASSING" source="mov1#opm1#icu1#icp3" passing="true"/>
+        <LinkParameter id="mov1#opm1#icu1#oln9#par122" name="imgURL_PASSING" source="mov1#opm1#icu1#icp11" passing="true"/>
+        <LinkParameter id="mov1#opm1#icu1#oln9#par123" name="mainCamera_PASSING" source="mov1#opm1#icu1#icp8" passing="true"/>
+        <LinkParameter id="mov1#opm1#icu1#oln9#par124" name="maker_PASSING" source="mov1#opm1#icu1#icp1" passing="true"/>
+        <LinkParameter id="mov1#opm1#icu1#oln9#par125" name="modelName_PASSING" source="mov1#opm1#icu1#icp2" passing="true"/>
+        <LinkParameter id="mov1#opm1#icu1#oln9#par126" name="osOID_PASSING" source="mov1#opm1#icu1#icp19" passing="true"/>
+        <LinkParameter id="mov1#opm1#icu1#oln9#par127" name="price_PASSING" source="mov1#opm1#icu1#icp4" passing="true"/>
+        <LinkParameter id="mov1#opm1#icu1#oln9#par128" name="ramOID_PASSING" source="mov1#opm1#icu1#icp15" passing="true"/>
+        <LinkParameter id="mov1#opm1#icu1#oln9#par129" name="releaseDate_PASSING" source="mov1#opm1#icu1#icp5" passing="true"/>
+        <LinkParameter id="mov1#opm1#icu1#oln9#par130" name="romOID_PASSING" source="mov1#opm1#icu1#icp14" passing="true"/>
+        <LinkParameter id="mov1#opm1#icu1#oln9#par131" name="screenResOID_PASSING" source="mov1#opm1#icu1#icp18" passing="true"/>
+        <LinkParameter id="mov1#opm1#icu1#oln9#par132" name="screenSizeOID_PASSING" source="mov1#opm1#icu1#icp20" passing="true"/>
+        <LinkParameter id="mov1#opm1#icu1#oln9#par133" name="secondaryCamera_PASSING" source="mov1#opm1#icu1#icp9" passing="true"/>
+        <LinkParameter id="mov1#opm1#icu1#oln9#par134" name="sim_PASSING" source="mov1#opm1#icu1#icp7" passing="true"/>
+        <LinkParameter id="mov1#opm1#icu1#oln9#par135" name="weight_PASSING" source="mov1#opm1#icu1#icp6" passing="true"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <IsNotNullUnit gr:x="300" gr:y="200" id="mov1#opm1#inn1" name="ID not null">
+      <OKLink id="mov1#opm1#inn1#oln10" name="OKFlow10" to="mov1#opm1#mfu2">
+        <LinkParameter id="mov1#opm1#inn1#oln10#par136" name="battery_PASSING_battery" sourceLinkParameter="mov1#opm1#icu1#oln9#par117" target="mov1#opm1#mfu2.ent2#att24"/>
+        <LinkParameter id="mov1#opm1#inn1#oln10#par137" name="cardSlot_PASSING_cardSlot" sourceLinkParameter="mov1#opm1#icu1#oln9#par118" target="mov1#opm1#mfu2.ent2#att47"/>
+        <LinkParameter id="mov1#opm1#inn1#oln10#par138" name="colorOID_PASSING_Color.oid(ModelToColor)" sourceLinkParameter="mov1#opm1#icu1#oln9#par119" target="mov1#opm1#mfu2.rel13#role26.ent3#att26"/>
+        <LinkParameter id="mov1#opm1#inn1#oln10#par139" name="CPU_PASSING_CPU" sourceLinkParameter="mov1#opm1#icu1#oln9#par120" target="mov1#opm1#mfu2.ent2#att4"/>
+        <LinkParameter id="mov1#opm1#inn1#oln10#par140" name="imgURL_PASSING_imgURL" sourceLinkParameter="mov1#opm1#icu1#oln9#par122" target="mov1#opm1#mfu2.ent2#att28"/>
+        <LinkParameter id="mov1#opm1#inn1#oln10#par141" name="ID_PASSING_KeyCondition5 [oid]" sourceLinkParameter="mov1#opm1#icu1#oln9#par121" target="mov1#opm1#mfu2#su5#kcond5.ent2#att6"/>
+        <LinkParameter id="mov1#opm1#inn1#oln10#par142" name="mainCamera_PASSING_main_camera" sourceLinkParameter="mov1#opm1#icu1#oln9#par123" target="mov1#opm1#mfu2.ent2#att20"/>
+        <LinkParameter id="mov1#opm1#inn1#oln10#par143" name="maker_PASSING_Maker.oid(ModelToMaker)" sourceLinkParameter="mov1#opm1#icu1#oln9#par124" target="mov1#opm1#mfu2.rel7#role14.ent1#att1"/>
+        <LinkParameter id="mov1#opm1#inn1#oln10#par144" name="modelName_PASSING_name" sourceLinkParameter="mov1#opm1#icu1#oln9#par125" target="mov1#opm1#mfu2.ent2#att7"/>
+        <LinkParameter id="mov1#opm1#inn1#oln10#par145" name="osOID_PASSING_OS.oid(ModelToOS)" sourceLinkParameter="mov1#opm1#icu1#oln9#par126" target="mov1#opm1#mfu2.rel9#role18.ent6#att16"/>
+        <LinkParameter id="mov1#opm1#inn1#oln10#par146" name="price_PASSING_price" sourceLinkParameter="mov1#opm1#icu1#oln9#par127" target="mov1#opm1#mfu2.ent2#att8"/>
+        <LinkParameter id="mov1#opm1#inn1#oln10#par147" name="ramOID_PASSING_RAM.oid(ModelToRAM)" sourceLinkParameter="mov1#opm1#icu1#oln9#par128" target="mov1#opm1#mfu2.rel12#role24.ent4#att10"/>
+        <LinkParameter id="mov1#opm1#inn1#oln10#par148" name="releaseDate_PASSING_release_date" sourceLinkParameter="mov1#opm1#icu1#oln9#par129" target="mov1#opm1#mfu2.ent2#att9"/>
+        <LinkParameter id="mov1#opm1#inn1#oln10#par149" name="romOID_PASSING_ROM.oid(ModelToROM)" sourceLinkParameter="mov1#opm1#icu1#oln9#par130" target="mov1#opm1#mfu2.rel11#role22.ent5#att14"/>
+        <LinkParameter id="mov1#opm1#inn1#oln10#par150" name="screenResOID_PASSING_Screen.oid(ModelToScreen)" sourceLinkParameter="mov1#opm1#icu1#oln9#par131" target="mov1#opm1#mfu2.rel8#role16.ent7#att42"/>
+        <LinkParameter id="mov1#opm1#inn1#oln10#par151" name="secondaryCamera_PASSING_secondary_camera" sourceLinkParameter="mov1#opm1#icu1#oln9#par133" target="mov1#opm1#mfu2.ent2#att21"/>
+        <LinkParameter id="mov1#opm1#inn1#oln10#par152" name="sim_PASSING_sim" sourceLinkParameter="mov1#opm1#icu1#oln9#par134" target="mov1#opm1#mfu2.ent2#att18"/>
+        <LinkParameter id="mov1#opm1#inn1#oln10#par153" name="weight_PASSING_weight" sourceLinkParameter="mov1#opm1#icu1#oln9#par135" target="mov1#opm1#mfu2.ent2#att17"/>
+      </OKLink>
+      <KOLink id="mov1#opm1#inn1#kln4" name="KOFlow4" to="mov1#opm1#cru3">
+        <LinkParameter id="mov1#opm1#inn1#kln4#par154" name="battery_PASSING_battery" sourceLinkParameter="mov1#opm1#icu1#oln9#par117" target="mov1#opm1#cru3.ent2#att24"/>
+        <LinkParameter id="mov1#opm1#inn1#kln4#par155" name="cardSlot_PASSING_cardSlot" sourceLinkParameter="mov1#opm1#icu1#oln9#par118" target="mov1#opm1#cru3.ent2#att47"/>
+        <LinkParameter id="mov1#opm1#inn1#kln4#par156" name="colorOID_PASSING_Color.oid(ModelToColor)" sourceLinkParameter="mov1#opm1#icu1#oln9#par119" target="mov1#opm1#cru3.rel13#role26.ent3#att26"/>
+        <LinkParameter id="mov1#opm1#inn1#kln4#par157" name="CPU_PASSING_CPU" sourceLinkParameter="mov1#opm1#icu1#oln9#par120" target="mov1#opm1#cru3.ent2#att4"/>
+        <LinkParameter id="mov1#opm1#inn1#kln4#par158" name="imgURL_PASSING_imgURL" sourceLinkParameter="mov1#opm1#icu1#oln9#par122" target="mov1#opm1#cru3.ent2#att28"/>
+        <LinkParameter id="mov1#opm1#inn1#kln4#par159" name="mainCamera_PASSING_main_camera" sourceLinkParameter="mov1#opm1#icu1#oln9#par123" target="mov1#opm1#cru3.ent2#att20"/>
+        <LinkParameter id="mov1#opm1#inn1#kln4#par160" name="maker_PASSING_Maker.oid(ModelToMaker)" sourceLinkParameter="mov1#opm1#icu1#oln9#par124" target="mov1#opm1#cru3.rel7#role14.ent1#att1"/>
+        <LinkParameter id="mov1#opm1#inn1#kln4#par161" name="modelName_PASSING_name" sourceLinkParameter="mov1#opm1#icu1#oln9#par125" target="mov1#opm1#cru3.ent2#att7"/>
+        <LinkParameter id="mov1#opm1#inn1#kln4#par162" name="osOID_PASSING_OS.oid(ModelToOS)" sourceLinkParameter="mov1#opm1#icu1#oln9#par126" target="mov1#opm1#cru3.rel9#role18.ent6#att16"/>
+        <LinkParameter id="mov1#opm1#inn1#kln4#par163" name="price_PASSING_price" sourceLinkParameter="mov1#opm1#icu1#oln9#par127" target="mov1#opm1#cru3.ent2#att8"/>
+        <LinkParameter id="mov1#opm1#inn1#kln4#par164" name="ramOID_PASSING_RAM.oid(ModelToRAM)" sourceLinkParameter="mov1#opm1#icu1#oln9#par128" target="mov1#opm1#cru3.rel12#role24.ent4#att10"/>
+        <LinkParameter id="mov1#opm1#inn1#kln4#par165" name="releaseDate_PASSING_release_date" sourceLinkParameter="mov1#opm1#icu1#oln9#par129" target="mov1#opm1#cru3.ent2#att9"/>
+        <LinkParameter id="mov1#opm1#inn1#kln4#par166" name="romOID_PASSING_ROM.oid(ModelToROM)" sourceLinkParameter="mov1#opm1#icu1#oln9#par130" target="mov1#opm1#cru3.rel11#role22.ent5#att14"/>
+        <LinkParameter id="mov1#opm1#inn1#kln4#par167" name="screenResOID_PASSING_Screen.oid(ModelToScreen)" sourceLinkParameter="mov1#opm1#icu1#oln9#par131" target="mov1#opm1#cru3.rel8#role16.ent7#att42"/>
+        <LinkParameter id="mov1#opm1#inn1#kln4#par168" name="secondaryCamera_PASSING_secondary_camera" sourceLinkParameter="mov1#opm1#icu1#oln9#par133" target="mov1#opm1#cru3.ent2#att21"/>
+        <LinkParameter id="mov1#opm1#inn1#kln4#par169" name="sim_PASSING_sim" sourceLinkParameter="mov1#opm1#icu1#oln9#par134" target="mov1#opm1#cru3.ent2#att18"/>
+        <LinkParameter id="mov1#opm1#inn1#kln4#par170" name="weight_PASSING_weight" sourceLinkParameter="mov1#opm1#icu1#oln9#par135" target="mov1#opm1#cru3.ent2#att17"/>
+      </KOLink>
+    </IsNotNullUnit>
+    <CreateUnit gr:x="460" gr:y="230" id="mov1#opm1#cru3" name="Add phone" entity="ent2">
+      <OKLink id="mov1#opm1#cru3#oln5" name="OKFlow5" to="mov1#opm1#okcu1" automaticCoupling="true"/>
+    </CreateUnit>
+    <ModifyUnit gr:x="450" gr:y="125" id="mov1#opm1#mfu2" name="Update phone" entity="ent2">
+      <Selector id="mov1#opm1#mfu2#su5" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm1#mfu2#su5#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm1#mfu2#oln4" name="OKFlow4" to="mov1#opm1#okcu1" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit gr:x="635" gr:y="190" id="mov1#opm1#okcu1" name="OK Port1"/>
+  </OperationUnits>
+</OperationModule>

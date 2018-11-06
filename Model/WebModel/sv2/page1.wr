@@ -1,27 +1,7 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="25" gr:y="155" id="sv2#page1" name="Phones" landmark="true">
   <ContentUnits>
-    <EntryUnit gr:x="140" gr:y="120" id="sv2#page1#enu1" name="Add a new phone" entity="ent2" linkOrder="sv2#page1#enu1#ln1" fieldOrder="sv2#page1#enu1#sfld2 sv2#page1#enu1#fld1 sv2#page1#enu1#fld7 sv2#page1#enu1#fld8 sv2#page1#enu1#fld16 sv2#page1#enu1#sfld5 sv2#page1#enu1#sfld6 sv2#page1#enu1#sfld8 sv2#page1#enu1#sfld3 sv2#page1#enu1#fld9 sv2#page1#enu1#sfld4 sv2#page1#enu1#fld11 sv2#page1#enu1#fld12 sv2#page1#enu1#fld13 sv2#page1#enu1#fld14 sv2#page1#enu1#fld15 sv2#page1#enu1#sfld7">
+    <EntryUnit gr:x="140" gr:y="120" id="sv2#page1#enu1" name="Phone details" entity="ent2" fieldOrder="sv2#page1#enu1#sfld2 sv2#page1#enu1#fld1 sv2#page1#enu1#fld7 sv2#page1#enu1#fld8 sv2#page1#enu1#fld16 sv2#page1#enu1#sfld5 sv2#page1#enu1#sfld6 sv2#page1#enu1#sfld8 sv2#page1#enu1#sfld3 sv2#page1#enu1#fld9 sv2#page1#enu1#sfld4 sv2#page1#enu1#fld11 sv2#page1#enu1#fld12 sv2#page1#enu1#fld13 sv2#page1#enu1#fld14 sv2#page1#enu1#fld15 sv2#page1#enu1#sfld7 sv2#page1#enu1#fld10" linkOrder="sv2#page1#enu1#ln15">
       <Field id="sv2#page1#enu1#fld1" name="Model name" type="string" modifiable="true" attribute="ent2#att7"/>
-      <Link id="sv2#page1#enu1#ln1" name="Add phone" to="sv2#cru1" type="normal" validate="true">
-        <LinkParameter id="sv2#page1#enu1#ln1#par38" name="Battery_battery" source="sv2#page1#enu1#fld13" target="sv2#cru1.ent2#att24"/>
-        <LinkParameter id="sv2#page1#enu1#ln1#par39" name="Memory card_cardSlot" source="sv2#page1#enu1#fld15" target="sv2#cru1.ent2#att47"/>
-        <LinkParameter id="sv2#page1#enu1#ln1#par40" name="Color_Color.oid(ModelToColor)" source="sv2#page1#enu1#sfld7" target="sv2#cru1.rel2#role3.ent3#att26"/>
-        <LinkParameter id="sv2#page1#enu1#ln1#par41" name="CPU_CPU" source="sv2#page1#enu1#fld16" target="sv2#cru1.ent2#att4"/>
-        <LinkParameter id="sv2#page1#enu1#ln1#par42" name="Main Camera_main_camera" source="sv2#page1#enu1#fld11" target="sv2#cru1.ent2#att20"/>
-        <LinkParameter id="sv2#page1#enu1#ln1#par43" name="Maker_Maker.oid(ModelToMaker)" source="sv2#page1#enu1#sfld2" target="sv2#cru1.rel1#role2.ent1#att1"/>
-        <LinkParameter id="sv2#page1#enu1#ln1#par44" name="Model Object_Model Object" source="entityBean" target="sv2#cru1.entityBeans"/>
-        <LinkParameter id="sv2#page1#enu1#ln1#par45" name="Model name_name" source="sv2#page1#enu1#fld1" target="sv2#cru1.ent2#att7"/>
-        <LinkParameter id="sv2#page1#enu1#ln1#par46" name="Key [oid]_oid" source="key.ent2#att6" target="sv2#cru1.ent2#att6"/>
-        <LinkParameter id="sv2#page1#enu1#ln1#par47" name="Operating System_OS.oid(ModelToOS)" source="sv2#page1#enu1#sfld4" target="sv2#cru1.rel6#role11.ent6#att16"/>
-        <LinkParameter id="sv2#page1#enu1#ln1#par48" name="Price_price" source="sv2#page1#enu1#fld8" target="sv2#cru1.ent2#att8"/>
-        <LinkParameter id="sv2#page1#enu1#ln1#par49" name="RAM_RAM.oid(ModelToRAM)" source="sv2#page1#enu1#sfld5" target="sv2#cru1.rel4#role7.ent4#att10"/>
-        <LinkParameter id="sv2#page1#enu1#ln1#par50" name="Release date_release_date" source="sv2#page1#enu1#fld7" target="sv2#cru1.ent2#att9"/>
-        <LinkParameter id="sv2#page1#enu1#ln1#par51" name="ROM_ROM.oid(ModelToROM)" source="sv2#page1#enu1#sfld6" target="sv2#cru1.rel5#role10.ent5#att14"/>
-        <LinkParameter id="sv2#page1#enu1#ln1#par52" name="Screen_Screen.oid(ModelToScreen)" source="sv2#page1#enu1#sfld3" target="sv2#cru1.rel3#role6.ent7#att42"/>
-        <LinkParameter id="sv2#page1#enu1#ln1#par53" name="Secondary Camera_secondary_camera" source="sv2#page1#enu1#fld12" target="sv2#cru1.ent2#att21"/>
-        <LinkParameter id="sv2#page1#enu1#ln1#par54" name="SIM Card slots_sim" source="sv2#page1#enu1#fld14" target="sv2#cru1.ent2#att18"/>
-        <LinkParameter id="sv2#page1#enu1#ln1#par55" name="Weight_weight" source="sv2#page1#enu1#fld9" target="sv2#cru1.ent2#att17"/>
-      </Link>
       <Field id="sv2#page1#enu1#fld7" type="string" modifiable="true" attribute="ent2#att9" name="Release date"/>
       <Field id="sv2#page1#enu1#fld8" name="Price" type="string" modifiable="true" attribute="ent2#att8"/>
       <Field id="sv2#page1#enu1#fld9" name="Weight" type="string" modifiable="true" attribute="ent2#att17"/>
@@ -38,13 +18,48 @@
       <SelectionField id="sv2#page1#enu1#sfld6" name="ROM" type="integer" attribute="ent2#att6"/>
       <SelectionField id="sv2#page1#enu1#sfld7" name="Color" type="integer" attribute="ent2#att6"/>
       <SelectionField id="sv2#page1#enu1#sfld8" name="Screen size" type="string"/>
+      <Link id="sv2#page1#enu1#ln15" name="OK" to="sv2#miu1" type="normal" validate="true">
+        <LinkParameter id="sv2#page1#enu1#ln15#par38" name="Battery_battery" source="sv2#page1#enu1#fld13" target="sv2#miu1.mov1#opm1#icu1#icp10"/>
+        <LinkParameter id="sv2#page1#enu1#ln15#par39" name="SIM Card slots_cardSlot" source="sv2#page1#enu1#fld14" target="sv2#miu1.mov1#opm1#icu1#icp12"/>
+        <LinkParameter id="sv2#page1#enu1#ln15#par40" name="Color_colorOID" source="sv2#page1#enu1#sfld7" target="sv2#miu1.mov1#opm1#icu1#icp16"/>
+        <LinkParameter id="sv2#page1#enu1#ln15#par41" name="CPU_CPU" source="sv2#page1#enu1#fld16" target="sv2#miu1.mov1#opm1#icu1#icp13"/>
+        <LinkParameter id="sv2#page1#enu1#ln15#par42" name="Key [oid]_ID" source="key.ent2#att6" target="sv2#miu1.mov1#opm1#icu1#icp3"/>
+        <LinkParameter id="sv2#page1#enu1#ln15#par43" name="Main Camera_mainCamera" source="sv2#page1#enu1#fld11" target="sv2#miu1.mov1#opm1#icu1#icp8"/>
+        <LinkParameter id="sv2#page1#enu1#ln15#par44" name="Maker_maker" source="sv2#page1#enu1#sfld2" target="sv2#miu1.mov1#opm1#icu1#icp1"/>
+        <LinkParameter id="sv2#page1#enu1#ln15#par45" name="Model name_modelName" source="sv2#page1#enu1#fld1" target="sv2#miu1.mov1#opm1#icu1#icp2"/>
+        <LinkParameter id="sv2#page1#enu1#ln15#par46" name="Operating System_osOID" source="sv2#page1#enu1#sfld4" target="sv2#miu1.mov1#opm1#icu1#icp19"/>
+        <LinkParameter id="sv2#page1#enu1#ln15#par47" name="Price_price" source="sv2#page1#enu1#fld8" target="sv2#miu1.mov1#opm1#icu1#icp4"/>
+        <LinkParameter id="sv2#page1#enu1#ln15#par48" name="RAM_ramOID" source="sv2#page1#enu1#sfld5" target="sv2#miu1.mov1#opm1#icu1#icp15"/>
+        <LinkParameter id="sv2#page1#enu1#ln15#par49" name="Release date_releaseDate" source="sv2#page1#enu1#fld7" target="sv2#miu1.mov1#opm1#icu1#icp5"/>
+        <LinkParameter id="sv2#page1#enu1#ln15#par50" name="ROM_romOID" source="sv2#page1#enu1#sfld6" target="sv2#miu1.mov1#opm1#icu1#icp14"/>
+        <LinkParameter id="sv2#page1#enu1#ln15#par51" name="Screen resolution_screenOID" source="sv2#page1#enu1#sfld3" target="sv2#miu1.mov1#opm1#icu1#icp18"/>
+        <LinkParameter id="sv2#page1#enu1#ln15#par52" name="Screen size_screenSizeOID" source="sv2#page1#enu1#sfld8" target="sv2#miu1.mov1#opm1#icu1#icp20"/>
+        <LinkParameter id="sv2#page1#enu1#ln15#par53" name="Secondary Camera_secondaryCamera" source="sv2#page1#enu1#fld12" target="sv2#miu1.mov1#opm1#icu1#icp9"/>
+        <LinkParameter id="sv2#page1#enu1#ln15#par54" name="SIM Card slots_sim" source="sv2#page1#enu1#fld14" target="sv2#miu1.mov1#opm1#icu1#icp7"/>
+        <LinkParameter id="sv2#page1#enu1#ln15#par55" name="Weight_weight" source="sv2#page1#enu1#fld9" target="sv2#miu1.mov1#opm1#icu1#icp6"/>
+        <LinkParameter id="sv2#page1#enu1#ln15#par60" name="Image URL_imgURL" source="sv2#page1#enu1#fld10" target="sv2#miu1.mov1#opm1#icu1#icp11"/>
+      </Link>
+      <Field id="sv2#page1#enu1#fld10" name="Image URL" type="string" modifiable="true" attribute="ent2#att28"/>
     </EntryUnit>
-    <PowerIndexUnit gr:x="30" gr:y="0" id="sv2#page1#pwu1" name="All phones" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att6 ent2#att7" linkOrder="sv2#page1#pwu1#ln12 sv2#page1#pwu1#ln11">
+    <PowerIndexUnit gr:x="30" gr:y="0" id="sv2#page1#pwu1" name="All phones" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att6 rel7#role14.ent1#att2 ent2#att7 ent2#att9" linkOrder="sv2#page1#pwu1#ln12 sv2#page1#pwu1#ln11">
       <Link id="sv2#page1#pwu1#ln11" name="Delete" to="sv2#dlu1" type="normal" validate="true">
         <LinkParameter id="sv2#page1#pwu1#ln11#par58" name="oid_KeyCondition2 [oid]" source="data[].ent2#att6" target="sv2#dlu1#su2#kcond2.ent2#att6"/>
         <LinkParameter id="sv2#page1#pwu1#ln11#par59" name="oid_PASSING" source="data[].ent2#att6" passing="true"/>
       </Link>
-      <Link id="sv2#page1#pwu1#ln12" name="Edit" to="sv2#page1#enu1" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#page1#pwu1#ln12" name="Edit" to="sv2#page1#enu1" type="normal" validate="true">
+        <LinkParameter id="sv2#page1#pwu1#ln12#par171" name="ModelToColor.oid_Color - Preselection" source="data[].rel13#role26_ent3#att26" target="sv2#page1#enu1#sfld7_presel"/>
+        <LinkParameter id="sv2#page1#pwu1#ln12#par172" name="oid_Key Condition [oid]" source="data[].ent2#att6" target="sv2#page1#enu1.ent2#att6"/>
+        <LinkParameter id="sv2#page1#pwu1#ln12#par173" name="ModelToMaker.oid_Maker - Preselection" source="data[].rel7#role14_ent1#att1" target="sv2#page1#enu1#sfld2_presel"/>
+        <LinkParameter id="sv2#page1#pwu1#ln12#par174" name="ModelToOS.oid_Operating System - Preselection" source="data[].rel9#role18_ent6#att16" target="sv2#page1#enu1#sfld4_presel"/>
+        <LinkParameter id="sv2#page1#pwu1#ln12#par175" name="ModelToRAM.oid_RAM - Preselection" source="data[].rel12#role24_ent4#att10" target="sv2#page1#enu1#sfld5_presel"/>
+        <LinkParameter id="sv2#page1#pwu1#ln12#par176" name="ModelToROM.oid_ROM - Preselection" source="data[].rel11#role22_ent5#att14" target="sv2#page1#enu1#sfld6_presel"/>
+        <LinkParameter id="sv2#page1#pwu1#ln12#par177" name="ModelToScreen.oid_Screen resolution - Preselection" source="data[].rel8#role16_ent7#att42" target="sv2#page1#enu1#sfld3_presel"/>
+        <LinkParameter id="sv2#page1#pwu1#ln12#par178" name="ModelToScreen.oid_Screen size - Preselection" source="data[].rel8#role16_ent7#att42" target="sv2#page1#enu1#sfld8_presel"/>
+      </Link>
+      <SortAttribute attribute="rel7#role14.ent1#att2" order="ascending"/>
+      <SortAttribute attribute="ent2#att6" order="ascending"/>
+      <SortAttribute attribute="ent2#att7" order="ascending"/>
+      <SortAttribute attribute="ent2#att9" order="ascending"/>
     </PowerIndexUnit>
     <SelectorUnit gr:x="0" gr:y="120" id="sv2#page1#seu2" name="Maker" entity="ent1">
       <Link id="sv2#page1#seu2#ln2" name="Flow2" to="sv2#page1#enu1" type="transport" validate="true">
@@ -102,9 +117,15 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#page1#pwu1">
           <layout:Attribute attribute="ent2#att6"/>
+          <layout:Attribute attribute="rel7#role14.ent1#att2"/>
           <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att9"/>
           <layout:Link link="sv2#page1#pwu1#ln12"/>
           <layout:Link link="sv2#page1#pwu1#ln11"/>
+          <layout:Link link="sv2#page1#pwu1rel7#role14$ent1#att2"/>
+          <layout:Link link="sv2#page1#pwu1ent2#att6"/>
+          <layout:Link link="sv2#page1#pwu1ent2#att7"/>
+          <layout:Link link="sv2#page1#pwu1ent2#att9"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -122,7 +143,7 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#page1#enu1">
-          <layout:Link link="sv2#page1#enu1#ln1"/>
+          <layout:Link link="sv2#page1#enu1#ln15"/>
           <layout:Field field="sv2#page1#enu1#sfld2"/>
           <layout:Field field="sv2#page1#enu1#fld1"/>
           <layout:Field field="sv2#page1#enu1#fld7"/>
@@ -140,6 +161,7 @@
           <layout:Field field="sv2#page1#enu1#fld14"/>
           <layout:Field field="sv2#page1#enu1#fld15"/>
           <layout:Field field="sv2#page1#enu1#sfld7"/>
+          <layout:Field field="sv2#page1#enu1#fld10"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
