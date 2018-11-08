@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="Admin" protected="true" homePage="sv2#page7" landmarks="sv2#page11 sv2#page1 sv2#page10 sv2#lou1" secure="false" layout:style="AdminLTE">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="Admin" protected="true" homePage="sv2#page7" landmarks="sv2#page11 sv2#page1 sv2#page10 sv2#lou1 sv2#page12" secure="false" layout:style="AdminLTE">
   <OperationUnits>
     <LogoutUnit gr:x="225" gr:y="25" id="sv2#lou1" name="Logout" siteView="sv1" landmark="true"/>
     <DeleteUnit gr:x="405" gr:y="190" id="sv2#dlu1" name="Delete phone" entity="ent2" linkOrder="sv2#dlu1#ln18">
@@ -41,6 +41,20 @@
       <Link id="sv2#miu3#ln24" name="Flow24" to="sv2#page11#mssu6" type="transport" validate="true" gr:bendpoints="-1,-190,249,25">
         <LinkParameter id="sv2#miu3#ln24#par183" name="KO Port3.Error_Shown Messages" source="mov1#opm3#kocu3#ocp6" target="sv2#page11#mssu6.shownMessages"/>
         <LinkParameter id="sv2#miu3#ln24#par184" name="OK Port3.Result_Shown Messages" source="mov1#opm3#okcu3#ocp5" target="sv2#page11#mssu6.shownMessages"/>
+      </Link>
+    </ModuleInstanceUnit>
+    <DeleteUnit gr:x="745" gr:y="770" id="sv2#dlu4" name="Delete screen" entity="ent7" linkOrder="sv2#dlu4#ln30">
+      <Selector id="sv2#dlu4#su8" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#dlu4#su8#kcond8" name="KeyCondition8" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#dlu4#ln30" name="Flow30" to="sv2#page12#mssu7" type="transport" validate="true">
+        <LinkParameter id="sv2#dlu4#ln30#par202" name="The selected screen has been deleted!_Shown Messages" sourceValue="Screen successfully deleted!" target="sv2#page12#mssu7.shownMessages"/>
+      </Link>
+    </DeleteUnit>
+    <ModuleInstanceUnit gr:x="745" gr:y="915" id="sv2#miu4" action="true" moduleId="mov1#opm4" linkOrder="sv2#miu4#ln31">
+      <Link id="sv2#miu4#ln31" name="Flow31" to="sv2#page12#mssu7" type="transport" validate="true" gr:bendpoints="1,-240,276,0">
+        <LinkParameter id="sv2#miu4#ln31#par219" name="KO Port4.Error_Shown Messages" source="mov1#opm4#kocu4#ocp8" target="sv2#page12#mssu7.shownMessages"/>
+        <LinkParameter id="sv2#miu4#ln31#par220" name="OK Port4.Result_Shown Messages" source="mov1#opm4#okcu4#ocp7" target="sv2#page12#mssu7.shownMessages"/>
       </Link>
     </ModuleInstanceUnit>
   </OperationUnits>

@@ -1,0 +1,51 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="50" gr:y="210" id="mov1#opm4" name="Add or Modify screen">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm4#icu4" gr:x="30" gr:y="120">
+      <OKLink id="mov1#opm4#icu4#oln13" name="OKFlow13" to="mov1#opm4#inn4">
+        <LinkParameter id="mov1#opm4#icu4#oln13#par203" name="Screen ID_Input" source="mov1#opm4#icu4#icp30" target="mov1#opm4#inn4.isnotnull"/>
+        <LinkParameter id="mov1#opm4#icu4#oln13#par204" name="Resolution_PASSING" source="mov1#opm4#icu4#icp31" passing="true"/>
+        <LinkParameter id="mov1#opm4#icu4#oln13#par205" name="Screen ID_PASSING" source="mov1#opm4#icu4#icp30" passing="true"/>
+        <LinkParameter id="mov1#opm4#icu4#oln13#par206" name="Size_PASSING" source="mov1#opm4#icu4#icp32" passing="true"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp32" name="Size"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp31" name="Resolution"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp30" name="Screen ID"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="670" gr:y="75" id="mov1#opm4#okcu4" name="OK Port4">
+      <OutputCollectorParameter id="mov1#opm4#okcu4#ocp7" name="Result"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="670" gr:y="205" id="mov1#opm4#kocu4" name="KO Port4">
+      <OutputCollectorParameter id="mov1#opm4#kocu4#ocp8" name="Error"/>
+    </KOCollectorUnit>
+    <IsNotNullUnit gr:x="305" gr:y="150" id="mov1#opm4#inn4" name="Is Not Null4">
+      <OKLink id="mov1#opm4#inn4#oln14" name="OKFlow14" to="mov1#opm4#mfu4">
+        <LinkParameter id="mov1#opm4#inn4#oln14#par207" name="Screen ID_PASSING_KeyCondition9 [oid]" sourceLinkParameter="mov1#opm4#icu4#oln13#par205" target="mov1#opm4#mfu4#su9#kcond9.ent7#att42"/>
+        <LinkParameter id="mov1#opm4#inn4#oln14#par208" name="Resolution_PASSING_resolution" sourceLinkParameter="mov1#opm4#icu4#oln13#par204" target="mov1#opm4#mfu4.ent7#att43"/>
+        <LinkParameter id="mov1#opm4#inn4#oln14#par209" name="Size_PASSING_size" sourceLinkParameter="mov1#opm4#icu4#oln13#par206" target="mov1#opm4#mfu4.ent7#att23"/>
+      </OKLink>
+      <KOLink id="mov1#opm4#inn4#kln10" name="KOFlow10" to="mov1#opm4#cru5">
+        <LinkParameter id="mov1#opm4#inn4#kln10#par210" name="Resolution_PASSING_resolution" sourceLinkParameter="mov1#opm4#icu4#oln13#par204" target="mov1#opm4#cru5.ent7#att43"/>
+        <LinkParameter id="mov1#opm4#inn4#kln10#par211" name="Size_PASSING_size" sourceLinkParameter="mov1#opm4#icu4#oln13#par206" target="mov1#opm4#cru5.ent7#att23"/>
+      </KOLink>
+    </IsNotNullUnit>
+    <CreateUnit gr:x="465" gr:y="205" id="mov1#opm4#cru5" name="Create screen" entity="ent7">
+      <KOLink id="mov1#opm4#cru5#kln11" name="KOFlow11" to="mov1#opm4#kocu4">
+        <LinkParameter id="mov1#opm4#cru5#kln11#par215" name="Error while creating a new screen!_Error" sourceValue="Error while creating a new screen!" target="mov1#opm4#kocu4#ocp8"/>
+      </KOLink>
+      <OKLink id="mov1#opm4#cru5#oln15" name="OKFlow15" to="mov1#opm4#okcu4">
+        <LinkParameter id="mov1#opm4#cru5#oln15#par213" name="The screen has been successfully created!_Result" sourceValue="The screen has been successfully created!" target="mov1#opm4#okcu4#ocp7"/>
+      </OKLink>
+    </CreateUnit>
+    <ModifyUnit gr:x="465" gr:y="70" id="mov1#opm4#mfu4" name="Update screen" entity="ent7">
+      <Selector id="mov1#opm4#mfu4#su9" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm4#mfu4#su9#kcond9" name="KeyCondition9" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="mov1#opm4#mfu4#kln12" name="KOFlow12" to="mov1#opm4#kocu4">
+        <LinkParameter id="mov1#opm4#mfu4#kln12#par214" name="Error while modifying the screen!_Error" sourceValue="Error while modifying the screen!" target="mov1#opm4#kocu4#ocp8"/>
+      </KOLink>
+      <OKLink id="mov1#opm4#mfu4#oln16" name="OKFlow16" to="mov1#opm4#okcu4">
+        <LinkParameter id="mov1#opm4#mfu4#oln16#par212" name="The screen has been successfully edited!_Result" sourceValue="The screen has been successfully modified!" target="mov1#opm4#okcu4#ocp7"/>
+      </OKLink>
+    </ModifyUnit>
+  </OperationUnits>
+</OperationModule>
