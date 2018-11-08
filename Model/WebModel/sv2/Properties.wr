@@ -1,16 +1,16 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="Admin" protected="true" homePage="sv2#page7" landmarks="sv2#page1 sv2#page10 sv2#lou1" secure="false" layout:style="AdminLTE">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="Admin" protected="true" homePage="sv2#page7" landmarks="sv2#page11 sv2#page1 sv2#page10 sv2#lou1" secure="false" layout:style="AdminLTE">
   <OperationUnits>
     <LogoutUnit gr:x="225" gr:y="25" id="sv2#lou1" name="Logout" siteView="sv1" landmark="true"/>
     <DeleteUnit gr:x="405" gr:y="190" id="sv2#dlu1" name="Delete phone" entity="ent2" linkOrder="sv2#dlu1#ln18">
       <Selector id="sv2#dlu1#su2" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#dlu1#su2#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
-      <Link id="sv2#dlu1#ln18" name="Flow18" to="sv2#page1#mssu5" type="transport" validate="true" gr:bendpoints="-85,-134,280,-134">
+      <Link id="sv2#dlu1#ln18" name="Flow18" to="sv2#page1#mssu5" type="transport" validate="true" gr:bendpoints="1,-108,367,-108;-95,-108,270,-108">
         <LinkParameter id="sv2#dlu1#ln18#par87" name="Model successfully deleted!_Shown Messages" sourceValue="Model successfully deleted!" target="sv2#page1#mssu5.shownMessages"/>
       </Link>
     </DeleteUnit>
     <ModuleInstanceUnit gr:x="405" gr:y="315" id="sv2#miu1" action="true" moduleId="mov1#opm1" linkOrder="sv2#miu1#ln19">
-      <Link id="sv2#miu1#ln19" name="Flow19" to="sv2#page1#mssu5" type="transport" validate="true" gr:bendpoints="-193,-27,242,88">
+      <Link id="sv2#miu1#ln19" name="Flow19" to="sv2#page1#mssu5" type="transport" validate="true" gr:bendpoints="0,-253,435,-138;-169,-253,266,-138">
         <LinkParameter id="sv2#miu1#ln19#par92" name="OK Port1.Result_Shown Messages" source="mov1#opm1#okcu1#ocp3" target="sv2#page1#mssu5.shownMessages"/>
         <LinkParameter id="sv2#miu1#ln19#par93" name="KO Port2.Error_Shown Messages" source="mov1#opm1#kocu2#ocp4" target="sv2#page1#mssu5.shownMessages"/>
       </Link>
@@ -21,7 +21,7 @@
         <LinkParameter id="sv2#miu2#ln16#par85" name="OK Port2.Result_Shown Messages" source="mov1#opm2#okcu2#ocp1" target="sv2#page10#mssu4.shownMessages"/>
       </Link>
     </ModuleInstanceUnit>
-    <DeleteUnit gr:x="900" gr:y="270" id="sv2#dlu2" name="Delete2" entity="ent1" linkOrder="sv2#dlu2#ln17">
+    <DeleteUnit gr:x="900" gr:y="270" id="sv2#dlu2" name="Delete maker" entity="ent1">
       <Selector id="sv2#dlu2#su4" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#dlu2#su4#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
@@ -29,5 +29,19 @@
         <LinkParameter id="sv2#dlu2#ln17#par86" name="Maker successfully deleted!_Shown Messages" sourceValue="Maker successfully deleted!" target="sv2#page10#mssu4.shownMessages"/>
       </Link>
     </DeleteUnit>
+    <DeleteUnit gr:x="240" gr:y="755" id="sv2#dlu3" name="Delete user" entity="User">
+      <Selector id="sv2#dlu3#su6" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#dlu3#su6#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#dlu3#ln22" name="Flow22" to="sv2#page11#mssu6" type="transport" validate="true">
+        <LinkParameter id="sv2#dlu3#ln22#par100" name="The user has been successfully deleted!_Shown Messages" sourceValue="The user has been successfully deleted!" target="sv2#page11#mssu6.shownMessages"/>
+      </Link>
+    </DeleteUnit>
+    <ModuleInstanceUnit gr:x="235" gr:y="890" id="sv2#miu3" action="true" name="Add of Modify user" moduleId="mov1#opm3" linkOrder="sv2#miu3#ln24">
+      <Link id="sv2#miu3#ln24" name="Flow24" to="sv2#page11#mssu6" type="transport" validate="true" gr:bendpoints="-1,-190,249,25">
+        <LinkParameter id="sv2#miu3#ln24#par183" name="KO Port3.Error_Shown Messages" source="mov1#opm3#kocu3#ocp6" target="sv2#page11#mssu6.shownMessages"/>
+        <LinkParameter id="sv2#miu3#ln24#par184" name="OK Port3.Result_Shown Messages" source="mov1#opm3#okcu3#ocp5" target="sv2#page11#mssu6.shownMessages"/>
+      </Link>
+    </ModuleInstanceUnit>
   </OperationUnits>
 </SiteView>
