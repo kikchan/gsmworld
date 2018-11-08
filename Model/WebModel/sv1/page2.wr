@@ -1,7 +1,7 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="25" gr:y="25" id="sv1#page2" name="Welcome" landmark="true">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page2#mssu1" name="Welcome to GSM World">
-      <Message xml:space="preserve">Welcome to GSM World. A world-leading smartphone website for everything thats related to mobile phones.</Message>
+      <Message xml:space="preserve">Welcome to GSM World. A world-leading smartphone website for everything thats related to mobile phones .</Message>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
