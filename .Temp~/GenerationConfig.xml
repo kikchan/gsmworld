@@ -6,14 +6,14 @@
     <Property name="applicationServer">Tomcat</Property>
     <Property name="cloudDeploy">false</Property>
     <Property name="commonsLibDir">/mnt/16E65C5AE65C3C65/Programs/Linux/Developing tools/WebRatio/WebRatio/plugins/com.webratio.commons.libs_7.2.17.201809120825/lib</Property>
-    <Property name="dbConfigPath">/tmp/WRDBConfig839759966783777539.xml</Property>
+    <Property name="dbConfigPath">/tmp/WRDBConfig7316436544547967191.xml</Property>
     <Property name="defaultEncoding"></Property>
     <Property name="deployCorePluginDir">/mnt/16E65C5AE65C3C65/Programs/Linux/Developing tools/WebRatio/WebRatio/configuration/org.eclipse.osgi/bundles/49/1/.cp</Property>
     <Property name="derbySystemHome">/home/petrolhead/workspace/.metadata/.plugins/com.webratio.commons.db/derby</Property>
     <Property name="enterpriseProjectDir"></Property>
-    <Property name="eventSocketPort">42921</Property>
+    <Property name="eventSocketPort">44463</Property>
     <Property name="excludedProjects" type="list"></Property>
-    <Property name="generationTime">201811082039</Property>
+    <Property name="generationTime">201811082119</Property>
     <Property name="helpersPluginDir">/mnt/16E65C5AE65C3C65/Programs/Linux/Developing tools/WebRatio/WebRatio/plugins/com.webratio.generator.helpers_7.2.17.201809120825</Property>
     <Property name="hostAlwaysAllowed">false</Property>
     <Property name="i18nBundleKeysFile" type="file"></Property>
@@ -25,7 +25,7 @@
     <Property name="phases">All</Property>
     <Property name="projectDir">/home/petrolhead/workspace/gsmworld</Property>
     <Property name="projectName">gsmworld</Property>
-    <Property name="projectPath">/tmp/Project7427075905828938708.wr</Property>
+    <Property name="projectPath">/tmp/Project1584389701505924345.wr</Property>
     <Property name="projectType">WEBPROJECT</Property>
     <Property name="rootModuleName"></Property>
     <Property name="uiPluginDir">/mnt/16E65C5AE65C3C65/Programs/Linux/Developing tools/WebRatio/WebRatio/plugins/com.webratio.ide.ui_7.2.17.201809120825</Property>
