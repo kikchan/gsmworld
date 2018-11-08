@@ -3,12 +3,100 @@
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv1#page2#mssu1" name="Welcome to GSM World">
       <Message xml:space="preserve">Welcome to GSM World. A world-leading smartphone website for everything thats related to mobile phones .</Message>
     </MultiMessageUnit>
+    <PowerIndexUnit gr:x="160" gr:y="10" id="sv1#page2#pwu9" name="Phone list" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att7 ent2#att8 ent2#att17 ent2#att4 ent2#att12" linkOrder="sv1#page2#pwu9#ln38 sv1#page2#pwu9#ln39">
+      <Link id="sv1#page2#pwu9#ln38" name="compare 1" to="sv1#page2#dau8" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#page2#pwu9#ln39" name="compare 2" to="sv1#page2#dau9" automaticCoupling="true" type="normal" validate="true"/>
+    </PowerIndexUnit>
+    <DataUnit gr:x="50" gr:y="150" id="sv1#page2#dau8" name="Phone 1" entity="ent2" displayAttributes="ent2#att7 ent2#att8 ent2#att17 ent2#att20 ent2#att24 ent2#att18 ent2#att4 ent2#att12">
+      <Selector id="sv1#page2#dau8#su15" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page2#dau8#su15#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <DataUnit gr:x="235" gr:y="155" id="sv1#page2#dau9" name="Phone 2" entity="ent2" displayAttributes="ent2#att7 ent2#att8 ent2#att17 ent2#att20 ent2#att24 ent2#att18 ent2#att4 ent2#att12">
+      <Selector id="sv1#page2#dau9#su16" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page2#dau9#su16#kcond15" name="KeyCondition15" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page2#mssu1"/>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page2#pwu9">
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att8"/>
+          <layout:Attribute attribute="ent2#att17"/>
+          <layout:Attribute attribute="ent2#att4"/>
+          <layout:Attribute attribute="ent2#att12"/>
+          <layout:Link link="sv1#page2#pwu9#ln38"/>
+          <layout:Link link="sv1#page2#pwu9#ln39"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv1#page2#dau8">
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att8"/>
+          <layout:Attribute attribute="ent2#att17"/>
+          <layout:Attribute attribute="ent2#att20"/>
+          <layout:Attribute attribute="ent2#att24"/>
+          <layout:Attribute attribute="ent2#att18"/>
+          <layout:Attribute attribute="ent2#att4"/>
+          <layout:Attribute attribute="ent2#att12"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv1#page2#dau9">
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att8"/>
+          <layout:Attribute attribute="ent2#att17"/>
+          <layout:Attribute attribute="ent2#att20"/>
+          <layout:Attribute attribute="ent2#att24"/>
+          <layout:Attribute attribute="ent2#att18"/>
+          <layout:Attribute attribute="ent2#att4"/>
+          <layout:Attribute attribute="ent2#att12"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
