@@ -1,0 +1,41 @@
+<MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="715" gr:y="10" id="sv1#mpage1" name="MasterPage 1">
+  <ContentUnits>
+    <GetUnit gr:x="0" gr:y="10" id="sv1#mpage1#gtu1" name="Get1" contextParameters="UserCtxParam">
+      <Link id="sv1#mpage1#gtu1#ln21" name="Flow21" to="sv1#mpage1#dau2" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+    <DataUnit gr:x="170" gr:y="0" id="sv1#mpage1#dau2" name="Details2" entity="User" displayAttributes="userName" linkOrder="sv1#mpage1#dau2#ln33">
+      <Selector id="sv1#mpage1#dau2#su10" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#mpage1#dau2#su10#kcond10" name="KeyCondition10" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#mpage1#dau2#ln33" name="Salir" to="sv1#lou3" type="normal" validate="true"/>
+    </DataUnit>
+  </ContentUnits>
+  <layout:CustomLocation name="User">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell layout:style="WebRatio">
+          <layout:Grid containerType="grid">
+            <layout:Row>
+              <layout:Cell colspan="8"/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell colspan="2">
+                <layout:Attribute unitId="sv1#mpage1#dau2" mode="value" attribute="userName" label="Usuario"/>
+              </layout:Cell>
+              <layout:Cell/>
+              <layout:Cell colspan="2">
+                <layout:Link unitId="sv1#mpage1#dau2" link="sv1#mpage1#dau2#ln33"/>
+              </layout:Cell>
+              <layout:Cell/>
+            </layout:Row>
+          </layout:Grid>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+</MasterPage>

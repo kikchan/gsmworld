@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="Admin" protected="true" homePage="sv2#page7" landmarks="sv2#page11 sv2#page1 sv2#page10 sv2#page12 sv2#lou1" secure="false" layout:style="AdminLTE">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="Admin" protected="true" homePage="sv2#page7" landmarks="sv2#page11 sv2#page1 sv2#page10 sv2#page12 sv2#lou1" secure="false" layout:style="WebRatio">
   <OperationUnits>
     <LogoutUnit gr:x="225" gr:y="25" id="sv2#lou1" name="Logout" siteView="sv1" landmark="true"/>
     <DeleteUnit gr:x="405" gr:y="190" id="sv2#dlu1" name="Delete phone" entity="ent2" linkOrder="sv2#dlu1#ln18">
@@ -57,5 +57,6 @@
         <LinkParameter id="sv2#miu4#ln31#par220" name="OK Port4.Result_Shown Messages" source="mov1#opm4#okcu4#ocp7" target="sv2#page12#mssu7.shownMessages"/>
       </Link>
     </ModuleInstanceUnit>
+    <LogoutUnit id="sv2#lou6" name="Logout3" gr:x="905" gr:y="30" siteView="sv1"/>
   </OperationUnits>
 </SiteView>

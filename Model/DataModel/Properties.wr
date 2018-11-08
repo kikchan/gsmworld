@@ -77,7 +77,7 @@
     <Attribute id="ent7#att43" name="resolution" type="string" db:column="resolution"/>
     <Attribute id="ent7#att23" name="size" type="string" db:column="size"/>
   </Entity>
-  <db:Database id="db1" name="Database" type="MySQL (InnoDB)" url="jdbc:mysql://192.168.1.10:3306/gsmworld" username="usuarioUA" password="dXN1YXJpb1VB" cryptedPassword="true">
+  <db:Database id="db1" name="Database" type="MySQL (InnoDB)" url="jdbc:mysql://149.71.238.44:3306/gsmworld" username="usuarioUA" password="dXN1YXJpb1VB" cryptedPassword="true">
     <Comment xml:space="preserve">jdbc:mysql://149.71.238.44:3306/gsmworld
 
 jdbc:mysql://192.168.1.10:3306/gsmworld</Comment>
