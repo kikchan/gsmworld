@@ -43,7 +43,7 @@
         <LinkParameter id="mov1#opm1#icu1#oln9#par135" name="weight_PASSING" source="mov1#opm1#icu1#icp6" passing="true"/>
       </OKLink>
     </InputCollectorUnit>
-    <IsNotNullUnit gr:x="300" gr:y="200" id="mov1#opm1#inn1" name="ID not null">
+    <IsNotNullUnit gr:x="325" gr:y="220" id="mov1#opm1#inn1" name="ID not null">
       <OKLink id="mov1#opm1#inn1#oln10" name="OKFlow10" to="mov1#opm1#mfu2">
         <LinkParameter id="mov1#opm1#inn1#oln10#par136" name="battery_PASSING_battery" sourceLinkParameter="mov1#opm1#icu1#oln9#par117" target="mov1#opm1#mfu2.ent2#att24"/>
         <LinkParameter id="mov1#opm1#inn1#oln10#par137" name="cardSlot_PASSING_cardSlot" sourceLinkParameter="mov1#opm1#icu1#oln9#par118" target="mov1#opm1#mfu2.ent2#att47"/>
@@ -84,15 +84,30 @@
         <LinkParameter id="mov1#opm1#inn1#kln4#par170" name="weight_PASSING_weight" sourceLinkParameter="mov1#opm1#icu1#oln9#par135" target="mov1#opm1#cru3.ent2#att17"/>
       </KOLink>
     </IsNotNullUnit>
-    <CreateUnit gr:x="460" gr:y="230" id="mov1#opm1#cru3" name="Add phone" entity="ent2">
-      <OKLink id="mov1#opm1#cru3#oln5" name="OKFlow5" to="mov1#opm1#okcu1" automaticCoupling="true"/>
+    <CreateUnit gr:x="495" gr:y="230" id="mov1#opm1#cru3" name="Add phone" entity="ent2">
+      <OKLink id="mov1#opm1#cru3#oln5" name="OKFlow5" to="mov1#opm1#okcu1">
+        <LinkParameter id="mov1#opm1#cru3#oln5#par89" name="The maker was added successfully!_Result" sourceValue="The maker was added successfully!" target="mov1#opm1#okcu1#ocp3"/>
+      </OKLink>
+      <KOLink id="mov1#opm1#cru3#kln6" name="KOFlow6" to="mov1#opm1#kocu2">
+        <LinkParameter id="mov1#opm1#cru3#kln6#par90" name="Error adding a new model!_Error" sourceValue="Error adding a new model!" target="mov1#opm1#kocu2#ocp4"/>
+      </KOLink>
     </CreateUnit>
-    <ModifyUnit gr:x="450" gr:y="125" id="mov1#opm1#mfu2" name="Update phone" entity="ent2">
+    <ModifyUnit gr:x="475" gr:y="125" id="mov1#opm1#mfu2" name="Update phone" entity="ent2">
       <Selector id="mov1#opm1#mfu2#su5" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov1#opm1#mfu2#su5#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="mov1#opm1#mfu2#oln4" name="OKFlow4" to="mov1#opm1#okcu1" automaticCoupling="true"/>
+      <OKLink id="mov1#opm1#mfu2#oln4" name="OKFlow4" to="mov1#opm1#okcu1">
+        <LinkParameter id="mov1#opm1#mfu2#oln4#par88" name="The maker was modified successfully!_Result" sourceValue="The maker was modified successfully!" target="mov1#opm1#okcu1#ocp3"/>
+      </OKLink>
+      <KOLink id="mov1#opm1#mfu2#kln5" name="KOFlow5" to="mov1#opm1#kocu2">
+        <LinkParameter id="mov1#opm1#mfu2#kln5#par91" name="Error updating a new maker!_Error" sourceValue="Error updating a new maker!" target="mov1#opm1#kocu2#ocp4"/>
+      </KOLink>
     </ModifyUnit>
-    <OKCollectorUnit gr:x="635" gr:y="190" id="mov1#opm1#okcu1" name="OK Port1"/>
+    <OKCollectorUnit gr:x="655" gr:y="130" id="mov1#opm1#okcu1" name="OK Port1">
+      <OutputCollectorParameter id="mov1#opm1#okcu1#ocp3" name="Result"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="655" gr:y="230" id="mov1#opm1#kocu2" name="KO Port2">
+      <OutputCollectorParameter id="mov1#opm1#kocu2#ocp4" name="Error"/>
+    </KOCollectorUnit>
   </OperationUnits>
 </OperationModule>

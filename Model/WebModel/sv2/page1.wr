@@ -41,7 +41,7 @@
       </Link>
       <Field id="sv2#page1#enu1#fld10" name="Image URL" type="string" modifiable="true" attribute="ent2#att28"/>
     </EntryUnit>
-    <PowerIndexUnit gr:x="30" gr:y="0" id="sv2#page1#pwu1" name="All phones" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att6 rel7#role14.ent1#att2 ent2#att7 ent2#att9" linkOrder="sv2#page1#pwu1#ln12 sv2#page1#pwu1#ln11">
+    <PowerIndexUnit gr:x="155" gr:y="0" id="sv2#page1#pwu1" name="All phones" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att6 rel7#role14.ent1#att2 ent2#att7 ent2#att9" linkOrder="sv2#page1#pwu1#ln12 sv2#page1#pwu1#ln11">
       <Link id="sv2#page1#pwu1#ln11" name="Delete" to="sv2#dlu1" type="normal" validate="true">
         <LinkParameter id="sv2#page1#pwu1#ln11#par58" name="oid_KeyCondition2 [oid]" source="data[].ent2#att6" target="sv2#dlu1#su2#kcond2.ent2#att6"/>
         <LinkParameter id="sv2#page1#pwu1#ln11#par59" name="oid_PASSING" source="data[].ent2#att6" passing="true"/>
@@ -111,10 +111,27 @@
         <LinkParameter id="sv2#page1#seu7#ln10#par37" name="name_PASSING" source="ent3#att27Array" passing="true"/>
       </Link>
     </SelectorUnit>
+    <MultiMessageUnit gr:x="15" gr:y="15" id="sv2#page1#mssu5" name="Message"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page1#mssu5"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="6">
         <layout:Unit unitId="sv2#page1#pwu1">
           <layout:Attribute attribute="ent2#att6"/>
           <layout:Attribute attribute="rel7#role14.ent1#att2"/>
@@ -133,15 +150,7 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="6">
         <layout:Unit unitId="sv2#page1#enu1">
           <layout:Link link="sv2#page1#enu1#ln15"/>
           <layout:Field field="sv2#page1#enu1#sfld2"/>
@@ -164,12 +173,6 @@
           <layout:Field field="sv2#page1#enu1#fld10"/>
         </layout:Unit>
       </layout:Cell>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

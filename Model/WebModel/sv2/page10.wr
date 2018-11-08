@@ -1,0 +1,111 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="670" gr:y="155" id="sv2#page10" name="Makers" landmark="true">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="15" gr:y="80" id="sv2#page10#pwu4" name="All makers" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att5 ent1#att29" linkOrder="sv2#page10#pwu4#ln1 sv2#page10#pwu4#ln14" blockFactor="10">
+      <Link id="sv2#page10#pwu4#ln1" name="Edit" to="sv2#page10#enu4" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#page10#pwu4#ln14" name="Delete" to="sv2#dlu2" type="normal" validate="true">
+        <LinkParameter id="sv2#page10#pwu4#ln14#par82" name="oid_KeyCondition4 [oid]" source="data[].ent1#att1" target="sv2#dlu2#su4#kcond4.ent1#att1"/>
+        <LinkParameter id="sv2#page10#pwu4#ln14#par83" name="oid_PASSING" source="data[].ent1#att1" passing="true"/>
+      </Link>
+      <SortAttribute attribute="ent1#att2" order="ascending"/>
+      <SortAttribute attribute="ent1#att3" order="ascending"/>
+    </PowerIndexUnit>
+    <EntryUnit gr:x="0" gr:y="210" id="sv2#page10#enu4" name="Maker details" entity="ent1" fieldOrder="sv2#page10#enu4#fld17 sv2#page10#enu4#fld19 sv2#page10#enu4#fld18 sv2#page10#enu4#fld20" linkOrder="sv2#page10#enu4#ln13">
+      <Field id="sv2#page10#enu4#fld17" name="Name" type="string" modifiable="true" attribute="ent1#att2"/>
+      <Field id="sv2#page10#enu4#fld18" name="Year of creation" type="string" modifiable="true" attribute="ent1#att5"/>
+      <Field id="sv2#page10#enu4#fld19" name="Origin" type="string" modifiable="true" attribute="ent1#att3"/>
+      <Field id="sv2#page10#enu4#fld20" name="Official website" type="string" modifiable="true" attribute="ent1#att29"/>
+      <Link id="sv2#page10#enu4#ln13" name="OK" to="sv2#miu2" type="normal" validate="true">
+        <LinkParameter id="sv2#page10#enu4#ln13#par77" name="Name_Make name" source="sv2#page10#enu4#fld17" target="sv2#miu2.mov1#opm2#icu2#icp17"/>
+        <LinkParameter id="sv2#page10#enu4#ln13#par78" name="Key [oid]_Maker ID" source="key.ent1#att1" target="sv2#miu2.mov1#opm2#icu2#icp24"/>
+        <LinkParameter id="sv2#page10#enu4#ln13#par79" name="Official website_Official website" source="sv2#page10#enu4#fld20" target="sv2#miu2.mov1#opm2#icu2#icp23"/>
+        <LinkParameter id="sv2#page10#enu4#ln13#par80" name="Origin_Origin" source="sv2#page10#enu4#fld19" target="sv2#miu2.mov1#opm2#icu2#icp21"/>
+        <LinkParameter id="sv2#page10#enu4#ln13#par81" name="Year of creation_Year created" source="sv2#page10#enu4#fld18" target="sv2#miu2.mov1#opm2#icu2#icp22"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit gr:x="15" gr:y="0" id="sv2#page10#mssu4" name="Message"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page10#mssu4"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv2#page10#pwu4">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att5"/>
+          <layout:Attribute attribute="ent1#att29"/>
+          <layout:Link link="sv2#page10#pwu4#ln1"/>
+          <layout:Link link="sv2#page10#pwu4#ln14"/>
+          <layout:Link link="sv2#page10#pwu4ent1#att2"/>
+          <layout:Link link="sv2#page10#pwu4ent1#att3"/>
+          <layout:Link link="sv2#page10#pwu4First"/>
+          <layout:Link link="sv2#page10#pwu4Previous"/>
+          <layout:Link link="sv2#page10#pwu4Block"/>
+          <layout:Link link="sv2#page10#pwu4Next"/>
+          <layout:Link link="sv2#page10#pwu4Last"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv2#page10#enu4">
+          <layout:Field field="sv2#page10#enu4#fld17"/>
+          <layout:Field field="sv2#page10#enu4#fld19"/>
+          <layout:Field field="sv2#page10#enu4#fld18"/>
+          <layout:Field field="sv2#page10#enu4#fld20"/>
+          <layout:Link link="sv2#page10#enu4#ln13"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

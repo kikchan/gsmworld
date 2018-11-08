@@ -1,0 +1,59 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="50" gr:y="100" id="mov1#opm2" name="Add of Modify maker">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm2#icu2" gr:x="5" gr:y="90">
+      <OKLink id="mov1#opm2#icu2#oln1" name="OKFlow1" to="mov1#opm2#inn2">
+        <LinkParameter id="mov1#opm2#icu2#oln1#par6" name="Maker ID_Input" source="mov1#opm2#icu2#icp24" target="mov1#opm2#inn2.isnotnull"/>
+        <LinkParameter id="mov1#opm2#icu2#oln1#par7" name="Make name_PASSING" source="mov1#opm2#icu2#icp17" passing="true"/>
+        <LinkParameter id="mov1#opm2#icu2#oln1#par8" name="Maker ID_PASSING" source="mov1#opm2#icu2#icp24" passing="true"/>
+        <LinkParameter id="mov1#opm2#icu2#oln1#par61" name="Official website_PASSING" source="mov1#opm2#icu2#icp23" passing="true"/>
+        <LinkParameter id="mov1#opm2#icu2#oln1#par62" name="Origin_PASSING" source="mov1#opm2#icu2#icp21" passing="true"/>
+        <LinkParameter id="mov1#opm2#icu2#oln1#par63" name="Year created_PASSING" source="mov1#opm2#icu2#icp22" passing="true"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm2#icu2#icp23" name="Official website"/>
+      <InputCollectorParameter id="mov1#opm2#icu2#icp22" name="Year created"/>
+      <InputCollectorParameter id="mov1#opm2#icu2#icp21" name="Origin"/>
+      <InputCollectorParameter id="mov1#opm2#icu2#icp17" name="Make name"/>
+      <InputCollectorParameter id="mov1#opm2#icu2#icp24" name="Maker ID"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="610" gr:y="70" id="mov1#opm2#okcu2" name="OK Port2">
+      <OutputCollectorParameter id="mov1#opm2#okcu2#ocp1" name="Result"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="610" gr:y="190" id="mov1#opm2#kocu1" name="KO Port1">
+      <OutputCollectorParameter id="mov1#opm2#kocu1#ocp2" name="Error"/>
+    </KOCollectorUnit>
+    <IsNotNullUnit gr:x="275" gr:y="135" id="mov1#opm2#inn2" name="Is Not Null2">
+      <OKLink id="mov1#opm2#inn2#oln2" name="OKFlow2" to="mov1#opm2#mfu1">
+        <LinkParameter id="mov1#opm2#inn2#oln2#par64" name="Year created_PASSING_Created" sourceLinkParameter="mov1#opm2#icu2#oln1#par63" target="mov1#opm2#mfu1.ent1#att5"/>
+        <LinkParameter id="mov1#opm2#inn2#oln2#par65" name="Maker ID_PASSING_KeyCondition3 [oid]" sourceLinkParameter="mov1#opm2#icu2#oln1#par8" target="mov1#opm2#mfu1#su3#kcond3.ent1#att1"/>
+        <LinkParameter id="mov1#opm2#inn2#oln2#par66" name="Make name_PASSING_Name" sourceLinkParameter="mov1#opm2#icu2#oln1#par7" target="mov1#opm2#mfu1.ent1#att2"/>
+        <LinkParameter id="mov1#opm2#inn2#oln2#par67" name="Origin_PASSING_Origin" sourceLinkParameter="mov1#opm2#icu2#oln1#par62" target="mov1#opm2#mfu1.ent1#att3"/>
+        <LinkParameter id="mov1#opm2#inn2#oln2#par68" name="Official website_PASSING_Website" sourceLinkParameter="mov1#opm2#icu2#oln1#par61" target="mov1#opm2#mfu1.ent1#att29"/>
+      </OKLink>
+      <KOLink id="mov1#opm2#inn2#kln1" name="KOFlow1" to="mov1#opm2#cru1">
+        <LinkParameter id="mov1#opm2#inn2#kln1#par69" name="Year created_PASSING_Created" sourceLinkParameter="mov1#opm2#icu2#oln1#par63" target="mov1#opm2#cru1.ent1#att5"/>
+        <LinkParameter id="mov1#opm2#inn2#kln1#par70" name="Make name_PASSING_Name" sourceLinkParameter="mov1#opm2#icu2#oln1#par7" target="mov1#opm2#cru1.ent1#att2"/>
+        <LinkParameter id="mov1#opm2#inn2#kln1#par71" name="Origin_PASSING_Origin" sourceLinkParameter="mov1#opm2#icu2#oln1#par62" target="mov1#opm2#cru1.ent1#att3"/>
+        <LinkParameter id="mov1#opm2#inn2#kln1#par72" name="Official website_PASSING_Website" sourceLinkParameter="mov1#opm2#icu2#oln1#par61" target="mov1#opm2#cru1.ent1#att29"/>
+      </KOLink>
+    </IsNotNullUnit>
+    <ModifyUnit gr:x="420" gr:y="65" id="mov1#opm2#mfu1" name="Update maker" entity="ent1">
+      <Selector id="mov1#opm2#mfu1#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm2#mfu1#su3#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="mov1#opm2#mfu1#kln3" name="KOFlow3" to="mov1#opm2#kocu1">
+        <LinkParameter id="mov1#opm2#mfu1#kln3#par75" name="Error updating the maker!_Error" sourceValue="Error updating the maker!" target="mov1#opm2#kocu1#ocp2"/>
+      </KOLink>
+      <OKLink id="mov1#opm2#mfu1#oln3" name="OKFlow3" to="mov1#opm2#okcu2">
+        <LinkParameter id="mov1#opm2#mfu1#oln3#par73" name="The maker was added successfully!_Result" sourceValue="The maker was modified successfully!" target="mov1#opm2#okcu2#ocp1"/>
+      </OKLink>
+    </ModifyUnit>
+    <CreateUnit gr:x="440" gr:y="190" id="mov1#opm2#cru1" name="Add maker" entity="ent1">
+      <KOLink id="mov1#opm2#cru1#kln2" name="KOFlow2" to="mov1#opm2#kocu1">
+        <LinkParameter id="mov1#opm2#cru1#kln2#par76" name="Error adding a new maker!_Error" sourceValue="Error adding a new maker!" target="mov1#opm2#kocu1#ocp2"/>
+      </KOLink>
+      <OKLink id="mov1#opm2#cru1#oln6" name="OKFlow6" to="mov1#opm2#okcu2">
+        <LinkParameter id="mov1#opm2#cru1#oln6#par74" name="The maker was added successfully!_Result" sourceValue="The maker was added successfully!" target="mov1#opm2#okcu2#ocp1"/>
+      </OKLink>
+    </CreateUnit>
+  </OperationUnits>
+</OperationModule>
