@@ -35,6 +35,12 @@
         <KeyCondition id="sv1#page2#dau8#su26#kcond17" name="KeyCondition17" predicate="in" implied="false"/>
       </Selector>
     </DataUnit>
+    <PowerIndexUnit id="sv1#page2#pwu17" name="Phone on sales" gr:x="300" gr:y="315" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att12 ent2#att7 ent2#att8 ent2#att17 ent2#att4" linkOrder="sv1#page2#pwu17#ln83">
+      <Selector id="sv1#page2#pwu17#su27" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#page2#pwu17#su27#acond5" name="onSales" predicate="gteq" booleanOperator="or" implied="true" attributes="rel1#role2.userOID" value="0"/>
+      </Selector>
+      <Link id="sv1#page2#pwu17#ln83" name="buy" to="sv1#page17" automaticCoupling="true" type="normal" validate="true"/>
+    </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -64,6 +70,29 @@
           <layout:Attribute attribute="ent2#att8"/>
           <layout:Attribute attribute="ent2#att17"/>
           <layout:Attribute attribute="ent2#att4"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page2#pwu17">
+          <layout:Attribute attribute="ent2#att12"/>
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att8"/>
+          <layout:Attribute attribute="ent2#att17"/>
+          <layout:Attribute attribute="ent2#att4"/>
+          <layout:Link link="sv1#page2#pwu17#ln83"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

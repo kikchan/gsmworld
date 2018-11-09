@@ -1,7 +1,7 @@
 <SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="Public" homePage="sv1#page2" landmarks="sv1#page2 sv1#page3 sv1#page6 sv1#page9" layout:style="WebRatio">
   <OperationUnits>
-    <LoginUnit gr:x="70" gr:y="545" id="sv1#lgu1" name="Login"/>
-    <CreateUnit gr:x="280" gr:y="545" id="sv1#cru2" name="Add User" entity="User"/>
+    <LoginUnit gr:x="865" gr:y="610" id="sv1#lgu1" name="Login"/>
+    <CreateUnit gr:x="1025" gr:y="575" id="sv1#cru2" name="Add User" entity="User"/>
     <LogoutUnit gr:x="1080" gr:y="45" id="sv1#lou3" name="Logout3" siteView="sv1"/>
   </OperationUnits>
 </SiteView>
