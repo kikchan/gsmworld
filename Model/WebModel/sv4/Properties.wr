@@ -2,13 +2,13 @@
   <OperationUnits>
     <LogoutUnit gr:x="690" gr:y="190" id="sv4#lou2" name="Logout" siteView="sv1" landmark="true"/>
     <LogoutUnit id="sv4#lou7" name="Logout3" gr:x="730" gr:y="55" siteView="sv1"/>
-    <ModuleInstanceUnit id="sv4#miu5" gr:x="430" gr:y="685" action="true" moduleId="mov1#opm1">
+    <ModuleInstanceUnit id="sv4#miu5" gr:x="655" gr:y="710" action="true" moduleId="mov1#opm1">
       <Link id="sv4#miu5#ln49" name="Flow19" to="sv4#page14#mssu8" type="transport" validate="true" gr:bendpoints="-29,-233,416,22;-249,-256,206,-111">
         <LinkParameter id="sv4#miu5#ln49#par265" name="OK Port1.Result_Shown Messages" source="mov1#opm1#okcu1#ocp3" target="sv4#page14#mssu8.shownMessages"/>
         <LinkParameter id="sv4#miu5#ln49#par266" name="KO Port2.Error_Shown Messages" source="mov1#opm1#kocu2#ocp4" target="sv4#page14#mssu8.shownMessages"/>
       </Link>
     </ModuleInstanceUnit>
-    <DeleteUnit id="sv4#dlu5" name="Delete phone" gr:x="435" gr:y="540" entity="ent2">
+    <DeleteUnit id="sv4#dlu5" name="Delete phone" gr:x="680" gr:y="550" entity="ent2">
       <Selector id="sv4#dlu5#su16" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#dlu5#su16#kcond15" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>

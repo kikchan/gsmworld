@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="10" gr:y="-15" id="sv4#page8" name="Welcome">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="35" gr:y="-15" id="sv4#page8" name="Welcome">
   <ContentUnits>
-    <PowerIndexUnit id="sv4#page8#pwu11" name="Mobile selling" gr:x="150" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att6 rel7#role14.ent1#att2 ent2#att7 ent2#att8">
+    <PowerIndexUnit id="sv4#page8#pwu11" name="Mobile selling" gr:x="125" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att6 rel7#role14.ent1#att2 ent2#att7 ent2#att9 ent2#att8" linkOrder="sv4#page8#pwu11#ln75">
       <SortAttribute attribute="rel7#role14.ent1#att2" order="ascending"/>
       <SortAttribute attribute="ent2#att6" order="ascending"/>
       <SortAttribute attribute="ent2#att7" order="ascending"/>
@@ -8,34 +8,75 @@
       <Selector id="sv4#page8#pwu11#su19" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv4#page8#pwu11#su19#rcond4" name="userPhones" predicate="in" implied="false" role="rel1#role1"/>
       </Selector>
+      <Link id="sv4#page8#pwu11#ln75" name="details" to="sv4#page8#dau7" automaticCoupling="true" type="normal" validate="true"/>
     </PowerIndexUnit>
-    <GetUnit id="sv4#page8#gtu8" name="Get3" gr:x="25" gr:y="15" contextParameters="UserCtxParam">
+    <GetUnit id="sv4#page8#gtu8" name="Get3" gr:x="0" gr:y="15" contextParameters="UserCtxParam">
       <Link id="sv4#page8#gtu8#ln61" name="Flow51" to="sv4#page8#pwu11" type="transport" automaticCoupling="true" validate="true"/>
-      <Link id="sv4#page8#gtu8#ln65" name="Flow65" to="sv4#page8#pwu12" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
-    <EntryUnit gr:x="90" gr:y="155" id="sv4#page8#enu8" name="Search" entity="ent2" linkOrder="sv4#page8#enu8#ln64">
-      <Field id="sv4#page8#enu8#fld37" name="name" type="string" modifiable="true"/>
-      <SelectionField id="sv4#page8#enu8#sfld16" name="marker" type="string"/>
-      <Link id="sv4#page8#enu8#ln64" name="search" to="sv4#page8#pwu12" type="normal" validate="true">
-        <LinkParameter id="sv4#page8#enu8#ln64#par297" name="marker_marker [oid]" source="sv4#page8#enu8#sfld16" target="sv4#page8#pwu12#su20#rcond5.ent1#att1"/>
-        <LinkParameter id="sv4#page8#enu8#ln64#par298" name="name_name" source="sv4#page8#enu8#fld37" target="sv4#page8#pwu12#su20#acond1"/>
-      </Link>
-    </EntryUnit>
-    <SelectorUnit gr:x="0" gr:y="155" id="sv4#page8#seu14" name="Marker" entity="ent1">
-      <Link id="sv4#page8#seu14#ln63" name="Flow63" to="sv4#page8#enu8" type="transport" validate="true">
-        <LinkParameter id="sv4#page8#seu14#ln63#par295" name="Name_marker [label]" source="ent1#att2Array" target="sv4#page8#enu8#sfld16_label"/>
-        <LinkParameter id="sv4#page8#seu14#ln63#par296" name="oid_marker [output]" source="ent1#att1Array" target="sv4#page8#enu8#sfld16_output"/>
-      </Link>
-    </SelectorUnit>
-    <PowerIndexUnit gr:x="200" gr:y="125" id="sv4#page8#pwu12" name="Search result" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att6 ent2#att7 ent2#att9 ent2#att8">
-      <Selector id="sv4#page8#pwu12#su20" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv4#page8#pwu12#su20#acond1" name="name" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att7"/>
-        <RelationshipRoleCondition id="sv4#page8#pwu12#su20#rcond5" name="marker" predicate="in" implied="false" role="rel7#role13"/>
-        <RelationshipRoleCondition id="sv4#page8#pwu12#su20#rcond7" name="userModel" predicate="in" implied="false" role="rel1#role1"/>
+    <DataUnit gr:x="110" gr:y="165" id="sv4#page8#dau7" name="detalle" entity="ent2" displayAttributes="ent2#att6 ent2#att7 ent2#att12 ent2#att9 ent2#att8 ent2#att17 ent2#att20 ent2#att21 ent2#att24 ent2#att18 ent2#att47 ent2#att28 ent2#att4">
+      <Selector id="sv4#page8#dau7#su25" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#page8#dau7#su25#kcond16" name="KeyCondition16" predicate="in" implied="false"/>
       </Selector>
-    </PowerIndexUnit>
+    </DataUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page8#pwu11">
+          <layout:Attribute attribute="ent2#att6"/>
+          <layout:Attribute attribute="rel7#role14.ent1#att2"/>
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att9"/>
+          <layout:Attribute attribute="ent2#att8"/>
+          <layout:Link link="sv4#page8#pwu11#ln75"/>
+          <layout:Link link="sv4#page8#pwu11rel7#role14$ent1#att2"/>
+          <layout:Link link="sv4#page8#pwu11ent2#att6"/>
+          <layout:Link link="sv4#page8#pwu11ent2#att7"/>
+          <layout:Link link="sv4#page8#pwu11ent2#att9"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page8#dau7">
+          <layout:Attribute attribute="ent2#att6"/>
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att12"/>
+          <layout:Attribute attribute="ent2#att9"/>
+          <layout:Attribute attribute="ent2#att8"/>
+          <layout:Attribute attribute="ent2#att17"/>
+          <layout:Attribute attribute="ent2#att20"/>
+          <layout:Attribute attribute="ent2#att21"/>
+          <layout:Attribute attribute="ent2#att24"/>
+          <layout:Attribute attribute="ent2#att18"/>
+          <layout:Attribute attribute="ent2#att47"/>
+          <layout:Attribute attribute="ent2#att28"/>
+          <layout:Attribute attribute="ent2#att4"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12"/>
       <layout:Cell/>
@@ -51,17 +92,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv4#page8#pwu11">
-          <layout:Attribute attribute="ent2#att6"/>
-          <layout:Attribute attribute="rel7#role14.ent1#att2"/>
-          <layout:Attribute attribute="ent2#att7"/>
-          <layout:Attribute attribute="ent2#att8"/>
-          <layout:Link link="sv4#page8#pwu11rel7#role14$ent1#att2"/>
-          <layout:Link link="sv4#page8#pwu11ent2#att6"/>
-          <layout:Link link="sv4#page8#pwu11ent2#att7"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -75,13 +106,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv4#page8#enu8">
-          <layout:Field field="sv4#page8#enu8#fld37"/>
-          <layout:Field field="sv4#page8#enu8#sfld16"/>
-          <layout:Link link="sv4#page8#enu8#ln64"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -95,14 +120,35 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv4#page8#pwu12">
-          <layout:Attribute attribute="ent2#att6"/>
-          <layout:Attribute attribute="ent2#att7"/>
-          <layout:Attribute attribute="ent2#att9"/>
-          <layout:Attribute attribute="ent2#att8"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
