@@ -1,7 +1,6 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4" name="Private" secure="false" layout:style="WebRatio" homePage="sv4#page8" protected="true" landmarks="sv4#lou2 sv4#page15">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4" name="Private" secure="false" layout:style="WebRatio" homePage="sv4#page8" protected="true" landmarks="sv4#page15 sv4#page16">
   <OperationUnits>
-    <LogoutUnit gr:x="200" gr:y="25" id="sv4#lou2" name="Logout" siteView="sv1" landmark="true"/>
-    <LogoutUnit id="sv4#lou7" name="Logout3" gr:x="705" gr:y="55" siteView="sv1"/>
+    <LogoutUnit id="sv4#lou7" name="Logout3" gr:x="510" gr:y="65" siteView="sv1"/>
     <CreateUnit gr:x="275" gr:y="495" id="sv4#cru6" name="Create Comment" entity="ent9"/>
   </OperationUnits>
 </SiteView>

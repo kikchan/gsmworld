@@ -7,7 +7,7 @@
       <Link id="sv4#page14#dau7#ln43" name="Flow43" to="sv4#page14#inu1" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv4#page14#dau7#ln47" name="Flow47" to="sv4#cru6" automaticCoupling="true" type="transport" validate="true"/>
     </DataUnit>
-    <IndexUnit gr:x="150" gr:y="0" id="sv4#page14#inu1" name="Comments list" entity="ent9" displayAttributes="rel2#role4.userName ent9#att30 ent9#att25">
+    <IndexUnit gr:x="150" gr:y="0" id="sv4#page14#inu1" name="Comments list" entity="ent9" displayAttributes="ent9#att25 rel2#role4.userName ent9#att30">
       <Selector id="sv4#page14#inu1#su18" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv4#page14#inu1#su18#rcond3" name="RoleCondition3" predicate="in" implied="false" role="rel1#role1"/>
       </Selector>
@@ -58,9 +58,9 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv4#page14#inu1">
+          <layout:Attribute attribute="ent9#att25"/>
           <layout:Attribute attribute="rel2#role4.userName"/>
           <layout:Attribute attribute="ent9#att30"/>
-          <layout:Attribute attribute="ent9#att25"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
