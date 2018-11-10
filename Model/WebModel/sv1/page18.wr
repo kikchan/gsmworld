@@ -1,0 +1,211 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page18" name="Welcome" landmark="true" gr:x="70" gr:y="0">
+  <ContentUnits>
+    <MultiMessageUnit id="sv1#page18#mssu8" name="Welcome to GSM World" gr:x="5" gr:y="10">
+      <Message xml:space="preserve">Welcome to GSM World. A world-leading smartphone website for everything thats related to mobile phones.</Message>
+    </MultiMessageUnit>
+    <DataUnit id="sv1#page18#dau8" name="Phone 1" gr:x="135" gr:y="140" entity="ent2" displayAttributes="ent2#att7 ent2#att8 ent2#att17 ent2#att20 ent2#att24 ent2#att18 ent2#att4 ent2#att12">
+      <Selector id="sv1#page18#dau8#su19" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page18#dau8#su19#kcond16" name="KeyCondition14" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <PowerIndexUnit id="sv1#page18#pwu10" name="Phone list" linkOrder="sv1#page18#pwu10#ln42 sv1#page18#pwu10#ln44 sv1#page18#pwu10#ln46" gr:x="195" gr:y="10" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att12 ent2#att7 ent2#att8 ent2#att17 ent2#att4">
+      <Link id="sv1#page18#pwu10#ln42" name="compare 1" to="sv1#page18#dau8" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv1#page18#pwu10#ln44" name="compare 2" to="sv1#page18#dau9" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv1#page18#pwu10#ln46" name="details" to="sv1#page5#dau1" type="normal" automaticCoupling="true" validate="true"/>
+    </PowerIndexUnit>
+    <DataUnit id="sv1#page18#dau9" name="Phone 2" gr:x="240" gr:y="140" entity="ent2" displayAttributes="ent2#att7 ent2#att8 ent2#att17 ent2#att20 ent2#att24 ent2#att18 ent2#att4 ent2#att12">
+      <Selector id="sv1#page18#dau9#su20" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page18#dau9#su20#kcond17" name="KeyCondition15" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <EntryUnit id="sv1#page18#enu7" name="Search" linkOrder="sv1#page18#enu7#ln48" gr:x="325" gr:y="0" entity="ent2">
+      <Field id="sv1#page18#enu7#fld23" name="name" type="string" modifiable="true"/>
+      <Link id="sv1#page18#enu7#ln48" name="search" to="sv1#page18#pwu11" type="normal" validate="true">
+        <LinkParameter id="sv1#page18#enu7#ln48#par96" name="name_name" source="sv1#page18#enu7#fld23" target="sv1#page18#pwu11#su22#acond1"/>
+      </Link>
+    </EntryUnit>
+    <PowerIndexUnit id="sv1#page18#pwu11" name="Search result" linkOrder="sv1#page18#pwu11#ln50" gr:x="345" gr:y="140" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att6 ent2#att7 ent2#att9 ent2#att8">
+      <Selector id="sv1#page18#pwu11#su22" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#page18#pwu11#su22#acond1" name="name" predicate="contains" booleanOperator="or" implied="false" attributes="ent2#att7"/>
+      </Selector>
+      <Link id="sv1#page18#pwu11#ln50" name="details" to="sv1#page18#dau10" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="-2,86,354,86;-359,90,-3,90"/>
+    </PowerIndexUnit>
+    <DataUnit id="sv1#page18#dau10" name="Mobile details" gr:x="0" gr:y="140" entity="ent2" displayAttributes="ent2#att7 ent2#att12 ent2#att9 ent2#att8 ent2#att17 ent2#att20">
+      <Selector id="sv1#page18#dau10#su23" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page18#dau10#su23#kcond18" name="KeyCondition17" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <PowerIndexUnit id="sv1#page18#pwu12" name="Phone on sales" linkOrder="sv1#page18#pwu12#ln51" gr:x="300" gr:y="315" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att12 ent2#att7 ent2#att8 ent2#att17 ent2#att4">
+      <Selector id="sv1#page18#pwu12#su24" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#page18#pwu12#su24#acond2" name="onSales" predicate="gteq" booleanOperator="or" implied="true" value="0"/>
+      </Selector>
+      <Link id="sv1#page18#pwu12#ln51" name="buy" to="sv1#page19" type="normal" automaticCoupling="true" validate="true"/>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page18#mssu8"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page18#pwu10">
+          <layout:Link link="sv1#page18#pwu10#ln42"/>
+          <layout:Link link="sv1#page18#pwu10#ln44"/>
+          <layout:Link link="sv1#page18#pwu10#ln46"/>
+          <layout:Attribute attribute="ent2#att12"/>
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att8"/>
+          <layout:Attribute attribute="ent2#att17"/>
+          <layout:Attribute attribute="ent2#att4"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page18#pwu12">
+          <layout:Attribute attribute="ent2#att12"/>
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att8"/>
+          <layout:Attribute attribute="ent2#att17"/>
+          <layout:Attribute attribute="ent2#att4"/>
+          <layout:Link link="sv1#page18#pwu12#ln51"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv1#page18#dau8">
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att8"/>
+          <layout:Attribute attribute="ent2#att17"/>
+          <layout:Attribute attribute="ent2#att20"/>
+          <layout:Attribute attribute="ent2#att24"/>
+          <layout:Attribute attribute="ent2#att18"/>
+          <layout:Attribute attribute="ent2#att4"/>
+          <layout:Attribute attribute="ent2#att12"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv1#page18#dau9">
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att8"/>
+          <layout:Attribute attribute="ent2#att17"/>
+          <layout:Attribute attribute="ent2#att20"/>
+          <layout:Attribute attribute="ent2#att24"/>
+          <layout:Attribute attribute="ent2#att18"/>
+          <layout:Attribute attribute="ent2#att4"/>
+          <layout:Attribute attribute="ent2#att12"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv1#page18#enu7">
+          <layout:Field field="sv1#page18#enu7#fld23"/>
+          <layout:Link link="sv1#page18#enu7#ln48"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell rowspan="2" colspan="6">
+        <layout:Unit unitId="sv1#page18#dau10">
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att12"/>
+          <layout:Attribute attribute="ent2#att9"/>
+          <layout:Attribute attribute="ent2#att8"/>
+          <layout:Attribute attribute="ent2#att17"/>
+          <layout:Attribute attribute="ent2#att20"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv1#page18#pwu11">
+          <layout:Attribute attribute="ent2#att6"/>
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att9"/>
+          <layout:Attribute attribute="ent2#att8"/>
+          <layout:Link link="sv1#page18#pwu11#ln50"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
