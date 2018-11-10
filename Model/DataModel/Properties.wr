@@ -162,4 +162,12 @@ jdbc:mysql://192.168.1.10:3306/gsmworld</Comment>
     <Attribute id="ent9#att25" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent9#att30" name="comment" type="text" db:column="comment"/>
   </Entity>
+  <Relationship id="rel3" name="User_Model" sourceEntity="User" targetEntity="ent2" db:database="db1" db:table="model" gr:bendpoints="168,113,-126,-247">
+    <RelationshipRole1 id="rel3#role5" name="UserToModel" maxCard="N">
+      <db:JoinColumn name="user_oid" attribute="userOID"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel3#role6" name="ModelToUser" maxCard="1">
+      <db:JoinColumn name="oid" attribute="ent2#att6"/>
+    </RelationshipRole2>
+  </Relationship>
 </DataModel>
