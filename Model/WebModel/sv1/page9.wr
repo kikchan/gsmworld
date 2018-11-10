@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="225" gr:y="350" id="sv1#page9" name="Register" landmark="true">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="sv1#page9#enu3" name="New user registration" entity="User" linkOrder="sv1#page9#enu3#ln9">
+    <EntryUnit gr:x="0" gr:y="0" id="sv1#page9#enu3" name="New user registration" entity="User" linkOrder="sv1#page9#enu3#ln9 sv1#page9#enu3#ln54">
       <Field id="sv1#page9#enu3#fld4" name="Username" type="string" modifiable="true" attribute="userName"/>
       <Field id="sv1#page9#enu3#fld5" name="Email" type="string" modifiable="true" attribute="email"/>
       <Field id="sv1#page9#enu3#fld6" name="Password" type="password" modifiable="true" attribute="password"/>
@@ -17,16 +17,21 @@
         <LinkParameter id="sv1#page9#enu3#ln9#par19" name="Group_Group.oid(defaultGroup)" target="sv1#cru2.User2DefaultGroup.groupOID" sourceValue="2"/>
         <LinkParameter id="sv1#page9#enu3#ln9#par20" name="Key [oid]_oid" source="key.userOID" target="sv1#cru2.userOID"/>
       </Link>
+      <Link id="sv1#page9#enu3#ln54" name="Register with Email" to="sv1#miu5" type="normal" validate="true">
+        <LinkParameter id="sv1#page9#enu3#ln54#par223" name="User Object_Input Port Object" source="entityBean" target="sv1#miu5.mov1#opm5#icu5#icp33"/>
+        <LinkParameter id="sv1#page9#enu3#ln54#par225" name="2_Input Port Group" sourceValue="2" target="sv1#miu5.mov1#opm5#icu5#icp35"/>
+      </Link>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page9#enu3">
-          <layout:Link link="sv1#page9#enu3#ln9"/>
           <layout:Field field="sv1#page9#enu3#fld4"/>
           <layout:Field field="sv1#page9#enu3#fld5"/>
           <layout:Field field="sv1#page9#enu3#fld6"/>
+          <layout:Link link="sv1#page9#enu3#ln9"/>
+          <layout:Link link="sv1#page9#enu3#ln54"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

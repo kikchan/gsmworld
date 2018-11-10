@@ -2,5 +2,11 @@
 <?webml version="7.2.0.4"?>
 
 <WebProject xmlns:gr="http://www.webratio.com/2006/WebML/Graph" outputPath="${webapps_loc}/${project_name}" gr:showUnitContent="true" gr:showTooltip="true" httpPort="8080" httpsPort="8443" enableProjectDependencies="false" jobGroupName="WEBRATIO" wrTempNewProject="true" gr:useUMLStyle="true">
-  <ServiceDataProviders/>
+  <ServiceDataProviders>
+    <SMTPServer id="smtp2" name="SMTP Server 1" port="465" useSsl="true" url="smtp.gmail.com" username="no.reply.gsmworld@gmail.com" password="Z3Ntd29ybGQ1" cryptedPassword="true" defaultFrom="no.reply.gsmworld@gmail.com">
+      <Property id="smtp2#prop1" name="mail.smtp.ssl" value="true"/>
+      <Property id="smtp2#prop2" name="mail.smtp.auth" value="true"/>
+      <Property id="smtp2#prop3" name="mail.smtp.socketFactory.class" value="javax.net.ssl.SSLSocketFactory"/>
+    </SMTPServer>
+  </ServiceDataProviders>
 </WebProject>

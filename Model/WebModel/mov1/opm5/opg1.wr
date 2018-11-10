@@ -1,0 +1,21 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm5#opg1" name="Create user and send email" transaction="true" gr:x="235" gr:y="30">
+  <OperationUnits>
+    <MailUnit id="mov1#opm5#opg1#mlu1" name="Send Email" gr:x="160" gr:y="10" format="html" template="WEB-INF/descr/EmailTemplate.mt" smtpServer="smtp2">
+      <OKLink id="mov1#opm5#opg1#mlu1#oln18" name="OKFlow9" to="mov1#opm5#okcu5" automaticCoupling="true"/>
+      <KOLink id="mov1#opm5#opg1#mlu1#kln13" name="KOFlow4" to="mov1#opm5#kocu5">
+        <LinkParameter id="mov1#opm5#opg1#mlu1#kln13#par99" name="Error al enviar el email_Mensaje" target="mov1#opm5#kocu5#ocp9" sourceValue="Error al enviar el email"/>
+      </KOLink>
+      <SubjectTemplate xml:space="preserve">Welcome to GSMWorld</SubjectTemplate>
+      <Placeholder id="mov1#opm5#opg1#mlu1#ph1" name="Usuario"/>
+    </MailUnit>
+    <CreateUnit id="mov1#opm5#opg1#cru7" name="Create User" gr:x="0" gr:y="0" entity="User">
+      <KOLink id="mov1#opm5#opg1#cru7#kln14" name="KOFlow6" to="mov1#opm5#kocu5">
+        <LinkParameter id="mov1#opm5#opg1#cru7#kln14#par187" name="Error al crear el usuario_Mensaje" target="mov1#opm5#kocu5#ocp9" sourceValue="Error al crear el usuario"/>
+      </KOLink>
+      <OKLink id="mov1#opm5#opg1#cru7#oln19" name="OKFlow18" to="mov1#opm5#opg1#mlu1">
+        <LinkParameter id="mov1#opm5#opg1#cru7#oln19#par221" name="email_Mail - To" source="emailArray" target="mov1#opm5#opg1#mlu1.to"/>
+        <LinkParameter id="mov1#opm5#opg1#cru7#oln19#par222" name="userName_Usuario" source="userNameArray" target="mov1#opm5#opg1#mlu1.Usuario"/>
+      </OKLink>
+    </CreateUnit>
+  </OperationUnits>
+</OperationGroup>

@@ -1,0 +1,16 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm5" name="Register and Send Email" gr:x="275" gr:y="45">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm5#icu5" gr:x="-20" gr:y="65">
+      <OKLink id="mov1#opm5#icu5#oln17" name="OKFlow14" to="mov1#opm5#opg1#cru7">
+        <LinkParameter id="mov1#opm5#icu5#oln17#par98" name="Input Port Object_User Object" source="mov1#opm5#icu5#icp33" target="mov1#opm5#opg1#cru7.entityBeans"/>
+        <LinkParameter id="mov1#opm5#icu5#oln17#par224" name="2_Group.oid(defaultGroup)" target="mov1#opm5#opg1#cru7.User2DefaultGroup.groupOID" source="mov1#opm5#icu5#icp35"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm5#icu5#icp33" name="Input Port Object"/>
+      <InputCollectorParameter id="mov1#opm5#icu5#icp35" name="Input Port Group"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov1#opm5#kocu5" name="KO Port" gr:x="575" gr:y="260">
+      <OutputCollectorParameter id="mov1#opm5#kocu5#ocp9" name="Error"/>
+    </KOCollectorUnit>
+    <OKCollectorUnit id="mov1#opm5#okcu5" name="Continue" gr:x="575" gr:y="95"/>
+  </OperationUnits>
+</OperationModule>
