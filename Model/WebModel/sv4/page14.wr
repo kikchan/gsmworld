@@ -1,153 +1,47 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page14" name="Sales" landmark="true" gr:x="60" gr:y="390">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page14" name="Details" gr:x="395" gr:y="235">
   <ContentUnits>
-    <EntryUnit id="sv4#page14#enu7" name="Phone details" linkOrder="sv4#page14#enu7#ln36" gr:x="320" gr:y="215" entity="ent2" fieldOrder="sv4#page14#enu7#sfld1 sv4#page14#enu7#fld23 sv4#page14#enu7#fld27 sv4#page14#enu7#fld28 sv4#page14#enu7#fld35 sv4#page14#enu7#sfld12 sv4#page14#enu7#sfld13 sv4#page14#enu7#sfld15 sv4#page14#enu7#sfld10 sv4#page14#enu7#fld29 sv4#page14#enu7#sfld11 sv4#page14#enu7#fld30 sv4#page14#enu7#fld31 sv4#page14#enu7#fld32 sv4#page14#enu7#fld33 sv4#page14#enu7#fld34 sv4#page14#enu7#sfld14 sv4#page14#enu7#fld36">
-      <Field id="sv4#page14#enu7#fld23" name="Model name" type="string" modifiable="true" attribute="ent2#att7"/>
-      <Field id="sv4#page14#enu7#fld27" name="Release date" type="string" modifiable="true" attribute="ent2#att9"/>
-      <Field id="sv4#page14#enu7#fld28" name="Price" type="string" modifiable="true" attribute="ent2#att8"/>
-      <Field id="sv4#page14#enu7#fld29" name="Weight" type="string" modifiable="true" attribute="ent2#att17"/>
-      <Field id="sv4#page14#enu7#fld30" name="Main Camera" type="string" modifiable="true" attribute="ent2#att20"/>
-      <Field id="sv4#page14#enu7#fld31" name="Secondary Camera" type="string" modifiable="true" attribute="ent2#att21"/>
-      <Field id="sv4#page14#enu7#fld32" name="Battery" type="string" modifiable="true" attribute="ent2#att24"/>
-      <Field id="sv4#page14#enu7#fld33" name="SIM Card slots" type="string" modifiable="true" attribute="ent2#att18"/>
-      <Field id="sv4#page14#enu7#fld34" name="Memory card" type="string" modifiable="true" attribute="ent2#att47"/>
-      <Field id="sv4#page14#enu7#fld35" name="CPU" type="string" modifiable="true" attribute="ent2#att4"/>
-      <SelectionField id="sv4#page14#enu7#sfld1" name="Maker" type="integer" attribute="ent2#att6"/>
-      <SelectionField id="sv4#page14#enu7#sfld10" name="Screen resolution" type="integer" attribute="ent2#att6"/>
-      <SelectionField id="sv4#page14#enu7#sfld11" name="Operating System" type="integer" attribute="ent2#att6"/>
-      <SelectionField id="sv4#page14#enu7#sfld12" name="RAM" type="integer" attribute="ent2#att6"/>
-      <SelectionField id="sv4#page14#enu7#sfld13" name="ROM" type="integer" attribute="ent2#att6"/>
-      <SelectionField id="sv4#page14#enu7#sfld14" name="Color" type="integer" attribute="ent2#att6"/>
-      <SelectionField id="sv4#page14#enu7#sfld15" name="Screen size" type="string"/>
-      <Link id="sv4#page14#enu7#ln36" name="OK" to="sv4#miu5" type="normal" validate="true">
-        <LinkParameter id="sv4#page14#enu7#ln36#par96" name="Battery_battery" source="sv4#page14#enu7#fld32" target="sv4#miu5.mov1#opm1#icu1#icp10"/>
-        <LinkParameter id="sv4#page14#enu7#ln36#par97" name="SIM Card slots_cardSlot" source="sv4#page14#enu7#fld33" target="sv4#miu5.mov1#opm1#icu1#icp12"/>
-        <LinkParameter id="sv4#page14#enu7#ln36#par98" name="Color_colorOID" source="sv4#page14#enu7#sfld14" target="sv4#miu5.mov1#opm1#icu1#icp16"/>
-        <LinkParameter id="sv4#page14#enu7#ln36#par99" name="CPU_CPU" source="sv4#page14#enu7#fld35" target="sv4#miu5.mov1#opm1#icu1#icp13"/>
-        <LinkParameter id="sv4#page14#enu7#ln36#par187" name="Key [oid]_ID" source="key.ent2#att6" target="sv4#miu5.mov1#opm1#icu1#icp3"/>
-        <LinkParameter id="sv4#page14#enu7#ln36#par221" name="Main Camera_mainCamera" source="sv4#page14#enu7#fld30" target="sv4#miu5.mov1#opm1#icu1#icp8"/>
-        <LinkParameter id="sv4#page14#enu7#ln36#par222" name="Maker_maker" source="sv4#page14#enu7#sfld1" target="sv4#miu5.mov1#opm1#icu1#icp1"/>
-        <LinkParameter id="sv4#page14#enu7#ln36#par223" name="Model name_modelName" source="sv4#page14#enu7#fld23" target="sv4#miu5.mov1#opm1#icu1#icp2"/>
-        <LinkParameter id="sv4#page14#enu7#ln36#par224" name="Operating System_osOID" source="sv4#page14#enu7#sfld11" target="sv4#miu5.mov1#opm1#icu1#icp19"/>
-        <LinkParameter id="sv4#page14#enu7#ln36#par225" name="Price_price" source="sv4#page14#enu7#fld28" target="sv4#miu5.mov1#opm1#icu1#icp4"/>
-        <LinkParameter id="sv4#page14#enu7#ln36#par226" name="RAM_ramOID" source="sv4#page14#enu7#sfld12" target="sv4#miu5.mov1#opm1#icu1#icp15"/>
-        <LinkParameter id="sv4#page14#enu7#ln36#par227" name="Release date_releaseDate" source="sv4#page14#enu7#fld27" target="sv4#miu5.mov1#opm1#icu1#icp5"/>
-        <LinkParameter id="sv4#page14#enu7#ln36#par228" name="ROM_romOID" source="sv4#page14#enu7#sfld13" target="sv4#miu5.mov1#opm1#icu1#icp14"/>
-        <LinkParameter id="sv4#page14#enu7#ln36#par229" name="Screen resolution_screenOID" source="sv4#page14#enu7#sfld10" target="sv4#miu5.mov1#opm1#icu1#icp18"/>
-        <LinkParameter id="sv4#page14#enu7#ln36#par230" name="Screen size_screenSizeOID" source="sv4#page14#enu7#sfld15" target="sv4#miu5.mov1#opm1#icu1#icp20"/>
-        <LinkParameter id="sv4#page14#enu7#ln36#par231" name="Secondary Camera_secondaryCamera" source="sv4#page14#enu7#fld31" target="sv4#miu5.mov1#opm1#icu1#icp9"/>
-        <LinkParameter id="sv4#page14#enu7#ln36#par232" name="SIM Card slots_sim" source="sv4#page14#enu7#fld33" target="sv4#miu5.mov1#opm1#icu1#icp7"/>
-        <LinkParameter id="sv4#page14#enu7#ln36#par233" name="Weight_weight" source="sv4#page14#enu7#fld29" target="sv4#miu5.mov1#opm1#icu1#icp6"/>
-        <LinkParameter id="sv4#page14#enu7#ln36#par234" name="Image URL_imgURL" source="sv4#page14#enu7#fld36" target="sv4#miu5.mov1#opm1#icu1#icp11"/>
-      </Link>
-      <Field id="sv4#page14#enu7#fld36" name="Image URL" type="string" modifiable="true" attribute="ent2#att28"/>
-    </EntryUnit>
-    <PowerIndexUnit id="sv4#page14#pwu9" name="All phones" linkOrder="sv4#page14#pwu9#ln42 sv4#page14#pwu9#ln37" gr:x="355" gr:y="60" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att6 rel7#role14.ent1#att2 ent2#att7 ent2#att8">
-      <Link id="sv4#page14#pwu9#ln37" name="Delete" to="sv4#dlu5" type="normal" validate="true">
-        <LinkParameter id="sv4#page14#pwu9#ln37#par235" name="oid_KeyCondition2 [oid]" source="data[].ent2#att6" target="sv4#dlu5#su16#kcond15.ent2#att6"/>
-        <LinkParameter id="sv4#page14#pwu9#ln37#par236" name="oid_PASSING" source="data[].ent2#att6" passing="true"/>
-      </Link>
-      <Link id="sv4#page14#pwu9#ln42" name="Edit" to="sv4#page14#enu7" type="normal" validate="true">
-        <LinkParameter id="sv4#page14#pwu9#ln42#par237" name="ModelToColor.oid_Color - Preselection" source="data[].rel13#role26_ent3#att26" target="sv4#page14#enu7#sfld14_presel"/>
-        <LinkParameter id="sv4#page14#pwu9#ln42#par238" name="oid_Key Condition [oid]" source="data[].ent2#att6" target="sv4#page14#enu7.ent2#att6"/>
-        <LinkParameter id="sv4#page14#pwu9#ln42#par239" name="ModelToMaker.oid_Maker - Preselection" source="data[].rel7#role14_ent1#att1" target="sv4#page14#enu7#sfld1_presel"/>
-        <LinkParameter id="sv4#page14#pwu9#ln42#par240" name="ModelToOS.oid_Operating System - Preselection" source="data[].rel9#role18_ent6#att16" target="sv4#page14#enu7#sfld11_presel"/>
-        <LinkParameter id="sv4#page14#pwu9#ln42#par241" name="ModelToRAM.oid_RAM - Preselection" source="data[].rel12#role24_ent4#att10" target="sv4#page14#enu7#sfld12_presel"/>
-        <LinkParameter id="sv4#page14#pwu9#ln42#par242" name="ModelToROM.oid_ROM - Preselection" source="data[].rel11#role22_ent5#att14" target="sv4#page14#enu7#sfld13_presel"/>
-        <LinkParameter id="sv4#page14#pwu9#ln42#par243" name="ModelToScreen.oid_Screen resolution - Preselection" source="data[].rel8#role16_ent7#att42" target="sv4#page14#enu7#sfld10_presel"/>
-        <LinkParameter id="sv4#page14#pwu9#ln42#par244" name="ModelToScreen.oid_Screen size - Preselection" source="data[].rel8#role16_ent7#att42" target="sv4#page14#enu7#sfld15_presel"/>
-      </Link>
-      <SortAttribute attribute="rel7#role14.ent1#att2" order="ascending"/>
-      <SortAttribute attribute="ent2#att6" order="ascending"/>
-      <SortAttribute attribute="ent2#att7" order="ascending"/>
-      <SortAttribute attribute="ent2#att9" order="ascending"/>
-      <Selector id="sv4#page14#pwu9#su17" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="sv4#page14#pwu9#su17#rcond1" name="userPhones" predicate="in" implied="false" role="rel1#role1"/>
+    <DataUnit id="sv4#page14#dau7" name="Phone Details" gr:x="0" gr:y="0" entity="ent2" displayAll="true">
+      <Selector id="sv4#page14#dau7#su17" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#page14#dau7#su17#kcond15" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
-    </PowerIndexUnit>
-    <SelectorUnit id="sv4#page14#seu1" name="Maker" gr:x="190" gr:y="215" entity="ent1">
-      <Link id="sv4#page14#seu1#ln43" name="Flow2" to="sv4#page14#enu7" type="transport" validate="true">
-        <LinkParameter id="sv4#page14#seu1#ln43#par245" name="Name_Maker [label]" source="ent1#att2Array" target="sv4#page14#enu7#sfld1_label"/>
-        <LinkParameter id="sv4#page14#seu1#ln43#par246" name="oid_Maker [output]" source="ent1#att1Array" target="sv4#page14#enu7#sfld1_output"/>
-        <LinkParameter id="sv4#page14#seu1#ln43#par247" name="Name_PASSING" source="ent1#att2Array" passing="true"/>
-      </Link>
-      <SortAttribute attribute="ent1#att2" order="ascending"/>
-    </SelectorUnit>
-    <SelectorUnit id="sv4#page14#seu9" name="Screen" gr:x="180" gr:y="315" entity="ent7">
-      <SortAttribute attribute="ent7#att43" order="ascending"/>
-      <Link id="sv4#page14#seu9#ln44" name="Flow3" to="sv4#page14#enu7" type="transport" validate="true">
-        <LinkParameter id="sv4#page14#seu9#ln44#par248" name="resolution_Screen [label]" source="ent7#att43Array" target="sv4#page14#enu7#sfld10_label"/>
-        <LinkParameter id="sv4#page14#seu9#ln44#par249" name="oid_Screen [output]" source="ent7#att42Array" target="sv4#page14#enu7#sfld10_output"/>
-        <LinkParameter id="sv4#page14#seu9#ln44#par250" name="resolution_PASSING" source="ent7#att43Array" passing="true"/>
-        <LinkParameter id="sv4#page14#seu9#ln44#par251" name="size_Screen size [label]" source="ent7#att23Array" target="sv4#page14#enu7#sfld15_label"/>
-        <LinkParameter id="sv4#page14#seu9#ln44#par252" name="oid_Screen size [output]" source="ent7#att42Array" target="sv4#page14#enu7#sfld15_output"/>
-      </Link>
-    </SelectorUnit>
-    <SelectorUnit id="sv4#page14#seu10" name="OS" gr:x="180" gr:y="415" entity="ent6">
-      <Link id="sv4#page14#seu10#ln45" name="Flow4" to="sv4#page14#enu7" type="transport" validate="true">
-        <LinkParameter id="sv4#page14#seu10#ln45#par253" name="nameAndVersion_Operating System [label]" source="ent6#att22Array" target="sv4#page14#enu7#sfld11_label"/>
-        <LinkParameter id="sv4#page14#seu10#ln45#par254" name="oid_Operating System [output]" source="ent6#att16Array" target="sv4#page14#enu7#sfld11_output"/>
-        <LinkParameter id="sv4#page14#seu10#ln45#par255" name="nameAndVersion_PASSING" source="ent6#att22Array" passing="true"/>
-      </Link>
-      <SortAttribute attribute="ent6#att16" order="ascending"/>
-    </SelectorUnit>
-    <SelectorUnit id="sv4#page14#seu11" name="ROM" gr:x="265" gr:y="415" entity="ent5">
-      <Link id="sv4#page14#seu11#ln46" name="Flow7" to="sv4#page14#enu7" type="transport" validate="true">
-        <LinkParameter id="sv4#page14#seu11#ln46#par256" name="cuantity_ROM [label]" source="ent5#att15Array" target="sv4#page14#enu7#sfld13_label"/>
-        <LinkParameter id="sv4#page14#seu11#ln46#par257" name="oid_ROM [output]" source="ent5#att14Array" target="sv4#page14#enu7#sfld13_output"/>
-        <LinkParameter id="sv4#page14#seu11#ln46#par258" name="cuantity_PASSING" source="ent5#att15Array" passing="true"/>
-      </Link>
-      <SortAttribute attribute="ent5#att14" order="ascending"/>
-    </SelectorUnit>
-    <SelectorUnit id="sv4#page14#seu12" name="RAM" gr:x="350" gr:y="415" entity="ent4">
-      <Link id="sv4#page14#seu12#ln47" name="Flow8" to="sv4#page14#enu7" type="transport" validate="true">
-        <LinkParameter id="sv4#page14#seu12#ln47#par259" name="cuantity_RAM [label]" source="ent4#att11Array" target="sv4#page14#enu7#sfld12_label"/>
-        <LinkParameter id="sv4#page14#seu12#ln47#par260" name="oid_RAM [output]" source="ent4#att10Array" target="sv4#page14#enu7#sfld12_output"/>
-        <LinkParameter id="sv4#page14#seu12#ln47#par261" name="cuantity_PASSING" source="ent4#att11Array" passing="true"/>
-      </Link>
-      <SortAttribute attribute="ent4#att10" order="ascending"/>
-    </SelectorUnit>
-    <SelectorUnit id="sv4#page14#seu13" name="Color" gr:x="435" gr:y="405" entity="ent3">
-      <SortAttribute attribute="ent3#att27" order="ascending"/>
-      <Link id="sv4#page14#seu13#ln48" name="Flow10" to="sv4#page14#enu7" type="transport" validate="true">
-        <LinkParameter id="sv4#page14#seu13#ln48#par262" name="name_Color [label]" source="ent3#att27Array" target="sv4#page14#enu7#sfld14_label"/>
-        <LinkParameter id="sv4#page14#seu13#ln48#par263" name="oid_Color [output]" source="ent3#att26Array" target="sv4#page14#enu7#sfld14_output"/>
-        <LinkParameter id="sv4#page14#seu13#ln48#par264" name="name_PASSING" source="ent3#att27Array" passing="true"/>
-      </Link>
-    </SelectorUnit>
-    <MultiMessageUnit id="sv4#page14#mssu8" name="Message" gr:x="195" gr:y="110"/>
-    <GetUnit gr:x="210" gr:y="0" id="sv4#page14#gtu3" name="Get3" contextParameters="UserCtxParam">
-      <Link id="sv4#page14#gtu3#ln51" name="Flow51" to="sv4#page14#pwu9" automaticCoupling="true" type="transport" validate="true"/>
-      <Link id="sv4#page14#gtu3#ln52" name="Flow52" to="sv4#miu5" type="transport" validate="true" gr:bendpoints="244,-55,-211,-280;519,66,64,-159">
-        <LinkParameter id="sv4#page14#gtu3#ln52#par271" name="UserCtxParam.oid_userOID" source="sv4#page14#gtu3.UserCtxParam" target="sv4#miu5.mov1#opm1#icu1#icp33"/>
-      </Link>
-      <Link id="sv4#page14#gtu3#ln74" name="Flow65" to="sv4#page14#pwu16" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="sv4#page14#dau7#ln43" name="Flow43" to="sv4#page14#inu1" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv4#page14#dau7#ln47" name="Flow47" to="sv4#cru6" automaticCoupling="true" type="transport" validate="true"/>
+    </DataUnit>
+    <IndexUnit gr:x="150" gr:y="0" id="sv4#page14#inu1" name="Comments list" entity="ent9" displayAttributes="rel2#role4.userName ent9#att30 ent9#att25">
+      <Selector id="sv4#page14#inu1#su18" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#page14#inu1#su18#rcond3" name="RoleCondition3" predicate="in" implied="false" role="rel1#role1"/>
+      </Selector>
+      <SortAttribute attribute="ent9#att25" order="ascending"/>
+    </IndexUnit>
+    <GetUnit gr:x="175" gr:y="120" id="sv4#page14#gtu2" name="Get User" contextParameters="UserCtxParam">
+      <Link id="sv4#page14#gtu2#ln45" name="Flow45" to="sv4#cru6" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
-    <PowerIndexUnit id="sv4#page14#pwu16" name="Search result" gr:x="10" gr:y="25" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att6 ent2#att7 ent2#att9 ent2#att8">
-      <Selector id="sv4#page14#pwu16#su24" defaultPolicy="fill" booleanOperator="or" expression="(IFNULLFALSE(sv4#page14#pwu16#su24#acond4) OR IFNULLFALSE(sv4#page14#pwu16#su24#rcond13)) AND sv4#page14#pwu16#su24#rcond14">
-        <AttributesCondition id="sv4#page14#pwu16#su24#acond4" name="name" predicate="contains" booleanOperator="or" implied="false" attributes="ent2#att7"/>
-        <RelationshipRoleCondition id="sv4#page14#pwu16#su24#rcond13" name="marker" predicate="in" implied="false" role="rel7#role13"/>
-        <RelationshipRoleCondition id="sv4#page14#pwu16#su24#rcond14" name="userModel" predicate="in" implied="false" role="rel1#role1"/>
-      </Selector>
-    </PowerIndexUnit>
-    <EntryUnit id="sv4#page14#enu11" name="Search" linkOrder="sv4#page14#enu11#ln71" gr:x="105" gr:y="225" entity="ent2">
-      <Field id="sv4#page14#enu11#fld40" name="name" type="string" modifiable="true"/>
-      <SelectionField id="sv4#page14#enu11#sfld19" name="marker" type="string"/>
-      <Link id="sv4#page14#enu11#ln71" name="search" to="sv4#page14#pwu16" type="normal" validate="true">
-        <LinkParameter id="sv4#page14#enu11#ln71#par305" name="marker_marker [oid]" source="sv4#page14#enu11#sfld19" target="sv4#page14#pwu16#su24#rcond13.ent1#att1"/>
-        <LinkParameter id="sv4#page14#enu11#ln71#par306" name="name_name" source="sv4#page14#enu11#fld40" target="sv4#page14#pwu16#su24#acond4"/>
-      </Link>
+    <EntryUnit gr:x="0" gr:y="120" id="sv4#page14#enu8" name="Create Comment" entity="ent9" linkOrder="sv4#page14#enu8#ln49">
+      <Field id="sv4#page14#enu8#fld27" name="comment" type="text" modifiable="true" attribute="ent9#att30">
+        <VRules>
+          <ValueLengthValidationRule id="sv4#page14#enu8#fld27#vl2" name="Value Length5" predicate="min" value="5"/>
+        </VRules>
+      </Field>
+      <Link id="sv4#page14#enu8#ln49" name="Comment" to="sv4#cru6" automaticCoupling="true" type="normal" validate="true"/>
     </EntryUnit>
-    <SelectorUnit id="sv4#page14#seu16" name="Marker" gr:x="0" gr:y="215" entity="ent1">
-      <Link id="sv4#page14#seu16#ln72" name="Flow63" to="sv4#page14#enu11" type="transport" validate="true">
-        <LinkParameter id="sv4#page14#seu16#ln72#par307" name="Name_marker [label]" source="ent1#att2Array" target="sv4#page14#enu11#sfld19_label"/>
-        <LinkParameter id="sv4#page14#seu16#ln72#par308" name="oid_marker [output]" source="ent1#att1Array" target="sv4#page14#enu11#sfld19_output"/>
-      </Link>
-    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv4#page14#mssu8"/>
+        <layout:Unit unitId="sv4#page14#dau7">
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att9"/>
+          <layout:Attribute attribute="ent2#att8"/>
+          <layout:Attribute attribute="ent2#att17"/>
+          <layout:Attribute attribute="ent2#att20"/>
+          <layout:Attribute attribute="ent2#att21"/>
+          <layout:Attribute attribute="ent2#att24"/>
+          <layout:Attribute attribute="ent2#att18"/>
+          <layout:Attribute attribute="ent2#att47"/>
+          <layout:Attribute attribute="ent2#att28"/>
+          <layout:Attribute attribute="ent2#att4"/>
+          <layout:Attribute attribute="ent2#att12"/>
+        </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
@@ -162,105 +56,19 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="6">
-        <layout:Grid containerType="grid">
-          <layout:Row>
-            <layout:Cell colspan="12">
-              <layout:Unit unitId="sv4#page14#pwu9">
-                <layout:Attribute attribute="ent2#att6"/>
-                <layout:Attribute attribute="rel7#role14.ent1#att2"/>
-                <layout:Attribute attribute="ent2#att7"/>
-                <layout:Attribute attribute="ent2#att8"/>
-                <layout:Link link="sv4#page14#pwu9#ln42"/>
-                <layout:Link link="sv4#page14#pwu9#ln37"/>
-                <layout:Link link="sv4#page14#pwu9rel7#role14$ent1#att2"/>
-                <layout:Link link="sv4#page14#pwu9ent2#att6"/>
-                <layout:Link link="sv4#page14#pwu9ent2#att7"/>
-              </layout:Unit>
-            </layout:Cell>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-          </layout:Row>
-          <layout:Row>
-            <layout:Cell colspan="12">
-              <layout:Unit unitId="sv4#page14#enu11">
-                <layout:Field field="sv4#page14#enu11#fld40"/>
-                <layout:Field field="sv4#page14#enu11#sfld19"/>
-                <layout:Link link="sv4#page14#enu11#ln71"/>
-              </layout:Unit>
-            </layout:Cell>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-          </layout:Row>
-          <layout:Row>
-            <layout:Cell colspan="12">
-              <layout:Unit unitId="sv4#page14#pwu16">
-                <layout:Attribute attribute="ent2#att6"/>
-                <layout:Attribute attribute="ent2#att7"/>
-                <layout:Attribute attribute="ent2#att9"/>
-                <layout:Attribute attribute="ent2#att8"/>
-              </layout:Unit>
-            </layout:Cell>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-            <layout:Cell/>
-          </layout:Row>
-        </layout:Grid>
-      </layout:Cell>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell colspan="6">
-        <layout:Unit unitId="sv4#page14#enu7">
-          <layout:Link link="sv4#page14#enu7#ln36"/>
-          <layout:Field field="sv4#page14#enu7#sfld1"/>
-          <layout:Field field="sv4#page14#enu7#fld23"/>
-          <layout:Field field="sv4#page14#enu7#fld27"/>
-          <layout:Field field="sv4#page14#enu7#fld28"/>
-          <layout:Field field="sv4#page14#enu7#fld35"/>
-          <layout:Field field="sv4#page14#enu7#sfld12"/>
-          <layout:Field field="sv4#page14#enu7#sfld13"/>
-          <layout:Field field="sv4#page14#enu7#sfld15"/>
-          <layout:Field field="sv4#page14#enu7#sfld10"/>
-          <layout:Field field="sv4#page14#enu7#fld29"/>
-          <layout:Field field="sv4#page14#enu7#sfld11"/>
-          <layout:Field field="sv4#page14#enu7#fld30"/>
-          <layout:Field field="sv4#page14#enu7#fld31"/>
-          <layout:Field field="sv4#page14#enu7#fld32"/>
-          <layout:Field field="sv4#page14#enu7#fld33"/>
-          <layout:Field field="sv4#page14#enu7#fld34"/>
-          <layout:Field field="sv4#page14#enu7#sfld14"/>
-          <layout:Field field="sv4#page14#enu7#fld36"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page14#inu1">
+          <layout:Attribute attribute="rel2#role4.userName"/>
+          <layout:Attribute attribute="ent9#att30"/>
+          <layout:Attribute attribute="ent9#att25"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -269,6 +77,25 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page14#enu8">
+          <layout:Field field="sv4#page14#enu8#fld27"/>
+          <layout:Link link="sv4#page14#enu8#ln49"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

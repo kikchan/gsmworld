@@ -41,9 +41,7 @@
         <LinkParameter id="mov1#opm1#icu1#oln9#par133" name="secondaryCamera_PASSING" source="mov1#opm1#icu1#icp9" passing="true"/>
         <LinkParameter id="mov1#opm1#icu1#oln9#par134" name="sim_PASSING" source="mov1#opm1#icu1#icp7" passing="true"/>
         <LinkParameter id="mov1#opm1#icu1#oln9#par135" name="weight_PASSING" source="mov1#opm1#icu1#icp6" passing="true"/>
-        <LinkParameter id="mov1#opm1#icu1#oln9#par268" name="userOID_PASSING" source="mov1#opm1#icu1#icp33" passing="true"/>
       </OKLink>
-      <InputCollectorParameter id="mov1#opm1#icu1#icp33" name="userOID"/>
     </InputCollectorUnit>
     <IsNotNullUnit gr:x="325" gr:y="220" id="mov1#opm1#inn1" name="ID not null">
       <OKLink id="mov1#opm1#inn1#oln10" name="OKFlow10" to="mov1#opm1#mfu2">
@@ -65,7 +63,6 @@
         <LinkParameter id="mov1#opm1#inn1#oln10#par151" name="secondaryCamera_PASSING_secondary_camera" sourceLinkParameter="mov1#opm1#icu1#oln9#par133" target="mov1#opm1#mfu2.ent2#att21"/>
         <LinkParameter id="mov1#opm1#inn1#oln10#par152" name="sim_PASSING_sim" sourceLinkParameter="mov1#opm1#icu1#oln9#par134" target="mov1#opm1#mfu2.ent2#att18"/>
         <LinkParameter id="mov1#opm1#inn1#oln10#par153" name="weight_PASSING_weight" sourceLinkParameter="mov1#opm1#icu1#oln9#par135" target="mov1#opm1#mfu2.ent2#att17"/>
-        <LinkParameter id="mov1#opm1#inn1#oln10#par269" name="userOID_PASSING_User.oid(ModelToUser)" sourceLinkParameter="mov1#opm1#icu1#oln9#par268" target="mov1#opm1#mfu2.rel1#role2.userOID"/>
       </OKLink>
       <KOLink id="mov1#opm1#inn1#kln4" name="KOFlow4" to="mov1#opm1#cru3">
         <LinkParameter id="mov1#opm1#inn1#kln4#par154" name="battery_PASSING_battery" sourceLinkParameter="mov1#opm1#icu1#oln9#par117" target="mov1#opm1#cru3.ent2#att24"/>
@@ -85,7 +82,6 @@
         <LinkParameter id="mov1#opm1#inn1#kln4#par168" name="secondaryCamera_PASSING_secondary_camera" sourceLinkParameter="mov1#opm1#icu1#oln9#par133" target="mov1#opm1#cru3.ent2#att21"/>
         <LinkParameter id="mov1#opm1#inn1#kln4#par169" name="sim_PASSING_sim" sourceLinkParameter="mov1#opm1#icu1#oln9#par134" target="mov1#opm1#cru3.ent2#att18"/>
         <LinkParameter id="mov1#opm1#inn1#kln4#par170" name="weight_PASSING_weight" sourceLinkParameter="mov1#opm1#icu1#oln9#par135" target="mov1#opm1#cru3.ent2#att17"/>
-        <LinkParameter id="mov1#opm1#inn1#kln4#par270" name="userOID_PASSING_User.oid(ModelToUser)" sourceLinkParameter="mov1#opm1#icu1#oln9#par268" target="mov1#opm1#cru3.rel1#role2.userOID"/>
       </KOLink>
     </IsNotNullUnit>
     <CreateUnit gr:x="495" gr:y="230" id="mov1#opm1#cru3" name="Add phone" entity="ent2">

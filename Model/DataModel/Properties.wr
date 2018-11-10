@@ -1,15 +1,15 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="50" gr:y="35" gr:hideAttributes="false" attributeOrder="userOID userName password email" db:database="db1" db:table="user">
+  <Entity id="User" name="User" duration="persistent" gr:x="50" gr:y="-35" gr:hideAttributes="false" attributeOrder="userOID userName password email" db:database="db1" db:table="user">
     <Attribute name="oid" id="userOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="userName" id="userName" type="string" db:column="username"/>
     <Attribute name="password" id="password" type="password" db:column="password"/>
     <Attribute name="email" id="email" type="string" db:column="email"/>
   </Entity>
-  <Entity id="Group" name="Group" duration="persistent" gr:x="315" gr:y="55" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:table="group">
+  <Entity id="Group" name="Group" duration="persistent" gr:x="315" gr:y="-15" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:table="group">
     <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="groupName" id="groupName" type="string" db:column="groupname"/>
   </Entity>
-  <Entity id="Module" name="Module" duration="persistent" gr:x="570" gr:y="45" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db1" db:table="module">
+  <Entity id="Module" name="Module" duration="persistent" gr:x="570" gr:y="-25" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db1" db:table="module">
     <Attribute name="oid" id="moduleOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="moduleID" id="moduleID" type="string" db:column="moduleid"/>
     <Attribute name="moduleName" id="moduleName" type="string" db:column="modulename"/>
@@ -77,7 +77,7 @@
     <Attribute id="ent7#att43" name="resolution" type="string" db:column="resolution"/>
     <Attribute id="ent7#att23" name="size" type="string" db:column="size"/>
   </Entity>
-  <db:Database id="db1" name="Database" type="MySQL (InnoDB)" url="jdbc:mysql://localhost:3306/gsmworld" username="root" password="Y29udHJhbXlzcWwy" cryptedPassword="true">
+  <db:Database id="db1" name="Database" type="MySQL (InnoDB)" url="jdbc:mysql://localhost:3306/gsmworld" username="root" password="cm9vdA==" cryptedPassword="true">
     <Comment xml:space="preserve">jdbc:mysql://149.71.238.44:3306/gsmworld
 
 jdbc:mysql://192.168.1.10:3306/gsmworld</Comment>
@@ -142,12 +142,24 @@ jdbc:mysql://192.168.1.10:3306/gsmworld</Comment>
       <db:JoinColumn attribute="ent2#att6" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel1" name="User_Model" sourceEntity="User" targetEntity="ent2" db:database="db1" db:table="model">
-    <RelationshipRole1 id="rel1#role1" name="UserToModel" maxCard="N">
-      <db:JoinColumn attribute="userOID" name="user_oid"/>
+  <Relationship id="rel1" name="Model_Comentario" sourceEntity="ent2" targetEntity="ent9" db:database="db1" db:table="comment">
+    <RelationshipRole1 id="rel1#role1" name="ModelToComentario" maxCard="N">
+      <db:JoinColumn attribute="ent2#att6" name="model_oid"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel1#role2" name="ModelToUser" maxCard="1">
-      <db:JoinColumn attribute="ent2#att6" name="oid"/>
+    <RelationshipRole2 id="rel1#role2" name="ComentarioToModel" maxCard="1">
+      <db:JoinColumn attribute="ent9#att25" name="oid"/>
     </RelationshipRole2>
   </Relationship>
+  <Relationship id="rel2" name="User_Comentario" sourceEntity="User" targetEntity="ent9" db:database="db1" db:table="comment">
+    <RelationshipRole1 id="rel2#role3" name="UserToComentario" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel2#role4" name="ComentarioToUser" maxCard="1">
+      <db:JoinColumn attribute="ent9#att25" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="125" gr:y="125" id="ent9" name="Comment" duration="persistent" attributeOrder="ent9#att25 ent9#att30" db:database="db1" db:table="comment">
+    <Attribute id="ent9#att25" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent9#att30" name="comment" type="text" db:column="comment"/>
+  </Entity>
 </DataModel>
