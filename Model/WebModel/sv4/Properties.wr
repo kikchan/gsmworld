@@ -1,6 +1,20 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4" name="Private" secure="false" layout:style="WebRatio" homePage="sv4#page8" protected="true" landmarks="sv4#page15 sv4#page16">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4" name="Private" secure="false" layout:style="WebRatio" protected="true" landmarks="sv4#page15 sv4#page16 sv4#page2" homePage="sv4#page17">
   <OperationUnits>
-    <LogoutUnit id="sv4#lou7" name="Logout3" gr:x="510" gr:y="65" siteView="sv1"/>
-    <CreateUnit gr:x="275" gr:y="495" id="sv4#cru6" name="Create Comment" entity="ent9"/>
+    <LogoutUnit id="sv4#lou7" name="Logout3" gr:x="900" gr:y="70" siteView="sv1"/>
+    <CreateUnit gr:x="210" gr:y="395" id="sv4#cru6" name="Create Comment" entity="ent9"/>
+    <ModuleInstanceUnit id="sv4#miu6" gr:x="710" gr:y="850" action="true" moduleId="mov1#opm1">
+      <Link id="sv4#miu6#ln69" name="Flow19" to="sv4#page2#mssu1" type="transport" validate="true" gr:bendpoints="-29,-233,416,22;-249,-256,206,-111">
+        <LinkParameter id="sv4#miu6#ln69#par280" name="OK Port1.Result_Shown Messages" source="mov1#opm1#okcu1#ocp3" target="sv4#page2#mssu1.shownMessages"/>
+        <LinkParameter id="sv4#miu6#ln69#par281" name="KO Port2.Error_Shown Messages" source="mov1#opm1#kocu2#ocp4" target="sv4#page2#mssu1.shownMessages"/>
+      </Link>
+    </ModuleInstanceUnit>
+    <DeleteUnit id="sv4#dlu6" name="Delete phone" gr:x="670" gr:y="705" entity="ent2">
+      <Selector id="sv4#dlu6#su27" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#dlu6#su27#kcond12" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv4#dlu6#ln70" name="Flow18" to="sv4#page2#mssu1" type="transport" validate="true" gr:bendpoints="-28,-97,392,38;-216,-118,214,-93">
+        <LinkParameter id="sv4#dlu6#ln70#par282" name="Model successfully deleted!_Shown Messages" target="sv4#page2#mssu1.shownMessages" sourceValue="Model successfully deleted!"/>
+      </Link>
+    </DeleteUnit>
   </OperationUnits>
 </SiteView>

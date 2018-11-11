@@ -1,0 +1,38 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm7" name="Add user" gr:x="50" gr:y="275">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm7#icu7" gr:x="15" gr:y="105">
+      <InputCollectorParameter id="mov1#opm7#icu7#icp36" name="Group ID"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp37" name="Email"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp38" name="Password"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp39" name="Username"/>
+      <OKLink id="mov1#opm7#icu7#oln22" name="OKFlow7" to="mov1#opm7#mfu6">
+        <LinkParameter id="mov1#opm7#icu7#oln22#par411" name="Email_PASSING" source="mov1#opm7#icu7#icp37" passing="true"/>
+        <LinkParameter id="mov1#opm7#icu7#oln22#par412" name="Group ID_PASSING" source="mov1#opm7#icu7#icp36" passing="true"/>
+        <LinkParameter id="mov1#opm7#icu7#oln22#par413" name="Password_PASSING" source="mov1#opm7#icu7#icp38" passing="true"/>
+        <LinkParameter id="mov1#opm7#icu7#oln22#par414" name="Username_PASSING" source="mov1#opm7#icu7#icp39" passing="true"/>
+        <LinkParameter id="mov1#opm7#icu7#oln22#par415" name="User ID_PASSING" source="mov1#opm7#icu7#icp40" passing="true"/>
+        <LinkParameter id="mov1#opm7#icu7#oln22#par429" name="Email_email" source="mov1#opm7#icu7#icp37" target="mov1#opm7#mfu6.email"/>
+        <LinkParameter id="mov1#opm7#icu7#oln22#par430" name="Password_password" source="mov1#opm7#icu7#icp38" target="mov1#opm7#mfu6.password"/>
+        <LinkParameter id="mov1#opm7#icu7#oln22#par431" name="Username_userName" source="mov1#opm7#icu7#icp39" target="mov1#opm7#mfu6.userName"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp40" name="User ID"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov1#opm7#okcu7" name="OK Port3" gr:x="520" gr:y="110">
+      <OutputCollectorParameter id="mov1#opm7#okcu7#ocp12" name="Result"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit id="mov1#opm7#kocu7" name="KO Port3" gr:x="520" gr:y="195">
+      <OutputCollectorParameter id="mov1#opm7#kocu7#ocp13" name="Error"/>
+    </KOCollectorUnit>
+    <ModifyUnit id="mov1#opm7#mfu6" name="Update user" gr:x="335" gr:y="135" entity="User">
+      <Selector id="mov1#opm7#mfu6#su40" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm7#mfu6#su40#kcond25" name="KeyCondition7" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="mov1#opm7#mfu6#kln18" name="KOFlow9" to="mov1#opm7#kocu7">
+        <LinkParameter id="mov1#opm7#mfu6#kln18#par427" name="Something went wrong when modifiying the user!_Error" target="mov1#opm7#kocu7#ocp13" sourceValue="Something went wrong when modifiying the user!"/>
+      </KOLink>
+      <OKLink id="mov1#opm7#mfu6#oln25" name="OKFlow12" to="mov1#opm7#okcu7">
+        <LinkParameter id="mov1#opm7#mfu6#oln25#par428" name="The user has been successfully modified!_Result" target="mov1#opm7#okcu7#ocp12" sourceValue="The user has been successfully modified!"/>
+      </OKLink>
+    </ModifyUnit>
+  </OperationUnits>
+</OperationModule>

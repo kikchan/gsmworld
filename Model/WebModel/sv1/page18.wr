@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page18" name="Welcome" landmark="true" gr:x="70" gr:y="0">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page18" name="Welcome" landmark="true" gr:x="65" gr:y="15">
   <ContentUnits>
     <MultiMessageUnit id="sv1#page18#mssu8" name="Welcome to GSM World" gr:x="5" gr:y="10">
       <Message xml:space="preserve">Welcome to GSM World. A world-leading smartphone website for everything thats related to mobile phones.</Message>
@@ -37,7 +37,7 @@
     </DataUnit>
     <PowerIndexUnit id="sv1#page18#pwu12" name="Phone on sales" linkOrder="sv1#page18#pwu12#ln51" gr:x="300" gr:y="315" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att12 ent2#att7 ent2#att8 ent2#att17 ent2#att4">
       <Selector id="sv1#page18#pwu12#su24" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv1#page18#pwu12#su24#acond2" name="onSales" predicate="gteq" booleanOperator="or" implied="true" value="0"/>
+        <AttributesCondition id="sv1#page18#pwu12#su24#acond2" name="onSales" predicate="gteq" booleanOperator="or" implied="true" value="0" attributes="rel3#role6.userOID"/>
       </Selector>
       <Link id="sv1#page18#pwu12#ln51" name="buy" to="sv1#page19" type="normal" automaticCoupling="true" validate="true"/>
     </PowerIndexUnit>
