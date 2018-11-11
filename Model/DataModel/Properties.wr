@@ -46,12 +46,13 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="125" gr:y="235" id="ent1" name="Maker" duration="persistent" attributeOrder="ent1#att1 ent1#att2 ent1#att3 ent1#att5 ent1#att29" db:database="db1" db:table="maker">
+  <Entity gr:x="125" gr:y="235" id="ent1" name="Maker" duration="persistent" attributeOrder="ent1#att1 ent1#att2 ent1#att3 ent1#att5 ent1#att29 ent1#att19" db:database="db1" db:table="maker">
     <Attribute id="ent1#att1" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent1#att2" name="Name" type="string" db:column="name"/>
     <Attribute id="ent1#att3" name="Origin" type="string" db:column="origin"/>
     <Attribute id="ent1#att5" name="Created" type="text" db:column="created"/>
     <Attribute id="ent1#att29" name="Website" type="string" db:column="website" contentType="text/html"/>
+    <Attribute id="ent1#att19" name="address" type="string" db:column="address"/>
   </Entity>
   <Entity gr:x="330" gr:y="235" id="ent2" name="Model" duration="persistent" attributeOrder="ent2#att6 ent2#att7 ent2#att9 ent2#att8 ent2#att17 ent2#att20 ent2#att21 ent2#att24 ent2#att18 ent2#att47 ent2#att28 ent2#att4 ent2#att12 ent2#att13" db:database="db1" db:table="model">
     <Attribute id="ent2#att6" key="true" name="oid" type="integer" db:column="oid"/>

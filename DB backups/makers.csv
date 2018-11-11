@@ -1,7 +1,7 @@
-oid,name,origin,created,website
-1,Apple,United States,1976,https://www.apple.com/
-2,Samsung,South Korea,1938,https://www.samsung.com/
-3,Nokia,Finland,1865,https://www.nokia.com/
+oid,name,origin,created,website,address
+1,Apple,United States,1976,https://www.apple.com/,cupertino
+2,Samsung,South Korea,1938,https://www.samsung.com/,seul sity
+3,Nokia,Finland,1865,https://www.nokia.com/,el polo norte
 4,Sony,Japan,1946,https://www.sony.com/
 5,LG,South Korea,1958,https://www.lg.com/
 6,HTC,Taiwan,1997,https://www.htc.com/

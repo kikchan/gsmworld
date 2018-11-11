@@ -9,5 +9,6 @@
       <Property id="smtp2#prop3" name="mail.smtp.socketFactory.class" value="javax.net.ssl.SSLSocketFactory"/>
     </SMTPServer>
     <ServiceDataProvider id="sdp1" type="PayPal" sandbox="true" currencyCode="EUR" apiUsername="gsmworld_api1.gmail.com" apiPassword="D4Y3NA349ZRYQJP9" apiSignature="AtbXJkWF8SfQmg0NYOc6kIZO2KMGA0XXfs49.YjDOiH-XLGzpn2dzBIQ"/>
+    <ServiceDataProvider id="sdp2" type="Google Maps" apiKey="AIzaSyByqdTTCuf3vUWnMCJPMobV2M5y8yCwHWQ "/>
   </ServiceDataProviders>
 </WebProject>
