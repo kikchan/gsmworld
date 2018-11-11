@@ -1,22 +1,25 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page14" name="Details" gr:x="395" gr:y="235">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page14" name="Details" gr:x="390" gr:y="235">
   <ContentUnits>
-    <DataUnit id="sv4#page14#dau7" name="Phone Details" gr:x="0" gr:y="0" entity="ent2" displayAll="true">
+    <DataUnit id="sv4#page14#dau7" name="Phone Details" gr:x="5" gr:y="0" entity="ent2" displayAll="true">
       <Selector id="sv4#page14#dau7#su17" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#page14#dau7#su17#kcond15" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
       <Link id="sv4#page14#dau7#ln43" name="Flow43" to="sv4#page14#inu1" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv4#page14#dau7#ln47" name="Flow47" to="sv4#cru6" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv4#page14#dau7#ln51" name="Flow48" to="sv4#page14#inu2" type="transport" validate="true">
+        <LinkParameter id="sv4#page14#dau7#ln51#par13" name="oid_current oid" source="data.ent2#att6" target="sv4#page14#inu2.current.ent2#att6"/>
+      </Link>
     </DataUnit>
-    <IndexUnit gr:x="150" gr:y="0" id="sv4#page14#inu1" name="Comments list" entity="ent9" displayAttributes="ent9#att25 rel2#role4.userName ent9#att30">
+    <IndexUnit gr:x="105" gr:y="100" id="sv4#page14#inu1" name="Comments list" entity="ent9" displayAttributes="ent9#att25 rel2#role4.userName ent9#att30">
       <Selector id="sv4#page14#inu1#su18" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv4#page14#inu1#su18#rcond3" name="RoleCondition3" predicate="in" implied="false" role="rel1#role1"/>
       </Selector>
       <SortAttribute attribute="ent9#att25" order="ascending"/>
     </IndexUnit>
-    <GetUnit gr:x="175" gr:y="120" id="sv4#page14#gtu2" name="Get User" contextParameters="UserCtxParam">
+    <GetUnit gr:x="200" gr:y="200" id="sv4#page14#gtu2" name="Get User" contextParameters="UserCtxParam">
       <Link id="sv4#page14#gtu2#ln45" name="Flow45" to="sv4#cru6" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
-    <EntryUnit gr:x="0" gr:y="120" id="sv4#page14#enu8" name="Create Comment" entity="ent9" linkOrder="sv4#page14#enu8#ln49">
+    <EntryUnit gr:x="0" gr:y="200" id="sv4#page14#enu8" name="Create Comment" entity="ent9" linkOrder="sv4#page14#enu8#ln49">
       <Field id="sv4#page14#enu8#fld27" name="comment" type="text" modifiable="true" attribute="ent9#att30">
         <VRules>
           <ValueLengthValidationRule id="sv4#page14#enu8#fld27#vl2" name="Value Length5" predicate="min" value="5"/>
@@ -24,10 +27,23 @@
       </Field>
       <Link id="sv4#page14#enu8#ln49" name="Comment" to="sv4#cru6" automaticCoupling="true" type="normal" validate="true"/>
     </EntryUnit>
+    <IndexUnit gr:x="195" gr:y="0" id="sv4#page14#inu2" name="On sale" entity="ent2" displayAttributes="ent2#att13 ent2#att8" linkOrder="sv4#page14#inu2#ln71">
+      <Selector id="sv4#page14#inu2#su22" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv4#page14#inu2#su22#acond1" name="onSales" predicate="gteq" booleanOperator="or" implied="true" value="0" attributes="rel3#role6.userOID"/>
+      </Selector>
+      <Link id="sv4#page14#inu2#ln71" to="sv4#ppu1" type="normal" validate="true" name="Checkout with PayPal">
+        <LinkParameter id="sv4#page14#inu2#ln71#par15" name="name_Item Names" source="data[].ent2#att7" target="sv4#ppu1.itemNames"/>
+        <LinkParameter id="sv4#page14#inu2#ln71#par19" name="price_Item Prices" source="data[].ent2#att8" target="sv4#ppu1.itemPrices"/>
+        <LinkParameter id="sv4#page14#inu2#ln71#par20" name="1_Item Quantities" sourceValue="1" target="sv4#ppu1.itemQuantities"/>
+        <LinkParameter id="sv4#page14#inu2#ln71#par96" name="10_Shipping Costs" sourceValue="10" target="sv4#ppu1.shippingCosts"/>
+        <LinkParameter id="sv4#page14#inu2#ln71#par275" name="0_Shipping Discount" sourceValue="0" target="sv4#ppu1.shippingDiscount"/>
+        <LinkParameter id="sv4#page14#inu2#ln71#par287" name="0_Tax" sourceValue="0" target="sv4#ppu1.tax"/>
+      </Link>
+    </IndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="6">
         <layout:Unit unitId="sv4#page14#dau7">
           <layout:Attribute attribute="ent2#att7"/>
           <layout:Attribute attribute="ent2#att9"/>
@@ -41,6 +57,7 @@
           <layout:Attribute attribute="ent2#att28"/>
           <layout:Attribute attribute="ent2#att4"/>
           <layout:Attribute attribute="ent2#att12"/>
+          <layout:Attribute attribute="ent2#att13"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -48,7 +65,18 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv4#page14#inu2">
+          <layout:Attribute attribute="ent2#att13"/>
+          <layout:Attribute attribute="ent2#att8"/>
+          <layout:Link link="sv4#page14#inu2#ln71">
+            <layout:LayoutParameter name="show" value="icon" type="link"/>
+            <layout:LayoutParameter name="icon-folder" value="PayPal" type="link"/>
+            <layout:LayoutParameter name="icon-extension" value="gif" type="link"/>
+            <layout:LayoutParameter name="icon-name" value="paypal" type="link"/>
+          </layout:Link>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -63,20 +91,6 @@
           <layout:Attribute attribute="ent9#att30"/>
         </layout:Unit>
       </layout:Cell>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

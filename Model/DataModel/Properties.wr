@@ -53,7 +53,7 @@
     <Attribute id="ent1#att5" name="Created" type="text" db:column="created"/>
     <Attribute id="ent1#att29" name="Website" type="string" db:column="website" contentType="text/html"/>
   </Entity>
-  <Entity gr:x="330" gr:y="235" id="ent2" name="Model" duration="persistent" attributeOrder="ent2#att6 ent2#att7 ent2#att9 ent2#att8 ent2#att17 ent2#att20 ent2#att21 ent2#att24 ent2#att18 ent2#att47 ent2#att28 ent2#att4 ent2#att12" db:database="db1" db:table="model">
+  <Entity gr:x="330" gr:y="235" id="ent2" name="Model" duration="persistent" attributeOrder="ent2#att6 ent2#att7 ent2#att9 ent2#att8 ent2#att17 ent2#att20 ent2#att21 ent2#att24 ent2#att18 ent2#att47 ent2#att28 ent2#att4 ent2#att12 ent2#att13" db:database="db1" db:table="model">
     <Attribute id="ent2#att6" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent2#att7" name="name" type="string" db:column="name"/>
     <Attribute id="ent2#att8" name="price" type="string" db:column="price"/>
@@ -67,6 +67,7 @@
     <Attribute id="ent2#att47" name="cardSlot" type="string" db:column="cardslot"/>
     <Attribute id="ent2#att4" name="CPU" type="string" db:column="cpu"/>
     <Attribute id="ent2#att12" name="Maker" type="string" derivationQuery="simpleImported::Self.rel7#role14.ent1#att2"/>
+    <Attribute id="ent2#att13" name="user" type="string" derivationQuery="simpleImported::Self.rel3#role6.userName"/>
   </Entity>
   <Entity gr:x="610" gr:y="235" id="ent3" name="Color" duration="persistent" attributeOrder="ent3#att26 ent3#att27" db:database="db1" db:table="color">
     <Attribute id="ent3#att26" key="true" name="oid" type="integer" db:column="oid"/>
@@ -77,7 +78,7 @@
     <Attribute id="ent7#att43" name="resolution" type="string" db:column="resolution"/>
     <Attribute id="ent7#att23" name="size" type="string" db:column="size"/>
   </Entity>
-  <db:Database id="db1" name="Database" type="MySQL (InnoDB)" url="jdbc:mysql://localhost:3306/gsmworld" username="root" password="Y29udHJhbXlzcWwy" cryptedPassword="true">
+  <db:Database id="db1" name="Database" type="MySQL (InnoDB)" url="jdbc:mysql://localhost:3306/gsmworld" username="root" password="cm9vdA==" cryptedPassword="true">
     <Comment xml:space="preserve">jdbc:mysql://149.71.238.44:3306/gsmworld
 
 jdbc:mysql://192.168.1.10:3306/gsmworld</Comment>

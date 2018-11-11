@@ -1,11 +1,11 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="750" gr:y="235" id="sv4#page16" name="My comments" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="835" gr:y="240" id="sv4#page16" name="My comments" landmark="true">
   <ContentUnits>
     <IndexUnit id="sv4#page16#inu3" name="My comments" linkOrder="sv4#page16#inu3#ln52" gr:x="0" gr:y="0" entity="ent9" displayAttributes="ent9#att25 rel1#role2.ent2#att7 ent9#att30">
       <Selector id="sv4#page16#inu3#su21" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv4#page16#inu3#su21#rcond5" name="RoleCondition4" predicate="in" implied="false" role="rel2#role3"/>
       </Selector>
       <SortAttribute attribute="ent9#att25" order="ascending"/>
-      <Link id="sv4#page16#inu3#ln52" name="View" to="sv4#page14#dau7" type="normal" validate="true" gr:bendpoints="-125,-118,245,-118">
+      <Link id="sv4#page16#inu3#ln52" name="View" to="sv4#page14#dau7" type="normal" validate="true" gr:bendpoints="-110,-105,345,-100;-368,-106,87,-101">
         <LinkParameter id="sv4#page16#inu3#ln52#par97" name="ComentarioToModel.oid_KeyCondition1 [oid]" source="data[].rel1#role2_ent2#att6" target="sv4#page14#dau7#su17#kcond15.ent2#att6"/>
       </Link>
     </IndexUnit>
