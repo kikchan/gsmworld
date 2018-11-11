@@ -39,7 +39,7 @@
         <LinkParameter id="sv4#page2#enu9#ln34#par243" name="Weight_weight" source="sv4#page2#enu9#fld31" target="sv4#miu6.mov1#opm1#icu1#icp6"/>
         <LinkParameter id="sv4#page2#enu9#ln34#par244" name="Image URL_imgURL" source="sv4#page2#enu9#fld38" target="sv4#miu6.mov1#opm1#icu1#icp11"/>
       </Link>
-      <Field id="sv4#page2#enu9#fld38" name="Image URL" type="string" modifiable="true" attribute="ent2#att28"/>
+      <Field id="sv4#page2#enu9#fld38" name="Image URL" type="blob" modifiable="true" attribute="ent2#att28"/>
     </EntryUnit>
     <PowerIndexUnit id="sv4#page2#pwu7" name="All phones" linkOrder="sv4#page2#pwu7#ln55 sv4#page2#pwu7#ln35" gr:x="365" gr:y="55" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att6 rel7#role14.ent1#att2 ent2#att7 ent2#att8">
       <Link id="sv4#page2#pwu7#ln35" name="Delete" to="sv4#dlu6" type="normal" validate="true">

@@ -63,7 +63,7 @@
     <Attribute id="ent2#att20" name="main_camera" type="string" db:column="main_camera"/>
     <Attribute id="ent2#att21" name="secondary_camera" type="string" db:column="secondary_camera"/>
     <Attribute id="ent2#att24" name="battery" type="string" db:column="battery"/>
-    <Attribute id="ent2#att28" name="imgURL" type="string" db:column="imgurl"/>
+    <Attribute id="ent2#att28" name="imgURL" type="blob" db:column="imgurl" contentType="image"/>
     <Attribute id="ent2#att47" name="cardSlot" type="string" db:column="cardslot"/>
     <Attribute id="ent2#att4" name="CPU" type="string" db:column="cpu"/>
     <Attribute id="ent2#att12" name="Maker" type="string" derivationQuery="simpleImported::Self.rel7#role14.ent1#att2"/>
