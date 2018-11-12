@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="70" gr:y="420" id="sv1#page20" name="Search" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="70" gr:y="420" id="sv1#page20" name="Search Mobile" landmark="true">
   <ContentUnits>
     <PowerIndexUnit id="sv1#page20#pwu19" name="Search result" linkOrder="sv1#page20#pwu19#ln75" gr:x="140" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att6 ent2#att7 ent2#att9 ent2#att8">
       <Selector id="sv1#page20#pwu19#su32" defaultPolicy="fill" booleanOperator="and">
@@ -20,7 +20,10 @@
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
         <layout:Unit unitId="sv1#page20#enu11">
           <layout:Field field="sv1#page20#enu11#fld40"/>
           <layout:Link link="sv1#page20#enu11#ln76"/>
@@ -31,15 +34,15 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="3"/>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="4">
         <layout:Unit unitId="sv1#page20#pwu19">
           <layout:Attribute attribute="ent2#att6"/>
           <layout:Attribute attribute="ent2#att7"/>
@@ -51,17 +54,7 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="2">
         <layout:Unit unitId="sv1#page20#dau11">
           <layout:Attribute attribute="ent2#att7"/>
           <layout:Attribute attribute="ent2#att12"/>
@@ -70,17 +63,11 @@
           <layout:Attribute attribute="ent2#att17"/>
           <layout:Attribute attribute="ent2#att20"/>
           <layout:Attribute attribute="ent2#att28"/>
+          <layout:LayoutParameter name="label-width" value="6" type="unit"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="3"/>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>

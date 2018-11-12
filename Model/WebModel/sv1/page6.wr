@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="745" gr:y="545" id="sv1#page6" name="Login" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="745" gr:y="545" id="sv1#page6" name="Login" landmark="false">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv1#page6#enu2" name="User credentials" entity="User" linkOrder="sv1#page6#enu2#ln6">
       <Field id="sv1#page6#enu2#fld2" name="Username" type="string" modifiable="true" attribute="userName"/>
@@ -14,7 +14,10 @@
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
         <layout:Unit unitId="sv1#page6#enu2">
           <layout:Field field="sv1#page6#enu2#fld2"/>
           <layout:Field field="sv1#page6#enu2#fld3"/>
@@ -26,10 +29,7 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="3"/>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>

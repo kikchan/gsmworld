@@ -30,7 +30,9 @@
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="8">
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+      <layout:Cell colspan="5">
         <layout:Unit unitId="sv4#page28#pwu9">
           <layout:Link link="sv4#page28#pwu9#ln100"/>
           <layout:Attribute attribute="ent2#att12"/>
@@ -44,10 +46,7 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell colspan="4">
+      <layout:Cell colspan="3">
         <layout:Unit unitId="sv4#page28#enu17">
           <layout:Field field="sv4#page28#enu17#fld46"/>
           <layout:Link link="sv4#page28#enu17#ln102"/>
@@ -56,6 +55,7 @@
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>

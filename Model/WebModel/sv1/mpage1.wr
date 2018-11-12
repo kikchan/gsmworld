@@ -1,36 +1,61 @@
-<MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="715" gr:y="10" id="sv1#mpage1" name="MasterPage 1">
+<MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="725" gr:y="-65" id="sv1#mpage1" name="MasterPage 1" localized="false" gr:hide="false">
   <ContentUnits>
-    <GetUnit gr:x="0" gr:y="10" id="sv1#mpage1#gtu1" name="Get1" contextParameters="UserCtxParam">
-      <Link id="sv1#mpage1#gtu1#ln21" name="Flow21" to="sv1#mpage1#dau2" automaticCoupling="true" type="transport" validate="true"/>
-    </GetUnit>
-    <DataUnit gr:x="170" gr:y="0" id="sv1#mpage1#dau2" name="Details2" entity="User" displayAttributes="userName" linkOrder="sv1#mpage1#dau2#ln33">
+    <DataUnit gr:x="155" gr:y="0" id="sv1#mpage1#dau2" name="Details2" entity="User" displayAttributes="userName" linkOrder="sv1#mpage1#dau2#ln33">
       <Selector id="sv1#mpage1#dau2#su10" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#mpage1#dau2#su10#kcond10" name="KeyCondition10" predicate="in" implied="false"/>
       </Selector>
       <Link id="sv1#mpage1#dau2#ln33" name="Salir" to="sv1#lou3" type="normal" validate="true"/>
     </DataUnit>
+    <GetUnit gr:x="0" gr:y="0" id="sv1#mpage1#gtu11" name="Get11" contextParameters="UserCtxParam">
+      <Link id="sv1#mpage1#gtu11#ln108" name="Flow108" to="sv1#miu14" type="transport" validate="true">
+        <LinkParameter id="sv1#mpage1#gtu11#ln108#par365" name="UserCtxParam.oid_idUsuario" source="sv1#mpage1#gtu11.UserCtxParam" target="sv1#miu14.mov1#opm6#icu8#icp45"/>
+      </Link>
+    </GetUnit>
   </ContentUnits>
   <layout:CustomLocation name="User">
     <layout:Grid containerType="cell">
       <layout:Row>
-        <layout:Cell layout:style="WebRatio">
-          <layout:Grid containerType="grid">
+        <layout:Cell layout:style="AdminLTE">
+          <layout:Grid containerType="grid" layout:style="AdminLTE">
             <layout:Row>
-              <layout:Cell colspan="8"/>
+              <layout:Cell colspan="3"/>
               <layout:Cell/>
               <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell colspan="2">
-                <layout:Attribute unitId="sv1#mpage1#dau2" mode="value" attribute="userName" label="Usuario"/>
+              <layout:Cell colspan="3">
+                <layout:Attribute unitId="sv1#mpage1#dau2" mode="value" attribute="userName" label="Usuario">
+                  <layout:LayoutParameter name="label-width" value="6" type="attribute"/>
+                </layout:Attribute>
               </layout:Cell>
               <layout:Cell/>
-              <layout:Cell colspan="2">
-                <layout:Link unitId="sv1#mpage1#dau2" link="sv1#mpage1#dau2#ln33"/>
+              <layout:Cell/>
+              <layout:Cell colspan="3">
+                <layout:Link unitId="sv1#mpage1#dau2" link="sv1#mpage1#dau2#ln33" layout:linkDisableConditionNegated="true" layout:linkVisibilityConditionVariable="sv1#mpage1#var4">
+                  <layout:LayoutParameter name="link-style" value="button" type="link"/>
+                  <layout:LayoutParameter name="link-size" value="normal" type="link"/>
+                  <layout:LayoutParameter name="btn-style" value="danger" type="link"/>
+                  <layout:LayoutParameter name="btn-block" value="false" type="link"/>
+                  <layout:LayoutParameter name="show" value="text" type="link"/>
+                  <layout:LayoutParameter name="confirmation" value="false" type="link"/>
+                </layout:Link>
               </layout:Cell>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell colspan="3"/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+            <layout:Row>
+              <layout:Cell colspan="3"/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell colspan="3"/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell colspan="3"/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell colspan="3"/>
+              <layout:Cell/>
               <layout:Cell/>
             </layout:Row>
           </layout:Grid>
@@ -38,4 +63,5 @@
       </layout:Row>
     </layout:Grid>
   </layout:CustomLocation>
+  <Variable id="sv1#mpage1#var4" name="VisibleUser" type="boolean" value="False"/>
 </MasterPage>

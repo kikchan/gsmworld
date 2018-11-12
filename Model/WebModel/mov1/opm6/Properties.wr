@@ -1,0 +1,20 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm6" name="InputNotNull" gr:x="230" gr:y="280">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm6#icu8" gr:x="20" gr:y="110">
+      <InputCollectorParameter id="mov1#opm6#icu8#icp45" name="idUsuario"/>
+      <Link id="mov1#opm6#icu8#ln5" name="Flow53" to="mov1#opm6#inn7" type="transport" validate="true">
+        <LinkParameter id="mov1#opm6#icu8#ln5#par294" name="idUsuario_Input" source="mov1#opm6#icu8#icp45" target="mov1#opm6#inn7.isnotnull"/>
+      </Link>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov1#opm6#okcu8" name="OK Port5" gr:x="465" gr:y="50">
+      <OutputCollectorParameter id="mov1#opm6#okcu8#ocp14" name="output"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit id="mov1#opm6#kocu8" name="KO Port5" gr:x="465" gr:y="155"/>
+    <IsNotNullUnit id="mov1#opm6#inn7" name="Is Not Null6" gr:x="305" gr:y="115" emptyStringAsNull="true">
+      <OKLink id="mov1#opm6#inn7#oln31" name="OKFlow19" to="mov1#opm6#okcu8">
+        <LinkParameter id="mov1#opm6#inn7#oln31#par304" name="Input Value_output" source="inputValue" target="mov1#opm6#okcu8#ocp14"/>
+      </OKLink>
+      <KOLink id="mov1#opm6#inn7#kln22" name="KOFlow13" to="mov1#opm6#kocu8" automaticCoupling="true"/>
+    </IsNotNullUnit>
+  </OperationUnits>
+</OperationModule>

@@ -1,43 +1,53 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page8" name="Makers" landmark="true" gr:x="-395" gr:y="235">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page8" name="Makers" landmark="true" gr:x="-395" gr:y="235" layout:style="AdminLTE">
   <ContentUnits>
     <PowerIndexUnit id="sv4#page8#pwu11" name="Available makers" linkOrder="sv4#page8#pwu11#ln77 sv4#page8#pwu11#ln79" gr:x="0" gr:y="10" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att29">
       <Link id="sv4#page8#pwu11#ln77" name="More info" to="sv4#page8#dau12" type="normal" validate="true">
         <LinkParameter id="sv4#page8#pwu11#ln77#par295" name="oid_KeyCondition18 [oid]" source="data[].ent1#att1" target="sv4#page8#dau12#su28#kcond19.ent1#att1"/>
+        <LinkParameter id="sv4#page8#pwu11#ln77#par312" name="true_visibleMap" sourceValue="true" targetVariable="sv4#page8#var2"/>
       </Link>
       <Link id="sv4#page8#pwu11#ln79" name="View all models" to="sv4#page13#pwu8" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="89,-111,-226,-86;204,-112,-111,-87"/>
     </PowerIndexUnit>
-    <MultiMessageUnit id="sv4#page8#mssu9" name="View on Map" gr:x="155" gr:y="145">
-      <Message xml:space="preserve">&lt;a href="https://www.google.com/maps/place/$$address$$/"&gt;View on Google Maps&lt;/a&gt;</Message>
+    <MultiMessageUnit id="sv4#page8#mssu9" name="View on Map" gr:x="150" gr:y="145">
+      <Message xml:space="preserve">&lt;iframe width="100%" height="500" src="https://maps.google.com/maps?width=400&amp;height=600&amp;hl=es&amp;q=$$address$$+()&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"&gt;&lt;/iframe&gt;</Message>
     </MultiMessageUnit>
     <DataUnit id="sv4#page8#dau12" name="Details" gr:x="155" gr:y="0" entity="ent1" displayAll="true">
       <Selector id="sv4#page8#dau12#su28" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#page8#dau12#su28#kcond19" name="KeyCondition18" predicate="in" implied="false"/>
       </Selector>
-      <Link id="sv4#page8#dau12#ln78" name="Flow50" to="sv4#page8#mssu9" type="transport" customDescriptor="false" validate="true">
-        <LinkParameter id="sv4#page8#dau12#ln78#par296" name="address_address" source="data.ent1#att19" target="sv4#page8#mssu9.address"/>
+      <Link id="sv4#page8#dau12#ln49" name="Flow49" to="sv4#page8#mssu9" type="transport" validate="true">
+        <LinkParameter id="sv4#page8#dau12#ln49#par306" name="true_visibleMap" targetVariable="sv4#page8#var2" blank="true"/>
+        <LinkParameter id="sv4#page8#dau12#ln49#par311" name="address_address" source="data.ent1#att19" target="sv4#page8#mssu9.address"/>
       </Link>
     </DataUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell rowspan="3" colspan="8">
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+      <layout:Cell rowspan="3" colspan="5">
         <layout:Unit unitId="sv4#page8#pwu11">
-          <layout:LayoutParameter name="new-window-options" value="&lt;a href=&quot;http://google.es&gt;Google&lt;/a&gt;" type="link"/>
           <layout:Attribute attribute="ent1#att2"/>
           <layout:Attribute attribute="ent1#att3"/>
           <layout:Attribute attribute="ent1#att29"/>
-          <layout:Link link="sv4#page8#pwu11#ln77"/>
-          <layout:Link link="sv4#page8#pwu11#ln79"/>
+          <layout:Link link="sv4#page8#pwu11#ln77">
+            <layout:LayoutParameter name="link-style" value="normal" type="link"/>
+            <layout:LayoutParameter name="link-size" value="lg" type="link"/>
+            <layout:LayoutParameter name="show" value="icon" type="link"/>
+            <layout:LayoutParameter name="icon-class" value="glyphicon glyphicon-info-sign" type="link"/>
+          </layout:Link>
+          <layout:Link link="sv4#page8#pwu11#ln79">
+            <layout:LayoutParameter name="link-style" value="normal" type="link"/>
+            <layout:LayoutParameter name="link-size" value="lg" type="link"/>
+            <layout:LayoutParameter name="show" value="icon" type="link"/>
+            <layout:LayoutParameter name="icon-class" value="glyphicon glyphicon-tags" type="link"/>
+          </layout:Link>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell colspan="4">
+      <layout:Cell colspan="3">
         <layout:Unit unitId="sv4#page8#dau12">
           <layout:Attribute attribute="ent1#att2"/>
           <layout:Attribute attribute="ent1#att3"/>
@@ -48,27 +58,29 @@
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell colspan="4">
-        <layout:Unit unitId="sv4#page8#mssu9" manualLinks="true">
+      <layout:Cell colspan="3" rowspan="2">
+        <layout:Unit unitId="sv4#page8#mssu9" manualLinks="true" layout:unitVisibilityConditionVariable="sv4#page8#var2" layout:attributeVisibilityConditionVariable="sv4#page8#var2" layout:fieldVisibilityConditionVariable="sv4#page8#var2" layout:fieldDisableConditionVariable="sv4#page8#var2" layout:fieldDisableConditionNegated="true" layout:linkVisibilityConditionVariable="sv4#page8#var2" layout:linkDisableConditionVariable="sv4#page8#var2" layout:linkDisableConditionNegated="true">
           <layout:LayoutParameter name="contentType" value="text/html" type="unit"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -77,10 +89,10 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell colspan="4"/>
       <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
+  <Variable id="sv4#page8#var2" name="visibleMap" type="boolean" value="false"/>
 </Page>

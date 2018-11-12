@@ -1,26 +1,31 @@
-[12 nov 2018 03:04:34] DEBUG Executing SQL script
-[12 nov 2018 03:04:34] INFO ================================================================================
-[12 nov 2018 03:04:34] INFO onError= 'stop'
-[12 nov 2018 03:04:34] INFO autoCommit= 'false'
-[12 nov 2018 03:04:34] INFO username= 'root'
-[12 nov 2018 03:04:34] INFO outputPath= 'C:\WebRatio\WebRatio Platform 7.2.17.x64bit\workspace\gsmworld\.Temp~\UpdateSQL.xml'
-[12 nov 2018 03:04:34] INFO outputLogPath= 'C:\WebRatio\WebRatio Platform 7.2.17.x64bit\workspace\gsmworld\.Temp~\UpdateSQL.xml.log'
-[12 nov 2018 03:04:34] INFO encoding= ''
-[12 nov 2018 03:04:34] INFO driverClass= 'com.mysql.jdbc.Driver'
-[12 nov 2018 03:04:34] INFO sqlScript= 'C:\WebRatio\WebRatio Platform 7.2.17.x64bit\workspace\gsmworld\.Temp~\UpdateSQL.sql'
-[12 nov 2018 03:04:34] INFO eventSocketPort= '57459'
-[12 nov 2018 03:04:34] INFO statementSeparator= ';'
-[12 nov 2018 03:04:34] INFO derby.system.home= 'C:\WebRatio\WebRatio Platform 7.2.17.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
-[12 nov 2018 03:04:34] INFO password= 'root'
-[12 nov 2018 03:04:34] INFO url= 'jdbc:mysql://localhost:3306/gsmworld2'
-[12 nov 2018 03:04:34] INFO ================================================================================
-[12 nov 2018 03:04:34] INFO Connecting to the Database...
-[12 nov 2018 03:04:34] INFO Database connection estabilished
-[12 nov 2018 03:04:34] INFO transaction isolation: 4
-[12 nov 2018 03:04:34] DEBUG ================================================================================
-[12 nov 2018 03:04:34] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Platform 7.2.17.x64bit\workspace\gsmworld\.Temp~\UpdateSQL.sql
-[12 nov 2018 03:04:34] DEBUG Executing statement:  create view `model_averagerating_view` as select AL1.`oid` as `oid`, avg(AL2.`rating`) as `der_attr` from  `model` AL1 left outer join `rating` AL2 on AL1.`oid`=AL2.`model_oid` group by AL1.`oid`
-[12 nov 2018 03:04:35] DEBUG ================================================================================
-[12 nov 2018 03:04:35] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
-[12 nov 2018 03:04:35] INFO Database connection closed
-[12 nov 2018 03:04:35] DEBUG Total time: 714 milliseconds
+[12 nov 2018 17:20:15] DEBUG Executing SQL script
+[12 nov 2018 17:20:15] INFO ================================================================================
+[12 nov 2018 17:20:15] INFO onError= 'stop'
+[12 nov 2018 17:20:15] INFO autoCommit= 'false'
+[12 nov 2018 17:20:15] INFO username= 'root'
+[12 nov 2018 17:20:15] INFO outputPath= 'C:\Users\wrgui\Documents\GitHub\gsmworld\.Temp~\UpdateSQL.xml'
+[12 nov 2018 17:20:15] INFO outputLogPath= 'C:\Users\wrgui\Documents\GitHub\gsmworld\.Temp~\UpdateSQL.xml.log'
+[12 nov 2018 17:20:15] INFO encoding= ''
+[12 nov 2018 17:20:15] INFO driverClass= 'com.mysql.jdbc.Driver'
+[12 nov 2018 17:20:15] INFO sqlScript= 'C:\Users\wrgui\Documents\GitHub\gsmworld\.Temp~\UpdateSQL.sql'
+[12 nov 2018 17:20:15] INFO eventSocketPort= '56675'
+[12 nov 2018 17:20:15] INFO statementSeparator= ';'
+[12 nov 2018 17:20:15] INFO derby.system.home= 'C:\Users\wrgui\Documents\GitHub\.metadata\.plugins\com.webratio.commons.db\derby'
+[12 nov 2018 17:20:15] INFO password= 'root'
+[12 nov 2018 17:20:15] INFO url= 'jdbc:mysql://localhost:3306/gsmworld'
+[12 nov 2018 17:20:15] INFO ================================================================================
+[12 nov 2018 17:20:15] INFO Connecting to the Database...
+[12 nov 2018 17:20:15] INFO Database connection estabilished
+[12 nov 2018 17:20:15] INFO transaction isolation: 4
+[12 nov 2018 17:20:15] DEBUG ================================================================================
+[12 nov 2018 17:20:15] DEBUG Executing SQL script file: C:\Users\wrgui\Documents\GitHub\gsmworld\.Temp~\UpdateSQL.sql
+[12 nov 2018 17:20:15] DEBUG Executing statement:  create table `rating` ( `oid`  integer  not null, `rating`  double precision, primary key (`oid`) ) ENGINE=InnoDB
+[12 nov 2018 17:20:15] DEBUG Executing statement:    alter table `rating`  add column  `model_oid`  integer
+[12 nov 2018 17:20:15] DEBUG Executing statement:  alter table `rating`   add index fk_rating_model (`model_oid`), add constraint fk_rating_model foreign key (`model_oid`) references `model` (`oid`)
+[12 nov 2018 17:20:15] DEBUG Executing statement:    alter table `rating`  add column  `user_oid`  integer
+[12 nov 2018 17:20:15] DEBUG Executing statement:  alter table `rating`   add index fk_rating_user (`user_oid`), add constraint fk_rating_user foreign key (`user_oid`) references `user` (`oid`)
+[12 nov 2018 17:20:15] DEBUG Executing statement:    create view `model_averagerating_view` as select AL1.`oid` as `oid`, avg(AL2.`rating`) as `der_attr` from  `model` AL1 left outer join `rating` AL2 on AL1.`oid`=AL2.`model_oid` group by AL1.`oid`
+[12 nov 2018 17:20:15] DEBUG ================================================================================
+[12 nov 2018 17:20:15] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[12 nov 2018 17:20:15] INFO Database connection closed
+[12 nov 2018 17:20:15] DEBUG Total time: 331 milliseconds
