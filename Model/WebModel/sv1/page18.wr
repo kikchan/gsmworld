@@ -50,10 +50,18 @@
     <layout:Row>
       <layout:Cell colspan="9">
         <layout:Unit unitId="sv1#page18#pwu10">
-          <layout:Link link="sv1#page18#pwu10#ln42"/>
-          <layout:Link link="sv1#page18#pwu10#ln44"/>
-          <layout:Link link="sv1#page18#pwu10#ln46"/>
-          <layout:Link link="sv1#page18#pwu10#ln74"/>
+          <layout:Link link="sv1#page18#pwu10#ln42">
+            <layout:LayoutParameter name="link-style" value="button" type="link"/>
+          </layout:Link>
+          <layout:Link link="sv1#page18#pwu10#ln44">
+            <layout:LayoutParameter name="link-style" value="button" type="link"/>
+          </layout:Link>
+          <layout:Link link="sv1#page18#pwu10#ln46">
+            <layout:LayoutParameter name="link-style" value="button" type="link"/>
+          </layout:Link>
+          <layout:Link link="sv1#page18#pwu10#ln74">
+            <layout:LayoutParameter name="link-style" value="button" type="link"/>
+          </layout:Link>
           <layout:Attribute attribute="ent2#att12"/>
           <layout:Attribute attribute="ent2#att7"/>
           <layout:Attribute attribute="ent2#att8"/>
@@ -137,7 +145,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="9">
         <layout:Unit unitId="sv1#page18#pwu12">
           <layout:Attribute attribute="ent2#att12"/>
           <layout:Attribute attribute="ent2#att7"/>
@@ -154,7 +162,7 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="3"/>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
