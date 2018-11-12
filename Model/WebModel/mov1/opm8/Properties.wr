@@ -1,0 +1,53 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm8" name="Create or Update Rating" gr:x="275" gr:y="100">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm8#icu6" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm8#icu6#icp41" name="Input Port Key"/>
+      <InputCollectorParameter id="mov1#opm8#icu6#icp42" name="Input Port Object"/>
+      <OKLink id="mov1#opm8#icu6#oln26" name="OKFlow23" to="mov1#opm8#inn5">
+        <LinkParameter id="mov1#opm8#icu6#oln26#par308" name="Input Port Object_Input" source="mov1#opm8#icu6#icp41" target="mov1#opm8#inn5.isnotnull"/>
+      </OKLink>
+      <Link id="mov1#opm8#icu6#ln86" name="Flow55" to="mov1#opm8#mfu5" type="transport" validate="true" gr:bendpoints="153,-59,-152,6">
+        <LinkParameter id="mov1#opm8#icu6#ln86#par309" name="Input Port Object_Rating Object" source="mov1#opm8#icu6#icp42" target="mov1#opm8#mfu5.entityBeans"/>
+        <LinkParameter id="mov1#opm8#icu6#ln86#par320" name="Input Port Key_KeyCondition4 [oid]" source="mov1#opm8#icu6#icp41" target="mov1#opm8#mfu5#su37#kcond22.ent8#att31"/>
+        <LinkParameter id="mov1#opm8#icu6#ln86#par321" name="Input Port Model Oid_Model.oid(RatingToModel)" source="mov1#opm8#icu6#icp43" target="mov1#opm8#mfu5.rel10#role10.ent2#att6"/>
+        <LinkParameter id="mov1#opm8#icu6#ln86#par322" name="Input Port User Oid_User.oid(RatingToUser)" source="mov1#opm8#icu6#icp44" target="mov1#opm8#mfu5.rel4#role8.userOID"/>
+      </Link>
+      <Link id="mov1#opm8#icu6#ln87" name="Flow56" to="mov1#opm8#cru9" type="transport" validate="true" gr:bendpoints="156,60,-144,-5">
+        <LinkParameter id="mov1#opm8#icu6#ln87#par313" name="Input Port Object_Rating Object" source="mov1#opm8#icu6#icp42" target="mov1#opm8#cru9.entityBeans"/>
+        <LinkParameter id="mov1#opm8#icu6#ln87#par323" name="Input Port Model Oid_Model.oid(RatingToModel)" source="mov1#opm8#icu6#icp43" target="mov1#opm8#cru9.rel10#role10.ent2#att6"/>
+        <LinkParameter id="mov1#opm8#icu6#ln87#par324" name="Input Port User Oid_User.oid(RatingToUser)" source="mov1#opm8#icu6#icp44" target="mov1#opm8#cru9.rel4#role8.userOID"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm8#icu6#icp43" name="Input Port Model Oid"/>
+      <InputCollectorParameter id="mov1#opm8#icu6#icp44" name="Input Port User Oid"/>
+    </InputCollectorUnit>
+    <CreateUnit id="mov1#opm8#cru9" name="Create3" gr:x="425" gr:y="140" entity="ent8">
+      <OKLink id="mov1#opm8#cru9#oln27" name="OKFlow25" to="mov1#opm8#okcu6">
+        <LinkParameter id="mov1#opm8#cru9#oln27#par316" name="Rating created successfully_Message" target="mov1#opm8#okcu6#ocp10" sourceValue="Rating created successfully"/>
+      </OKLink>
+      <KOLink id="mov1#opm8#cru9#kln18" name="KOFlow19" to="mov1#opm8#kocu6">
+        <LinkParameter id="mov1#opm8#cru9#kln18#par317" name="Error creating rating_Message" target="mov1#opm8#kocu6#ocp11" sourceValue="Error creating rating"/>
+      </KOLink>
+    </CreateUnit>
+    <IsNotNullUnit id="mov1#opm8#inn5" name="Is Not Null1" gr:x="305" gr:y="85" emptyStringAsNull="true">
+      <OKLink id="mov1#opm8#inn5#oln28" name="OKFlow1" to="mov1#opm8#mfu5" automaticCoupling="true"/>
+      <KOLink id="mov1#opm8#inn5#kln19" name="KOFlow1" to="mov1#opm8#cru9" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <ModifyUnit id="mov1#opm8#mfu5" name="Update1" gr:x="425" gr:y="0" entity="ent8">
+      <Selector id="mov1#opm8#mfu5#su37" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm8#mfu5#su37#kcond22" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm8#mfu5#oln29" name="OKFlow24" to="mov1#opm8#okcu6">
+        <LinkParameter id="mov1#opm8#mfu5#oln29#par318" name="Rating updated successfully_Message" target="mov1#opm8#okcu6#ocp10" sourceValue="Rating updated successfully"/>
+      </OKLink>
+      <KOLink id="mov1#opm8#mfu5#kln20" name="KOFlow18" to="mov1#opm8#kocu6">
+        <LinkParameter id="mov1#opm8#mfu5#kln20#par319" name="Error updating rating_Message" target="mov1#opm8#kocu6#ocp11" sourceValue="Error updating rating"/>
+      </KOLink>
+    </ModifyUnit>
+    <OKCollectorUnit id="mov1#opm8#okcu6" name="OK Port6" gr:x="595" gr:y="10">
+      <OutputCollectorParameter id="mov1#opm8#okcu6#ocp10" name="Message"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit id="mov1#opm8#kocu6" name="KO Port6" gr:x="595" gr:y="140">
+      <OutputCollectorParameter id="mov1#opm8#kocu6#ocp11" name="Message"/>
+    </KOCollectorUnit>
+  </OperationUnits>
+</OperationModule>

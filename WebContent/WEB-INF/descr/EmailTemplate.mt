@@ -5,20 +5,15 @@
     </div>
   
     <div>
-      Dear Customer, Welcome to GSMWorld!!!
+      <b>$$Usuario$$</b>, Welcome to GSM World!!!
     </div>
  
     <div>
-      Your subscription was accepted.
-      Your access information are:
+      Your subscription was accepted.  
     </div>
-  
+    
     <div>
-      <b>Username</b>: $$Usuario$$
-    </div>
-  
-    <div>
-      Visit our <a href="http://www.webratio.com">web site</a> to know the WebRatio world.
+      Visit our <a href="http://www.gsmworld.com">web site</a> to know more about GSM World.
     </div>
   </body>
 </html>

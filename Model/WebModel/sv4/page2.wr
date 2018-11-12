@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page2" name="Sales" landmark="true" gr:x="30" gr:y="545">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page2" name="Sales" landmark="true" gr:x="30" gr:y="915">
   <ContentUnits>
     <EntryUnit id="sv4#page2#enu9" name="Phone details" linkOrder="sv4#page2#enu9#ln34" gr:x="330" gr:y="210" entity="ent2" fieldOrder="sv4#page2#enu9#sfld1 sv4#page2#enu9#fld28 sv4#page2#enu9#fld29 sv4#page2#enu9#fld30 sv4#page2#enu9#fld37 sv4#page2#enu9#sfld12 sv4#page2#enu9#sfld13 sv4#page2#enu9#sfld15 sv4#page2#enu9#sfld10 sv4#page2#enu9#fld31 sv4#page2#enu9#sfld11 sv4#page2#enu9#fld32 sv4#page2#enu9#fld33 sv4#page2#enu9#fld34 sv4#page2#enu9#fld35 sv4#page2#enu9#fld36 sv4#page2#enu9#sfld14 sv4#page2#enu9#fld38">
       <Field id="sv4#page2#enu9#fld28" name="Model name" type="string" modifiable="true" attribute="ent2#att7"/>

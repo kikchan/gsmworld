@@ -1,14 +1,21 @@
 <SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4" name="Private" secure="false" layout:style="WebRatio" protected="true" landmarks="sv4#page16 sv4#page2 sv4#page8" homePage="sv4#page17">
   <OperationUnits>
     <LogoutUnit id="sv4#lou7" name="Logout3" gr:x="900" gr:y="70" siteView="sv1"/>
-    <CreateUnit gr:x="215" gr:y="415" id="sv4#cru6" name="Create Comment" entity="ent9"/>
-    <ModuleInstanceUnit id="sv4#miu6" gr:x="710" gr:y="850" action="true" moduleId="mov1#opm1">
+    <CreateUnit gr:x="215" gr:y="515" id="sv4#cru6" name="Create Comment" entity="ent9">
+      <OKLink id="sv4#cru6#oln25" name="OKFlow21" to="sv4#page14#mssu10" ajaxOpenWindow="false" ajaxWindowWidth="400" ajaxWindowHeight="200" ajaxWindowClosable="true" ajaxWindowShowEffect="Effect.Grow" gr:bendpoints="46,294,-179,-1">
+        <LinkParameter id="sv4#cru6#oln25#par305" name="Comment created successfully_Shown Messages" target="sv4#page14#mssu10.shownMessages" sourceValue="Comment created successfully"/>
+      </OKLink>
+      <KOLink id="sv4#cru6#kln17" name="KOFlow16" to="sv4#page14#mssu10" ajaxOpenWindow="false" ajaxWindowWidth="400" ajaxWindowHeight="200" ajaxWindowClosable="false" ajaxWindowShowEffect="Effect.Grow" gr:bendpoints="-4,410,-229,0">
+        <LinkParameter id="sv4#cru6#kln17#par307" name="Error creating comment_Shown Messages" target="sv4#page14#mssu10.shownMessages" sourceValue="Error creating comment"/>
+      </KOLink>
+    </CreateUnit>
+    <ModuleInstanceUnit id="sv4#miu6" gr:x="710" gr:y="1220" action="true" moduleId="mov1#opm1">
       <Link id="sv4#miu6#ln69" name="Flow19" to="sv4#page2#mssu1" type="transport" validate="true" gr:bendpoints="-29,-233,416,22;-249,-256,206,-111">
         <LinkParameter id="sv4#miu6#ln69#par280" name="OK Port1.Result_Shown Messages" source="mov1#opm1#okcu1#ocp3" target="sv4#page2#mssu1.shownMessages"/>
         <LinkParameter id="sv4#miu6#ln69#par281" name="KO Port2.Error_Shown Messages" source="mov1#opm1#kocu2#ocp4" target="sv4#page2#mssu1.shownMessages"/>
       </Link>
     </ModuleInstanceUnit>
-    <DeleteUnit id="sv4#dlu6" name="Delete phone" gr:x="670" gr:y="705" entity="ent2">
+    <DeleteUnit id="sv4#dlu6" name="Delete phone" gr:x="670" gr:y="1075" entity="ent2">
       <Selector id="sv4#dlu6#su27" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#dlu6#su27#kcond12" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
@@ -16,7 +23,7 @@
         <LinkParameter id="sv4#dlu6#ln70#par282" name="Model successfully deleted!_Shown Messages" target="sv4#page2#mssu1.shownMessages" sourceValue="Model successfully deleted!"/>
       </Link>
     </DeleteUnit>
-    <PayPalUnit gr:x="825" gr:y="455" id="sv4#ppu1" name="PayPal Unit1" action="prepare" currencyCode="EUR">
+    <PayPalUnit gr:x="825" gr:y="425" id="sv4#ppu1" name="PayPal Unit1" action="prepare" currencyCode="EUR">
       <OKLink id="sv4#ppu1#oln20" name="OKFlow20" to="sv4#ppu2">
         <LinkParameter id="sv4#ppu1#oln20#par289" name="Payer ID_Payer ID" source="payerID" target="sv4#ppu2.payerID"/>
         <LinkParameter id="sv4#ppu1#oln20#par290" name="Transaction Amount_Transaction Amount" source="amount" target="sv4#ppu2.amount"/>
@@ -24,8 +31,16 @@
         <LinkParameter id="sv4#ppu1#oln20#par292" name="Transaction Token_Transaction Token" source="token" target="sv4#ppu2.token"/>
       </OKLink>
     </PayPalUnit>
-    <PayPalUnit gr:x="960" gr:y="455" id="sv4#ppu2" name="PayPal Unit2" action="pay">
-      <OKLink id="sv4#ppu2#oln21" name="OKFlow21" to="sv4#page13" automaticCoupling="true" gr:bendpoints="166,-87,886,98;165,-288,885,-103;-610,-303,110,-118"/>
+    <PayPalUnit gr:x="960" gr:y="425" id="sv4#ppu2" name="PayPal Unit2" action="pay">
+      <OKLink id="sv4#ppu2#oln21" name="OKFlow21" to="sv4#page13" automaticCoupling="true" gr:bendpoints="166,-87,886,98;165,-288,885,-103;-219,-266,501,-121;-616,-268,104,-123"/>
     </PayPalUnit>
+    <ModuleInstanceUnit gr:x="805" gr:y="520" id="sv4#miu7" action="true" moduleId="mov1#opm8">
+      <OKLink id="sv4#miu7#oln30" name="OKFlow30" to="sv4#page14#mssu10" gr:bendpoints="-120,286,275,-4">
+        <LinkParameter id="sv4#miu7#oln30#par329" name="Message_Shown Messages" source="mov1#opm8#okcu6#ocp10" target="sv4#page14#mssu10.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv4#miu7#kln21" name="KOFlow21" to="sv4#page14#mssu10" gr:bendpoints="-129,339,266,49">
+        <LinkParameter id="sv4#miu7#kln21#par330" name="Message_Shown Messages" source="mov1#opm8#kocu6#ocp11" target="sv4#page14#mssu10.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
   </OperationUnits>
 </SiteView>
