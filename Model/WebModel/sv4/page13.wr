@@ -1,23 +1,60 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page13" name="Models" layout:style="BootstrapStyle" gr:x="215" gr:y="235">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page13" name="Models" layout:style="BootstrapStyle" gr:x="-15" gr:y="235">
   <ContentUnits>
-    <PowerIndexUnit id="sv4#page13#pwu8" name="Phone list" linkOrder="sv4#page13#pwu8#ln36" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att12 ent2#att7 ent2#att9 ent2#att8">
+    <PowerIndexUnit id="sv4#page13#pwu8" name="Phone list" linkOrder="sv4#page13#pwu8#ln36" gr:x="5" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att12 ent2#att7 ent2#att9 ent2#att8 ent2#att33">
       <Link id="sv4#page13#pwu8#ln36" name="View" to="sv4#page14#dau7" type="normal" automaticCoupling="true" validate="true"/>
       <Selector id="sv4#page13#pwu8#su16" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv4#page13#pwu8#su16#rcond1" name="RoleCondition2" predicate="in" implied="false" role="rel7#role13"/>
       </Selector>
+      <Link id="sv4#page13#pwu8#ln99" name="Flow99" to="sv4#page13#enu16" type="transport" validate="true">
+        <LinkParameter id="sv4#page13#pwu8#ln99#par366" name="oid_PASSING" source="data[].ent2#att6" passing="true"/>
+      </Link>
     </PowerIndexUnit>
+    <EntryUnit id="sv4#page13#enu16" name="Filter by rating" gr:showAllParts="true" gr:x="0" gr:y="140" fieldOrder="sv4#page13#enu16#fld44" linkOrder="sv4#page13#enu16#ln103">
+      <Field id="sv4#page13#enu16#fld44" name="Min Rating" type="float" modifiable="true" validationOrder="sv4#page13#enu16#fld44#cmp3 sv4#page13#enu16#fld44#cmp4">
+        <VRules>
+          <CompareValidationRule id="sv4#page13#enu16#fld44#cmp3" name="Greather than 0" predicate="gteq" value="0" errorMessage="Your rating must be a value between 0 and 10"/>
+          <CompareValidationRule id="sv4#page13#enu16#fld44#cmp4" name="Less than 10" predicate="lteq" value="10" errorMessage="Your rating must be a value between 0 and 10"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#page13#enu16#fld45" name="Model Oid" type="integer" hidden="true"/>
+      <Link id="sv4#page13#enu16#ln103" name="Filter" to="sv4#inn10" type="normal" validate="true" gr:bendpoints="-1,103,364,-2">
+        <LinkParameter id="sv4#page13#enu16#ln103#par376" name="Min Rating_Input" source="sv4#page13#enu16#fld44" target="sv4#inn10.isnotnull"/>
+        <LinkParameter id="sv4#page13#enu16#ln103#par377" name="Min Rating_PASSING" source="sv4#page13#enu16#fld44" passing="true"/>
+        <LinkParameter id="sv4#page13#enu16#ln103#par378" name="oid_PASSING" sourceLinkParameter="sv4#page13#pwu8#ln99#par366" passing="true"/>
+      </Link>
+    </EntryUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="9">
         <layout:Unit unitId="sv4#page13#pwu8">
           <layout:Link link="sv4#page13#pwu8#ln36"/>
           <layout:Attribute attribute="ent2#att12"/>
           <layout:Attribute attribute="ent2#att7"/>
           <layout:Attribute attribute="ent2#att9"/>
           <layout:Attribute attribute="ent2#att8"/>
+          <layout:Attribute attribute="ent2#att33"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="3">
+        <layout:Unit unitId="sv4#page13#enu16">
+          <layout:Field field="sv4#page13#enu16#fld44"/>
+          <layout:Link link="sv4#page13#enu16#ln103"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

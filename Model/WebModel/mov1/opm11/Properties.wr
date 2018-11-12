@@ -1,0 +1,29 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm11" name="Update password" gr:x="275" gr:y="210">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm11#icu10" gr:x="30" gr:y="75">
+      <InputCollectorParameter id="mov1#opm11#icu10#icp51" name="Input Port Password"/>
+      <InputCollectorParameter id="mov1#opm11#icu10#icp52" name="Input Port User Oid"/>
+      <OKLink id="mov1#opm11#icu10#oln37" name="OKFlow27" to="mov1#opm11#mfu8">
+        <LinkParameter id="mov1#opm11#icu10#oln37#par347" name="Input Port User Oid_KeyCondition19 [oid]" source="mov1#opm11#icu10#icp52" target="mov1#opm11#mfu8#su40#kcond25.userOID"/>
+        <LinkParameter id="mov1#opm11#icu10#oln37#par348" name="Input Port Password_password" source="mov1#opm11#icu10#icp51" target="mov1#opm11#mfu8.password"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <ModifyUnit id="mov1#opm11#mfu8" name="Update password" gr:x="330" gr:y="65" entity="User">
+      <Selector id="mov1#opm11#mfu8#su40" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm11#mfu8#su40#kcond25" name="KeyCondition19" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm11#mfu8#oln38" name="OKFlow20" to="mov1#opm11#okcu10">
+        <LinkParameter id="mov1#opm11#mfu8#oln38#par349" name="Password updated successfully_Message" target="mov1#opm11#okcu10#ocp18" sourceValue="Password updated successfully"/>
+      </OKLink>
+      <KOLink id="mov1#opm11#mfu8#kln26" name="KOFlow15" to="mov1#opm11#kocu10">
+        <LinkParameter id="mov1#opm11#mfu8#kln26#par350" name="Error updating password_Message" target="mov1#opm11#kocu10#ocp19" sourceValue="Error updating password"/>
+      </KOLink>
+    </ModifyUnit>
+    <OKCollectorUnit id="mov1#opm11#okcu10" name="OK Port7" gr:x="515" gr:y="30">
+      <OutputCollectorParameter id="mov1#opm11#okcu10#ocp18" name="Message"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit id="mov1#opm11#kocu10" name="KO Port7" gr:x="515" gr:y="130">
+      <OutputCollectorParameter id="mov1#opm11#kocu10#ocp19" name="Message"/>
+    </KOCollectorUnit>
+  </OperationUnits>
+</OperationModule>

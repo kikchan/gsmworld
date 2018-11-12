@@ -1,10 +1,24 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="605" gr:y="220" id="sv1#page5" name="Details">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="545" gr:y="220" id="sv1#page5" name="Details">
   <ContentUnits>
-    <DataUnit gr:x="0" gr:y="0" id="sv1#page5#dau1" name="Phone Details" entity="ent2" displayAttributes="ent2#att6 ent2#att7 ent2#att9 ent2#att8 ent2#att17 ent2#att20 ent2#att21 ent2#att24 ent2#att18 ent2#att47 ent2#att4 ent2#att12 ent2#att28">
+    <DataUnit gr:x="70" gr:y="0" id="sv1#page5#dau1" name="Phone Details" entity="ent2" displayAttributes="ent2#att6 ent2#att7 ent2#att9 ent2#att8 ent2#att17 ent2#att20 ent2#att21 ent2#att24 ent2#att18 ent2#att47 ent2#att4 ent2#att12 ent2#att28 ent2#att33">
       <Selector id="sv1#page5#dau1#su1" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#page5#dau1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
+      <Link id="sv1#page5#dau1#ln37" name="Flow37" to="sv1#page5#inu5" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv1#page5#dau1#ln48" name="Flow48" to="sv1#page5#inu4" automaticCoupling="true" type="transport" validate="true"/>
     </DataUnit>
+    <IndexUnit id="sv1#page5#inu4" name="Ratings list" gr:x="130" gr:y="135" entity="ent8" displayAttributes="ent8#att31 ent8#att32">
+      <Selector id="sv1#page5#inu4#su29" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#page5#inu4#su29#rcond9" name="RoleCondition6" predicate="in" implied="false" role="rel10#role9"/>
+      </Selector>
+      <SortAttribute attribute="ent8#att31" order="ascending"/>
+    </IndexUnit>
+    <IndexUnit id="sv1#page5#inu5" name="Comments list" gr:x="0" gr:y="135" entity="ent9" displayAttributes="ent9#att25 ent9#att30">
+      <Selector id="sv1#page5#inu5#su30" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#page5#inu5#su30#rcond10" name="RoleCondition3" predicate="in" implied="false" role="rel1#role1"/>
+      </Selector>
+      <SortAttribute attribute="ent9#att25" order="ascending"/>
+    </IndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -23,8 +37,61 @@
           <layout:Attribute attribute="ent2#att4"/>
           <layout:Attribute attribute="ent2#att12"/>
           <layout:Attribute attribute="ent2#att28"/>
+          <layout:Attribute attribute="ent2#att33"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page5#inu5">
+          <layout:Attribute attribute="ent9#att25"/>
+          <layout:Attribute attribute="ent9#att30"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page5#inu4">
+          <layout:Attribute attribute="ent8#att31"/>
+          <layout:Attribute attribute="ent8#att32"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

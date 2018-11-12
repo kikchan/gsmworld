@@ -19,11 +19,10 @@
         <KeyCondition id="sv1#page18#dau9#su20#kcond17" name="KeyCondition15" predicate="in" implied="false"/>
       </Selector>
     </DataUnit>
-    <PowerIndexUnit id="sv1#page18#pwu12" name="Phone on sales" linkOrder="sv1#page18#pwu12#ln51" gr:x="260" gr:y="165" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att12 ent2#att7 ent2#att8 ent2#att17 ent2#att4">
+    <PowerIndexUnit id="sv1#page18#pwu12" name="Phone on sales" gr:x="260" gr:y="165" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att12 ent2#att7 ent2#att8 ent2#att17 ent2#att4">
       <Selector id="sv1#page18#pwu12#su24" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#page18#pwu12#su24#acond2" name="onSales" predicate="gteq" booleanOperator="or" implied="true" value="0" attributes="rel3#role6.userOID"/>
       </Selector>
-      <Link id="sv1#page18#pwu12#ln51" name="buy" to="sv1#page19" type="normal" automaticCoupling="true" validate="true"/>
     </PowerIndexUnit>
     <DataUnit gr:x="145" gr:y="145" id="sv1#page18#dau4" name="Image" entity="ent2" displayAttributes="ent2#att28">
       <Selector id="sv1#page18#dau4#su31" defaultPolicy="fill" booleanOperator="and">
@@ -145,7 +144,6 @@
           <layout:Attribute attribute="ent2#att8"/>
           <layout:Attribute attribute="ent2#att17"/>
           <layout:Attribute attribute="ent2#att4"/>
-          <layout:Link link="sv1#page18#pwu12#ln51"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

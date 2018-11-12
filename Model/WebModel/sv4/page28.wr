@@ -1,0 +1,90 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page28" name="Models with filter" gr:x="-160" gr:y="605">
+  <ContentUnits>
+    <PowerIndexUnit id="sv4#page28#pwu9" name="Phone list" linkOrder="sv4#page28#pwu9#ln100" gr:x="155" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att12 ent2#att7 ent2#att9 ent2#att8 ent2#att33">
+      <Link id="sv4#page28#pwu9#ln100" name="View" to="sv4#page14#dau7" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="178,-201,-277,139"/>
+      <Selector id="sv4#page28#pwu9#su42" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#page28#pwu9#su42#rcond14" name="RoleCondition2" predicate="in" implied="false" role="rel7#role13"/>
+        <AttributesCondition id="sv4#page28#pwu9#su42#acond5" name="Good models" predicate="gteq" booleanOperator="or" implied="false" attributes="ent2#att33"/>
+      </Selector>
+      <Link id="sv4#page28#pwu9#ln101" name="Flow70" to="sv4#page28#enu17" type="transport" validate="true">
+        <LinkParameter id="sv4#page28#pwu9#ln101#par381" name="oid_PASSING" sourceLinkParameter="sv4#inn10#oln42#par380" passing="true"/>
+      </Link>
+    </PowerIndexUnit>
+    <EntryUnit id="sv4#page28#enu17" name="Filter by rating" linkOrder="sv4#page28#enu17#ln102 sv4#page28#enu17#ln104" gr:showAllParts="true" gr:x="0" gr:y="15" fieldOrder="sv4#page28#enu17#fld46">
+      <Field id="sv4#page28#enu17#fld46" name="Min Rating" type="float" modifiable="true">
+        <VRules>
+          <CompareValidationRule id="sv4#page28#enu17#fld46#cmp5" name="Greather than 0" predicate="gteq" value="0" errorMessage="Your rating must be a value between 0 and 10"/>
+          <CompareValidationRule id="sv4#page28#enu17#fld46#cmp6" name="Less than 10" predicate="lteq" value="10" errorMessage="Your rating must be a value between 0 and 10"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#page28#enu17#fld47" name="Model Oid" type="integer" hidden="true"/>
+      <Link id="sv4#page28#enu17#ln102" name="Filter" to="sv4#inn9" type="normal" validate="true">
+        <LinkParameter id="sv4#page28#enu17#ln102#par368" name="Min Rating_Input" source="sv4#page28#enu17#fld46" target="sv4#inn9.isnotnull"/>
+        <LinkParameter id="sv4#page28#enu17#ln102#par370" name="Min Rating_PASSING" source="sv4#page28#enu17#fld46" passing="true"/>
+        <LinkParameter id="sv4#page28#enu17#ln102#par382" name="oid_PASSING" sourceLinkParameter="sv4#page28#pwu9#ln101#par381" passing="true"/>
+      </Link>
+      <Link id="sv4#page28#enu17#ln104" name="Ignore filter" to="sv4#page13#pwu8" type="normal" validate="true" gr:bendpoints="-1,-170,-146,205">
+        <LinkParameter id="sv4#page28#enu17#ln104#par383" name="oid_PASSING_RoleCondition2 [oid]" sourceLinkParameter="sv4#page28#pwu9#ln101#par381" target="sv4#page13#pwu8#su16#rcond1.ent1#att1"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="8">
+        <layout:Unit unitId="sv4#page28#pwu9">
+          <layout:Link link="sv4#page28#pwu9#ln100"/>
+          <layout:Attribute attribute="ent2#att12"/>
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att9"/>
+          <layout:Attribute attribute="ent2#att8"/>
+          <layout:Attribute attribute="ent2#att33"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="4">
+        <layout:Unit unitId="sv4#page28#enu17">
+          <layout:Field field="sv4#page28#enu17#fld46"/>
+          <layout:Link link="sv4#page28#enu17#ln102"/>
+          <layout:Link link="sv4#page28#enu17#ln104"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
