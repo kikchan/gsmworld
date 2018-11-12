@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4" name="Private" secure="false" layout:style="WebRatio" protected="true" landmarks="sv4#page16 sv4#page2 sv4#page8" homePage="sv4#page17">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4" name="Private" secure="false" layout:style="WebRatio" protected="true" landmarks="sv4#page16 sv4#page2 sv4#page8 sv4#page26" homePage="sv4#page17">
   <OperationUnits>
     <LogoutUnit id="sv4#lou7" name="Logout3" gr:x="900" gr:y="70" siteView="sv1"/>
     <CreateUnit gr:x="215" gr:y="515" id="sv4#cru6" name="Create Comment" entity="ent9">
@@ -40,6 +40,22 @@
       </OKLink>
       <KOLink id="sv4#miu7#kln21" name="KOFlow21" to="sv4#page14#mssu10" gr:bendpoints="-129,339,266,49">
         <LinkParameter id="sv4#miu7#kln21#par330" name="Message_Shown Messages" source="mov1#opm8#kocu6#ocp11" target="sv4#page14#mssu10.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="sv4#miu9" gr:x="1735" gr:y="-90" action="true" moduleId="mov1#opm10">
+      <OKLink id="sv4#miu9#oln39" name="OKFlow32" to="sv4#page25#mssu13" ajaxOpenWindow="true" ajaxReplaceWindow="false" ajaxWindowWidth="400" ajaxWindowHeight="200" ajaxWindowClosable="true" ajaxWindowShowEffect="Effect.Grow" gr:bendpoints="-74,97,-74,-48">
+        <LinkParameter id="sv4#miu9#oln39#par353" name="Message_Shown Messages" source="mov1#opm10#okcu9#ocp17" target="sv4#page25#mssu13.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv4#miu9#kln27" name="KOFlow24" to="sv4#page25#mssu14" ajaxOpenWindow="true" ajaxWindowWidth="400" ajaxWindowHeight="200" ajaxWindowClosable="true" ajaxWindowShowEffect="Effect.Grow" gr:bendpoints="82,81,-3,-64">
+        <LinkParameter id="sv4#miu9#kln27#par359" name="Message_Shown Messages" source="mov1#opm10#kocu9#ocp16" target="sv4#page25#mssu14.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="sv4#miu11" gr:x="1030" gr:y="65" action="true" moduleId="mov1#opm11">
+      <OKLink id="sv4#miu11#oln40" name="OKFlow34" to="sv4#page15#mssu11" ajaxOpenWindow="true" ajaxWindowWidth="400" ajaxWindowHeight="200" ajaxWindowClosable="true" ajaxWindowShowEffect="Effect.Grow">
+        <LinkParameter id="sv4#miu11#oln40#par354" name="Message_Shown Messages" source="mov1#opm11#okcu10#ocp18" target="sv4#page15#mssu11.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv4#miu11#kln28" name="KOFlow26" to="sv4#page15#mssu12" ajaxOpenWindow="true" ajaxWindowWidth="400" ajaxWindowHeight="200" ajaxWindowClosable="true" ajaxWindowShowEffect="Effect.Grow" gr:bendpoints="75,-58,0,62">
+        <LinkParameter id="sv4#miu11#kln28#par360" name="Message_Shown Messages" source="mov1#opm11#kocu10#ocp19" target="sv4#page15#mssu12.shownMessages"/>
       </KOLink>
     </ModuleInstanceUnit>
   </OperationUnits>

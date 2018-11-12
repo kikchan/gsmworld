@@ -1,0 +1,29 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm10" name="Update email" gr:x="275" gr:y="155">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm10#icu9" gr:x="30" gr:y="90">
+      <InputCollectorParameter id="mov1#opm10#icu9#icp49" name="Input Port Oid"/>
+      <InputCollectorParameter id="mov1#opm10#icu9#icp50" name="Input Port Email"/>
+      <OKLink id="mov1#opm10#icu9#oln35" name="OKFlow30" to="mov1#opm10#mfu7">
+        <LinkParameter id="mov1#opm10#icu9#oln35#par343" name="Input Port Email_email" source="mov1#opm10#icu9#icp50" target="mov1#opm10#mfu7.email"/>
+        <LinkParameter id="mov1#opm10#icu9#oln35#par344" name="Input Port Oid_KeyCondition19 [oid]" source="mov1#opm10#icu9#icp49" target="mov1#opm10#mfu7#su39#kcond24.userOID"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <ModifyUnit id="mov1#opm10#mfu7" name="Update email" gr:x="350" gr:y="80" entity="User">
+      <Selector id="mov1#opm10#mfu7#su39" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm10#mfu7#su39#kcond24" name="KeyCondition19" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm10#mfu7#oln36" name="OKFlow31" to="mov1#opm10#okcu9">
+        <LinkParameter id="mov1#opm10#mfu7#oln36#par345" name="Email updated successfully_Message" target="mov1#opm10#okcu9#ocp17" sourceValue="Email updated successfully"/>
+      </OKLink>
+      <KOLink id="mov1#opm10#mfu7#kln25" name="KOFlow23" to="mov1#opm10#kocu9">
+        <LinkParameter id="mov1#opm10#mfu7#kln25#par346" name="Error updating email_Message" target="mov1#opm10#kocu9#ocp16" sourceValue="Error updating email"/>
+      </KOLink>
+    </ModifyUnit>
+    <KOCollectorUnit id="mov1#opm10#kocu9" name="KO Port8" gr:x="510" gr:y="155">
+      <OutputCollectorParameter id="mov1#opm10#kocu9#ocp16" name="Message"/>
+    </KOCollectorUnit>
+    <OKCollectorUnit id="mov1#opm10#okcu9" name="OK Port8" gr:x="510" gr:y="40">
+      <OutputCollectorParameter id="mov1#opm10#okcu9#ocp17" name="Message"/>
+    </OKCollectorUnit>
+  </OperationUnits>
+</OperationModule>
