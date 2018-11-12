@@ -1,31 +1,70 @@
-[12 nov 2018 17:20:15] DEBUG Executing SQL script
-[12 nov 2018 17:20:15] INFO ================================================================================
-[12 nov 2018 17:20:15] INFO onError= 'stop'
-[12 nov 2018 17:20:15] INFO autoCommit= 'false'
-[12 nov 2018 17:20:15] INFO username= 'root'
-[12 nov 2018 17:20:15] INFO outputPath= 'C:\Users\wrgui\Documents\GitHub\gsmworld\.Temp~\UpdateSQL.xml'
-[12 nov 2018 17:20:15] INFO outputLogPath= 'C:\Users\wrgui\Documents\GitHub\gsmworld\.Temp~\UpdateSQL.xml.log'
-[12 nov 2018 17:20:15] INFO encoding= ''
-[12 nov 2018 17:20:15] INFO driverClass= 'com.mysql.jdbc.Driver'
-[12 nov 2018 17:20:15] INFO sqlScript= 'C:\Users\wrgui\Documents\GitHub\gsmworld\.Temp~\UpdateSQL.sql'
-[12 nov 2018 17:20:15] INFO eventSocketPort= '56675'
-[12 nov 2018 17:20:15] INFO statementSeparator= ';'
-[12 nov 2018 17:20:15] INFO derby.system.home= 'C:\Users\wrgui\Documents\GitHub\.metadata\.plugins\com.webratio.commons.db\derby'
-[12 nov 2018 17:20:15] INFO password= 'root'
-[12 nov 2018 17:20:15] INFO url= 'jdbc:mysql://localhost:3306/gsmworld'
-[12 nov 2018 17:20:15] INFO ================================================================================
-[12 nov 2018 17:20:15] INFO Connecting to the Database...
-[12 nov 2018 17:20:15] INFO Database connection estabilished
-[12 nov 2018 17:20:15] INFO transaction isolation: 4
-[12 nov 2018 17:20:15] DEBUG ================================================================================
-[12 nov 2018 17:20:15] DEBUG Executing SQL script file: C:\Users\wrgui\Documents\GitHub\gsmworld\.Temp~\UpdateSQL.sql
-[12 nov 2018 17:20:15] DEBUG Executing statement:  create table `rating` ( `oid`  integer  not null, `rating`  double precision, primary key (`oid`) ) ENGINE=InnoDB
-[12 nov 2018 17:20:15] DEBUG Executing statement:    alter table `rating`  add column  `model_oid`  integer
-[12 nov 2018 17:20:15] DEBUG Executing statement:  alter table `rating`   add index fk_rating_model (`model_oid`), add constraint fk_rating_model foreign key (`model_oid`) references `model` (`oid`)
-[12 nov 2018 17:20:15] DEBUG Executing statement:    alter table `rating`  add column  `user_oid`  integer
-[12 nov 2018 17:20:15] DEBUG Executing statement:  alter table `rating`   add index fk_rating_user (`user_oid`), add constraint fk_rating_user foreign key (`user_oid`) references `user` (`oid`)
-[12 nov 2018 17:20:15] DEBUG Executing statement:    create view `model_averagerating_view` as select AL1.`oid` as `oid`, avg(AL2.`rating`) as `der_attr` from  `model` AL1 left outer join `rating` AL2 on AL1.`oid`=AL2.`model_oid` group by AL1.`oid`
-[12 nov 2018 17:20:15] DEBUG ================================================================================
-[12 nov 2018 17:20:15] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
-[12 nov 2018 17:20:15] INFO Database connection closed
-[12 nov 2018 17:20:15] DEBUG Total time: 331 milliseconds
+[12 nov 2018 18:38:32] DEBUG Executing SQL script
+[12 nov 2018 18:38:32] INFO ================================================================================
+[12 nov 2018 18:38:32] INFO onError= 'stop'
+[12 nov 2018 18:38:32] INFO autoCommit= 'false'
+[12 nov 2018 18:38:32] INFO username= 'root'
+[12 nov 2018 18:38:32] INFO outputPath= 'C:\WebRatio\WebRatio Platform 7.2.17.x64bit\workspace\gsmworld\.Temp~\UpdateSQL.xml'
+[12 nov 2018 18:38:32] INFO outputLogPath= 'C:\WebRatio\WebRatio Platform 7.2.17.x64bit\workspace\gsmworld\.Temp~\UpdateSQL.xml.log'
+[12 nov 2018 18:38:32] INFO encoding= ''
+[12 nov 2018 18:38:32] INFO driverClass= 'com.mysql.jdbc.Driver'
+[12 nov 2018 18:38:32] INFO sqlScript= 'C:\WebRatio\WebRatio Platform 7.2.17.x64bit\workspace\gsmworld\.Temp~\UpdateSQL.sql'
+[12 nov 2018 18:38:32] INFO eventSocketPort= '53446'
+[12 nov 2018 18:38:32] INFO statementSeparator= ';'
+[12 nov 2018 18:38:32] INFO derby.system.home= 'C:\WebRatio\WebRatio Platform 7.2.17.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[12 nov 2018 18:38:32] INFO password= 'root'
+[12 nov 2018 18:38:32] INFO url= 'jdbc:mysql://localhost:3306/gsmworld'
+[12 nov 2018 18:38:32] INFO ================================================================================
+[12 nov 2018 18:38:32] INFO Connecting to the Database...
+[12 nov 2018 18:38:32] INFO Database connection estabilished
+[12 nov 2018 18:38:32] INFO transaction isolation: 4
+[12 nov 2018 18:38:32] DEBUG ================================================================================
+[12 nov 2018 18:38:32] DEBUG Executing SQL script file: C:\WebRatio\WebRatio Platform 7.2.17.x64bit\workspace\gsmworld\.Temp~\UpdateSQL.sql
+[12 nov 2018 18:38:32] DEBUG Executing statement:  create table `group` ( `oid`  integer  not null, `groupname`  varchar(255), primary key (`oid`) ) ENGINE=InnoDB
+[12 nov 2018 18:38:33] DEBUG Executing statement:    create table `module` ( `oid`  integer  not null, `moduleid`  varchar(255), `modulename`  varchar(255), primary key (`oid`) ) ENGINE=InnoDB
+[12 nov 2018 18:38:33] DEBUG Executing statement:    create table `user` ( `oid`  integer  not null, `username`  varchar(255), `password`  varchar(255), `email`  varchar(255), primary key (`oid`) ) ENGINE=InnoDB
+[12 nov 2018 18:38:34] DEBUG Executing statement:    create table `maker` ( `oid`  integer  not null, `name`  varchar(255), `origin`  varchar(255), `created`  longtext, `website`  varchar(255), `address`  varchar(255), primary key (`oid`) ) ENGINE=InnoDB
+[12 nov 2018 18:38:34] DEBUG Executing statement:    create table `model` ( `oid`  integer  not null, `name`  varchar(255), `price`  varchar(255), `release_date`  varchar(255), `weight`  varchar(255), `sim`  varchar(255), `main_camera`  varchar(255), `secondary_camera`  varchar(255), `battery`  varchar(255), `imgurl`  varchar(255), `cardslot`  varchar(255), `cpu`  varchar(255), primary key (`oid`) ) ENGINE=InnoDB
+[12 nov 2018 18:38:34] DEBUG Executing statement:    create table `color` ( `oid`  integer  not null, `name`  varchar(255), primary key (`oid`) ) ENGINE=InnoDB
+[12 nov 2018 18:38:34] DEBUG Executing statement:    create table `ram` ( `oid`  integer  not null, `cuantity`  varchar(255), primary key (`oid`) ) ENGINE=InnoDB
+[12 nov 2018 18:38:35] DEBUG Executing statement:    create table `rom` ( `oid`  integer  not null, `cuantity`  varchar(255), primary key (`oid`) ) ENGINE=InnoDB
+[12 nov 2018 18:38:35] DEBUG Executing statement:    create table `os` ( `oid`  integer  not null, `nameandversion`  varchar(255), primary key (`oid`) ) ENGINE=InnoDB
+[12 nov 2018 18:38:36] DEBUG Executing statement:    create table `screen` ( `oid`  integer  not null, `resolution`  varchar(255), `size`  varchar(255), primary key (`oid`) ) ENGINE=InnoDB
+[12 nov 2018 18:38:36] DEBUG Executing statement:    create table `rating` ( `oid`  integer  not null, `rating`  double precision, primary key (`oid`) ) ENGINE=InnoDB
+[12 nov 2018 18:38:36] DEBUG Executing statement:    create table `comment` ( `oid`  integer  not null, `comment`  longtext, primary key (`oid`) ) ENGINE=InnoDB
+[12 nov 2018 18:38:36] DEBUG Executing statement:    alter table `group`  add column  `module_oid`  integer
+[12 nov 2018 18:38:37] DEBUG Executing statement:  alter table `group`   add index fk_group_module (`module_oid`), add constraint fk_group_module foreign key (`module_oid`) references `module` (`oid`)
+[12 nov 2018 18:38:38] DEBUG Executing statement:    create table `group_module` ( `group_oid`  integer not null, `module_oid`  integer not null, primary key (`group_oid`, `module_oid`) ) ENGINE=InnoDB
+[12 nov 2018 18:38:38] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_group (`group_oid`), add constraint fk_group_module_group foreign key (`group_oid`) references `group` (`oid`)
+[12 nov 2018 18:38:39] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_module (`module_oid`), add constraint fk_group_module_module foreign key (`module_oid`) references `module` (`oid`)
+[12 nov 2018 18:38:40] DEBUG Executing statement:    alter table `user`  add column  `group_oid`  integer
+[12 nov 2018 18:38:41] DEBUG Executing statement:  alter table `user`   add index fk_user_group (`group_oid`), add constraint fk_user_group foreign key (`group_oid`) references `group` (`oid`)
+[12 nov 2018 18:38:42] DEBUG Executing statement:    create table `user_group` ( `user_oid`  integer not null, `group_oid`  integer not null, primary key (`user_oid`, `group_oid`) ) ENGINE=InnoDB
+[12 nov 2018 18:38:43] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_user (`user_oid`), add constraint fk_user_group_user foreign key (`user_oid`) references `user` (`oid`)
+[12 nov 2018 18:38:44] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_group (`group_oid`), add constraint fk_user_group_group foreign key (`group_oid`) references `group` (`oid`)
+[12 nov 2018 18:38:45] DEBUG Executing statement:    alter table `comment`  add column  `model_oid`  integer
+[12 nov 2018 18:38:46] DEBUG Executing statement:  alter table `comment`   add index fk_comment_model (`model_oid`), add constraint fk_comment_model foreign key (`model_oid`) references `model` (`oid`)
+[12 nov 2018 18:38:47] DEBUG Executing statement:    alter table `rating`  add column  `model_oid`  integer
+[12 nov 2018 18:38:48] DEBUG Executing statement:  alter table `rating`   add index fk_rating_model (`model_oid`), add constraint fk_rating_model foreign key (`model_oid`) references `model` (`oid`)
+[12 nov 2018 18:38:49] DEBUG Executing statement:    alter table `model`  add column  `rom_oid_2`  integer
+[12 nov 2018 18:38:50] DEBUG Executing statement:  alter table `model`   add index fk_model_rom (`rom_oid_2`), add constraint fk_model_rom foreign key (`rom_oid_2`) references `rom` (`oid`)
+[12 nov 2018 18:38:52] DEBUG Executing statement:    alter table `model`  add column  `ram_oid_2`  integer
+[12 nov 2018 18:38:53] DEBUG Executing statement:  alter table `model`   add index fk_model_ram (`ram_oid_2`), add constraint fk_model_ram foreign key (`ram_oid_2`) references `ram` (`oid`)
+[12 nov 2018 18:38:55] DEBUG Executing statement:    alter table `model`  add column  `color_oid_2`  integer
+[12 nov 2018 18:38:56] DEBUG Executing statement:  alter table `model`   add index fk_model_color (`color_oid_2`), add constraint fk_model_color foreign key (`color_oid_2`) references `color` (`oid`)
+[12 nov 2018 18:38:58] DEBUG Executing statement:    alter table `comment`  add column  `user_oid`  integer
+[12 nov 2018 18:38:59] DEBUG Executing statement:  alter table `comment`   add index fk_comment_user (`user_oid`), add constraint fk_comment_user foreign key (`user_oid`) references `user` (`oid`)
+[12 nov 2018 18:39:01] DEBUG Executing statement:    alter table `model`  add column  `user_oid`  integer
+[12 nov 2018 18:39:02] DEBUG Executing statement:  alter table `model`   add index fk_model_user (`user_oid`), add constraint fk_model_user foreign key (`user_oid`) references `user` (`oid`)
+[12 nov 2018 18:39:03] DEBUG Executing statement:    alter table `rating`  add column  `user_oid`  integer
+[12 nov 2018 18:39:04] DEBUG Executing statement:  alter table `rating`   add index fk_rating_user (`user_oid`), add constraint fk_rating_user foreign key (`user_oid`) references `user` (`oid`)
+[12 nov 2018 18:39:06] DEBUG Executing statement:    alter table `model`  add column  `maker_oid_2`  integer
+[12 nov 2018 18:39:07] DEBUG Executing statement:  alter table `model`   add index fk_model_maker (`maker_oid_2`), add constraint fk_model_maker foreign key (`maker_oid_2`) references `maker` (`oid`)
+[12 nov 2018 18:39:09] DEBUG Executing statement:    alter table `model`  add column  `screen_oid_2`  integer
+[12 nov 2018 18:39:10] DEBUG Executing statement:  alter table `model`   add index fk_model_screen (`screen_oid_2`), add constraint fk_model_screen foreign key (`screen_oid_2`) references `screen` (`oid`)
+[12 nov 2018 18:39:12] DEBUG Executing statement:    alter table `model`  add column  `os_oid_2`  integer
+[12 nov 2018 18:39:13] DEBUG Executing statement:  alter table `model`   add index fk_model_os (`os_oid_2`), add constraint fk_model_os foreign key (`os_oid_2`) references `os` (`oid`)
+[12 nov 2018 18:39:15] DEBUG Executing statement:    create view `model_averagerating_view` as select AL1.`oid` as `oid`, avg(AL2.`rating`) as `der_attr` from  `model` AL1 left outer join `rating` AL2 on AL1.`oid`=AL2.`model_oid` group by AL1.`oid`
+[12 nov 2018 18:39:15] DEBUG ================================================================================
+[12 nov 2018 18:39:15] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[12 nov 2018 18:39:15] INFO Database connection closed
+[12 nov 2018 18:39:15] DEBUG Total time: 43031 milliseconds

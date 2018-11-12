@@ -9,7 +9,7 @@
         <LinkParameter id="sv4#page16#inu3#ln52#par97" name="ComentarioToModel.oid_KeyCondition1 [oid]" source="data[].rel1#role2_ent2#att6" target="sv4#page14#dau7#su17#kcond15.ent2#att6"/>
       </Link>
     </IndexUnit>
-    <GetUnit id="sv4#page16#gtu6" name="Get User" gr:x="165" gr:y="0" contextParameters="UserCtxParam">
+    <GetUnit id="sv4#page16#gtu6" name="Get User" gr:x="165" gr:y="10" contextParameters="UserCtxParam">
       <Link id="sv4#page16#gtu6#ln53" name="Flow50" to="sv4#page16#inu3" type="transport" automaticCoupling="true" validate="true"/>
     </GetUnit>
   </ContentUnits>

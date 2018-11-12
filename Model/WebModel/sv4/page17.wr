@@ -15,7 +15,7 @@
         <LinkParameter id="sv4#page17#gtu7#ln68#par288" name="UserCtxParam.oid_userPhones [oid]" source="sv4#page17#gtu7.UserCtxParam" target="sv4#page17#pwu14#su25#rcond8.userOID"/>
       </Link>
     </GetUnit>
-    <DataUnit id="sv4#page17#dau3" name="detalle" gr:x="350" gr:y="5" entity="ent2" displayAttributes="ent2#att6 ent2#att7 ent2#att12 ent2#att9 ent2#att8 ent2#att17 ent2#att20 ent2#att21 ent2#att24 ent2#att18 ent2#att47 ent2#att28 ent2#att4">
+    <DataUnit id="sv4#page17#dau3" name="detalle" gr:x="350" gr:y="5" entity="ent2" displayAttributes="ent2#att6 ent2#att7 ent2#att12 ent2#att9 ent2#att8 ent2#att17 ent2#att20 ent2#att21 ent2#att24 ent2#att18 ent2#att47 ent2#att28 ent2#att4 ent2#att33">
       <Selector id="sv4#page17#dau3#su26" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#page17#dau3#su26#kcond11" name="KeyCondition16" predicate="in" implied="false"/>
       </Selector>
@@ -65,6 +65,7 @@
           <layout:Attribute attribute="ent2#att47"/>
           <layout:Attribute attribute="ent2#att28"/>
           <layout:Attribute attribute="ent2#att4"/>
+          <layout:Attribute attribute="ent2#att33"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
