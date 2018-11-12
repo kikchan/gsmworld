@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4" name="Private" secure="false" layout:style="AdminLTE" protected="true" landmarks="sv4#page16 sv4#page2 sv4#page8 sv4#page26" homePage="sv4#page17">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4" name="Private" secure="false" layout:style="AdminLTE" protected="true" landmarks="sv4#page2 sv4#page8 sv4#page26 sv4#page16 sv4#page3" homePage="sv4#page17">
   <OperationUnits>
     <LogoutUnit id="sv4#lou7" name="Logout3" gr:x="900" gr:y="70" siteView="sv1"/>
     <CreateUnit gr:x="215" gr:y="515" id="sv4#cru6" name="Create Comment" entity="ent9">
@@ -32,7 +32,7 @@
       </OKLink>
     </PayPalUnit>
     <PayPalUnit gr:x="960" gr:y="425" id="sv4#ppu2" name="PayPal Unit2" action="pay">
-      <OKLink id="sv4#ppu2#oln21" name="OKFlow21" to="sv4#page13" automaticCoupling="true" gr:bendpoints="166,-87,886,98;165,-288,885,-103;-219,-266,501,-121;-616,-268,104,-123"/>
+      <OKLink id="sv4#ppu2#oln21" name="OKFlow21" to="sv4#page13" automaticCoupling="true" gr:bendpoints="152,-71,1097,24;153,-247,1098,-152;-353,-258,592,-163;-808,-251,137,-156"/>
     </PayPalUnit>
     <ModuleInstanceUnit gr:x="805" gr:y="520" id="sv4#miu7" action="true" moduleId="mov1#opm8">
       <OKLink id="sv4#miu7#oln30" name="OKFlow30" to="sv4#page14#mssu10" gr:bendpoints="-120,286,275,-4">
@@ -75,5 +75,10 @@
       </OKLink>
       <KOLink id="sv4#inn10#kln30" name="KOFlow30" to="sv4#page13#pwu8" automaticCoupling="true" gr:bendpoints="157,-31,-208,204"/>
     </IsNotNullUnit>
+    <DeleteUnit gr:x="1210" gr:y="420" id="sv4#dlu5" name="Delete rating" entity="ent8">
+      <Selector id="sv4#dlu5#su38" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#dlu5#su38#kcond18" name="KeyCondition18" predicate="in" implied="false"/>
+      </Selector>
+    </DeleteUnit>
   </OperationUnits>
 </SiteView>
