@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page8" name="Makers" landmark="true" gr:x="-100" gr:y="255">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page8" name="Makers" landmark="true" gr:x="-395" gr:y="235">
   <ContentUnits>
     <PowerIndexUnit id="sv4#page8#pwu11" name="Available makers" linkOrder="sv4#page8#pwu11#ln77 sv4#page8#pwu11#ln79" gr:x="0" gr:y="10" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att29">
       <Link id="sv4#page8#pwu11#ln77" name="More info" to="sv4#page8#dau12" type="normal" validate="true">

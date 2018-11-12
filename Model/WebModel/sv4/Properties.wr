@@ -58,5 +58,22 @@
         <LinkParameter id="sv4#miu11#kln28#par360" name="Message_Shown Messages" source="mov1#opm11#kocu10#ocp19" target="sv4#page15#mssu12.shownMessages"/>
       </KOLink>
     </ModuleInstanceUnit>
+    <IsNotNullUnit id="sv4#inn9" name="Filtering from filter?" gr:x="-360" gr:y="665" emptyStringAsNull="true">
+      <OKLink id="sv4#inn9#oln41" name="OKFlow29" to="sv4#page28#pwu9" gr:bendpoints="281,67,-64,107">
+        <LinkParameter id="sv4#inn9#oln41#par371" name="Min Rating_PASSING_Good models" sourceLinkParameter="sv4#page28#enu17#ln102#par370" target="sv4#page28#pwu9#su42#acond5"/>
+        <LinkParameter id="sv4#inn9#oln41#par384" name="oid_PASSING_RoleCondition2 [oid]" sourceLinkParameter="sv4#page28#enu17#ln102#par382" target="sv4#page28#pwu9#su42#rcond14.ent1#att1"/>
+      </OKLink>
+      <KOLink id="sv4#inn9#kln29" name="KOFlow29" to="sv4#page13#pwu8">
+        <LinkParameter id="sv4#inn9#kln29#par385" name="oid_PASSING_RoleCondition2 [oid]" sourceLinkParameter="sv4#page28#enu17#ln102#par382" target="sv4#page13#pwu8#su16#rcond1.ent1#att1"/>
+      </KOLink>
+    </IsNotNullUnit>
+    <IsNotNullUnit id="sv4#inn10" name="Filtering?" gr:x="-340" gr:y="525" emptyStringAsNull="true">
+      <OKLink id="sv4#inn10#oln42" name="OKFlow27" to="sv4#page28#pwu9" gr:bendpoints="366,38,-4,-102">
+        <LinkParameter id="sv4#inn10#oln42#par373" name="Input Value_Good models" sourceLinkParameter="sv4#page13#enu16#ln103#par377" target="sv4#page28#pwu9#su42#acond5"/>
+        <LinkParameter id="sv4#inn10#oln42#par374" name="oid_PASSING_RoleCondition2 [oid]" sourceLinkParameter="sv4#page13#enu16#ln103#par378" target="sv4#page28#pwu9#su42#rcond14.ent1#att1"/>
+        <LinkParameter id="sv4#inn10#oln42#par380" name="oid_PASSING" sourceLinkParameter="sv4#page13#enu16#ln103#par378" passing="true"/>
+      </OKLink>
+      <KOLink id="sv4#inn10#kln30" name="KOFlow30" to="sv4#page13#pwu8" automaticCoupling="true" gr:bendpoints="157,-31,-208,204"/>
+    </IsNotNullUnit>
   </OperationUnits>
 </SiteView>
