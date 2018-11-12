@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page13" name="Models" layout:style="BootstrapStyle" gr:x="-15" gr:y="235">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page13" name="Models" layout:style="AdminLTE" gr:x="-15" gr:y="235">
   <ContentUnits>
     <PowerIndexUnit id="sv4#page13#pwu8" name="Phone list" linkOrder="sv4#page13#pwu8#ln36" gr:x="5" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att12 ent2#att7 ent2#att9 ent2#att8 ent2#att33">
       <Link id="sv4#page13#pwu8#ln36" name="View" to="sv4#page14#dau7" type="normal" automaticCoupling="true" validate="true"/>

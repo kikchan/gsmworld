@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page17" name="Welcome" gr:x="25" gr:y="25">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page17" name="Welcome" gr:x="25" gr:y="25" layout:style="AdminLTE">
   <ContentUnits>
     <PowerIndexUnit id="sv4#page17#pwu14" name="Mobile selling" linkOrder="sv4#page17#pwu14#ln67" gr:x="145" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att6 rel7#role14.ent1#att2 ent2#att7 ent2#att9 ent2#att8">
       <SortAttribute attribute="rel7#role14.ent1#att2" order="ascending"/>
