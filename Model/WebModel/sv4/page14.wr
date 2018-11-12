@@ -79,7 +79,10 @@
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
         <layout:Unit unitId="sv4#page14#mssu10"/>
       </layout:Cell>
       <layout:Cell/>
@@ -87,15 +90,14 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="3"/>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="6">
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+      <layout:Cell colspan="4" rowspan="3">
         <layout:Unit unitId="sv4#page14#dau7">
           <layout:Attribute attribute="ent2#att7"/>
           <layout:Attribute attribute="ent2#att9"/>
@@ -111,14 +113,13 @@
           <layout:Attribute attribute="ent2#att12"/>
           <layout:Attribute attribute="ent2#att13"/>
           <layout:Attribute attribute="ent2#att33"/>
+          <layout:LayoutParameter name="label-width" value="6" type="unit"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell colspan="6">
+      <layout:Cell colspan="4">
         <layout:Unit unitId="sv4#page14#inu2">
           <layout:Attribute attribute="ent2#att13"/>
           <layout:Attribute attribute="ent2#att8"/>
@@ -133,30 +134,17 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv4#page14#inu9">
-          <layout:Attribute attribute="rel4#role8.userName"/>
-          <layout:Attribute attribute="ent8#att32"/>
-        </layout:Unit>
-      </layout:Cell>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="4">
         <layout:Unit unitId="sv4#page14#inu1">
           <layout:Attribute attribute="ent9#att25"/>
           <layout:Attribute attribute="rel2#role4.userName"/>
@@ -166,17 +154,32 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="4">
+        <layout:Unit unitId="sv4#page14#inu9">
+          <layout:Attribute attribute="rel4#role8.userName"/>
+          <layout:Attribute attribute="ent8#att32"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+      <layout:Cell colspan="4">
         <layout:Unit unitId="sv4#page14#enu12">
           <layout:Field field="sv4#page14#enu12#fld23"/>
           <layout:Link link="sv4#page14#enu12#ln83"/>
@@ -185,17 +188,7 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="4">
         <layout:Unit unitId="sv4#page14#enu13">
           <layout:Field field="sv4#page14#enu13#fld41"/>
           <layout:Link link="sv4#page14#enu13#ln88"/>
@@ -204,55 +197,7 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12"/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12"/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12"/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>

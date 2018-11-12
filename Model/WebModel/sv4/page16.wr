@@ -15,9 +15,17 @@
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
         <layout:Unit unitId="sv4#page16#inu3">
-          <layout:Link link="sv4#page16#inu3#ln52"/>
+          <layout:Link link="sv4#page16#inu3#ln52">
+            <layout:LayoutParameter name="link-style" value="normal" type="link"/>
+            <layout:LayoutParameter name="link-size" value="lg" type="link"/>
+            <layout:LayoutParameter name="show" value="icon" type="link"/>
+            <layout:LayoutParameter name="icon-class" value="glyphicon glyphicon-eye-open" type="link"/>
+          </layout:Link>
           <layout:Attribute attribute="ent9#att25"/>
           <layout:Attribute attribute="rel1#role2.ent2#att7"/>
           <layout:Attribute attribute="ent9#att30"/>
@@ -28,10 +36,7 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="3"/>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>

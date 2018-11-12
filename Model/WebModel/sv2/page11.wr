@@ -45,7 +45,10 @@
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
         <layout:Unit unitId="sv2#page11#mssu6"/>
       </layout:Cell>
       <layout:Cell/>
@@ -53,22 +56,31 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="3"/>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="6">
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+      <layout:Cell colspan="4">
         <layout:Unit unitId="sv2#page11#pwu5">
           <layout:Attribute attribute="userOID"/>
           <layout:Attribute attribute="userName"/>
           <layout:Attribute attribute="email"/>
           <layout:Attribute attribute="User2DefaultGroup.groupName"/>
-          <layout:Link link="sv2#page11#pwu5#ln23"/>
-          <layout:Link link="sv2#page11#pwu5#ln20"/>
+          <layout:Link link="sv2#page11#pwu5#ln23">
+            <layout:LayoutParameter name="link-style" value="normal" type="link"/>
+            <layout:LayoutParameter name="link-size" value="lg" type="link"/>
+            <layout:LayoutParameter name="show" value="icon" type="link"/>
+            <layout:LayoutParameter name="icon-class" value="glyphicon glyphicon-pencil" type="link"/>
+          </layout:Link>
+          <layout:Link link="sv2#page11#pwu5#ln20">
+            <layout:LayoutParameter name="link-style" value="normal" type="link"/>
+            <layout:LayoutParameter name="link-size" value="lg" type="link"/>
+            <layout:LayoutParameter name="show" value="icon" type="link"/>
+            <layout:LayoutParameter name="icon-class" value="glyphicon glyphicon-trash" type="link"/>
+          </layout:Link>
           <layout:Link link="sv2#page11#pwu5userOID"/>
           <layout:Link link="sv2#page11#pwu5userName"/>
           <layout:Link link="sv2#page11#pwu5User2DefaultGroup$groupName"/>
@@ -83,9 +95,7 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell colspan="6">
+      <layout:Cell colspan="4">
         <layout:Unit unitId="sv2#page11#enu5">
           <layout:Field field="sv2#page11#enu5#fld24"/>
           <layout:Field field="sv2#page11#enu5#fld26"/>
@@ -97,21 +107,7 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12"/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>

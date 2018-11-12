@@ -115,7 +115,10 @@
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
         <layout:Unit unitId="sv2#page1#mssu5"/>
       </layout:Cell>
       <layout:Cell/>
@@ -123,22 +126,31 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="3"/>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="6">
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+      <layout:Cell colspan="4">
         <layout:Unit unitId="sv2#page1#pwu1">
           <layout:Attribute attribute="ent2#att6"/>
           <layout:Attribute attribute="rel7#role14.ent1#att2"/>
           <layout:Attribute attribute="ent2#att7"/>
           <layout:Attribute attribute="ent2#att9"/>
-          <layout:Link link="sv2#page1#pwu1#ln12"/>
-          <layout:Link link="sv2#page1#pwu1#ln11"/>
+          <layout:Link link="sv2#page1#pwu1#ln12">
+            <layout:LayoutParameter name="link-style" value="normal" type="link"/>
+            <layout:LayoutParameter name="link-size" value="lg" type="link"/>
+            <layout:LayoutParameter name="show" value="icon" type="link"/>
+            <layout:LayoutParameter name="icon-class" value="glyphicon glyphicon-pencil" type="link"/>
+          </layout:Link>
+          <layout:Link link="sv2#page1#pwu1#ln11">
+            <layout:LayoutParameter name="link-style" value="normal" type="link"/>
+            <layout:LayoutParameter name="link-size" value="lg" type="link"/>
+            <layout:LayoutParameter name="show" value="icon" type="link"/>
+            <layout:LayoutParameter name="icon-class" value="glyphicon glyphicon-trash" type="link"/>
+          </layout:Link>
           <layout:Link link="sv2#page1#pwu1rel7#role14$ent1#att2"/>
           <layout:Link link="sv2#page1#pwu1ent2#att6"/>
           <layout:Link link="sv2#page1#pwu1ent2#att7"/>
@@ -148,9 +160,7 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell colspan="6">
+      <layout:Cell colspan="4">
         <layout:Unit unitId="sv2#page1#enu1">
           <layout:Link link="sv2#page1#enu1#ln15"/>
           <layout:Field field="sv2#page1#enu1#sfld2"/>
@@ -176,21 +186,7 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12"/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>

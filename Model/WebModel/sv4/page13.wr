@@ -26,9 +26,16 @@
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="9">
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+      <layout:Cell colspan="5">
         <layout:Unit unitId="sv4#page13#pwu8">
-          <layout:Link link="sv4#page13#pwu8#ln36"/>
+          <layout:Link link="sv4#page13#pwu8#ln36">
+            <layout:LayoutParameter name="link-style" value="normal" type="link"/>
+            <layout:LayoutParameter name="link-size" value="lg" type="link"/>
+            <layout:LayoutParameter name="show" value="icon" type="link"/>
+            <layout:LayoutParameter name="icon-class" value="glyphicon glyphicon-eye-open" type="link"/>
+          </layout:Link>
           <layout:Attribute attribute="ent2#att12"/>
           <layout:Attribute attribute="ent2#att7"/>
           <layout:Attribute attribute="ent2#att9"/>
@@ -40,10 +47,6 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
       <layout:Cell colspan="3">
         <layout:Unit unitId="sv4#page13#enu16">
           <layout:Field field="sv4#page13#enu16#fld44"/>
@@ -51,6 +54,8 @@
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>

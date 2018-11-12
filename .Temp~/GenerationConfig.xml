@@ -6,26 +6,26 @@
     <Property name="applicationServer">Tomcat</Property>
     <Property name="cloudDeploy">false</Property>
     <Property name="commonsLibDir">C:\WebRatio\WebRatio Platform 7.2.17.x64bit\WebRatio\plugins\com.webratio.commons.libs_7.2.17.201809120825\lib</Property>
-    <Property name="dbConfigPath">C:\Users\Toni\AppData\Local\Temp\WRDBConfig9204445784758094056.xml</Property>
+    <Property name="dbConfigPath">C:\Users\wrgui\AppData\Local\Temp\WRDBConfig1605708632327123258.xml</Property>
     <Property name="defaultEncoding"></Property>
     <Property name="deployCorePluginDir">C:\WebRatio\WebRatio Platform 7.2.17.x64bit\WebRatio\configuration\org.eclipse.osgi\bundles\49\1\.cp</Property>
-    <Property name="derbySystemHome">C:\WebRatio\WebRatio Platform 7.2.17.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby</Property>
+    <Property name="derbySystemHome">C:\Users\wrgui\Documents\GitHub\.metadata\.plugins\com.webratio.commons.db\derby</Property>
     <Property name="enterpriseProjectDir"></Property>
-    <Property name="eventSocketPort">54945</Property>
+    <Property name="eventSocketPort">62624</Property>
     <Property name="excludedProjects" type="list"></Property>
-    <Property name="generationTime">201811122203</Property>
+    <Property name="generationTime">201811122310</Property>
     <Property name="helpersPluginDir">C:\WebRatio\WebRatio Platform 7.2.17.x64bit\WebRatio\plugins\com.webratio.generator.helpers_7.2.17.201809120825</Property>
     <Property name="hostAlwaysAllowed">false</Property>
     <Property name="i18nBundleKeysFile" type="file"></Property>
     <Property name="i18nExtraBundleFile" type="file"></Property>
     <Property name="localDeploy">true</Property>
-    <Property name="lockDir">C:\WebRatio\WebRatio Platform 7.2.17.x64bit\workspace\gsmworld_bad\.Temp~</Property>
+    <Property name="lockDir">C:\Users\wrgui\Documents\GitHub\gsmworld\.Temp~</Property>
     <Property name="normalizeDescriptors">false</Property>
-    <Property name="outputPath">C:\WebRatio\WebRatio Platform 7.2.17.x64bit\Tomcat\webapps\gsmworld_bad</Property>
+    <Property name="outputPath">C:\WebRatio\WebRatio Platform 7.2.17.x64bit\Tomcat\webapps\gsmworld</Property>
     <Property name="phases">All</Property>
-    <Property name="projectDir">C:\WebRatio\WebRatio Platform 7.2.17.x64bit\workspace\gsmworld_bad</Property>
-    <Property name="projectName">gsmworld_bad</Property>
-    <Property name="projectPath">C:\Users\Toni\AppData\Local\Temp\Project2374007411062992941.wr</Property>
+    <Property name="projectDir">C:\Users\wrgui\Documents\GitHub\gsmworld</Property>
+    <Property name="projectName">gsmworld</Property>
+    <Property name="projectPath">C:\Users\wrgui\AppData\Local\Temp\Project3348481827434872665.wr</Property>
     <Property name="projectType">WEBPROJECT</Property>
     <Property name="rootModuleName"></Property>
     <Property name="uiPluginDir">C:\WebRatio\WebRatio Platform 7.2.17.x64bit\WebRatio\plugins\com.webratio.ide.ui_7.2.17.201809120825</Property>
@@ -36,6 +36,7 @@
     <Property name="wrVersion">7.2.17</Property>
   </Properties>
   <Plugins>
+    <Plugin id="StoreComponents" path="C:/Users/wrgui/Documents/GitHub/StoreComponents" type="components"/>
     <Plugin id="com.webratio.commons.libs" path="C:/WebRatio/WebRatio Platform 7.2.17.x64bit/WebRatio/plugins/com.webratio.commons.libs_7.2.17.201809120825"/>
     <Plugin id="com.webratio.commons.transform" path="C:/WebRatio/WebRatio Platform 7.2.17.x64bit/WebRatio/plugins/com.webratio.commons.transform_7.2.17.201809120825"/>
     <Plugin id="com.webratio.debug" path="C:/WebRatio/WebRatio Platform 7.2.17.x64bit/WebRatio/plugins/com.webratio.debug_7.2.17.201809120825"/>
@@ -61,12 +62,13 @@
     <Plugin id="com.webratio.units.ws" path="C:/WebRatio/WebRatio Platform 7.2.17.x64bit/WebRatio/plugins/com.webratio.units.ws_7.2.17.201809120825" type="components"/>
     <Plugin id="com.webratio.ws" path="C:/WebRatio/WebRatio Platform 7.2.17.x64bit/WebRatio/plugins/com.webratio.ws_7.2.17.201809120825"/>
     <Plugin id="com.webratio.xsd" path="C:/WebRatio/WebRatio Platform 7.2.17.x64bit/WebRatio/plugins/com.webratio.xsd_7.2.17.201809120825"/>
-    <Plugin id="StoreComponents" path="C:/WebRatio/WebRatio Platform 7.2.17.x64bit/workspace/StoreComponents" type="components"/>
   </Plugins>
   <Styles>
+    <Style name="AdminLTE" path="C:\Users\wrgui\Documents\GitHub\AdminLTE"/>
     <Style name="Excel" path="C:\WebRatio\WebRatio Platform 7.2.17.x64bit\WebRatio\plugins\Excel_7.2.17.201809120825"/>
     <Style name="Multiflex" path="C:\WebRatio\WebRatio Platform 7.2.17.x64bit\WebRatio\plugins\Multiflex_7.2.17.201809120825"/>
     <Style name="Reports" path="C:\WebRatio\WebRatio Platform 7.2.17.x64bit\WebRatio\plugins\Reports_7.2.17.201809120825"/>
+    <Style name="StoreTemplates" path="C:\Users\wrgui\Documents\GitHub\StoreTemplates"/>
     <Style name="WebRatio" path="C:\WebRatio\WebRatio Platform 7.2.17.x64bit\WebRatio\plugins\WebRatio_7.2.17.201809120825"/>
     <Style name="WRDefault" path="C:\WebRatio\WebRatio Platform 7.2.17.x64bit\WebRatio\plugins\WRDefault_7.2.17.201809120825"/>
   </Styles>

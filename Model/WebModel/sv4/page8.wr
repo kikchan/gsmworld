@@ -8,7 +8,7 @@
       <Link id="sv4#page8#pwu11#ln79" name="View all models" to="sv4#page13#pwu8" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="89,-111,-226,-86;204,-112,-111,-87"/>
     </PowerIndexUnit>
     <MultiMessageUnit id="sv4#page8#mssu9" name="View on Map" gr:x="150" gr:y="145">
-      <Message xml:space="preserve">&lt;iframe width="400" height="400" src="https://maps.google.com/maps?width=400&amp;height=600&amp;hl=es&amp;q=$$address$$+()&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"&gt;&lt;/iframe&gt;</Message>
+      <Message xml:space="preserve">&lt;iframe width="100%" height="500" src="https://maps.google.com/maps?width=400&amp;height=600&amp;hl=es&amp;q=$$address$$+()&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"&gt;&lt;/iframe&gt;</Message>
     </MultiMessageUnit>
     <DataUnit id="sv4#page8#dau12" name="Details" gr:x="155" gr:y="0" entity="ent1" displayAll="true">
       <Selector id="sv4#page8#dau12#su28" defaultPolicy="fill" booleanOperator="and">
@@ -22,22 +22,32 @@
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell rowspan="3" colspan="7">
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+      <layout:Cell rowspan="3" colspan="5">
         <layout:Unit unitId="sv4#page8#pwu11">
           <layout:Attribute attribute="ent1#att2"/>
           <layout:Attribute attribute="ent1#att3"/>
           <layout:Attribute attribute="ent1#att29"/>
-          <layout:Link link="sv4#page8#pwu11#ln77"/>
-          <layout:Link link="sv4#page8#pwu11#ln79"/>
+          <layout:Link link="sv4#page8#pwu11#ln77">
+            <layout:LayoutParameter name="link-style" value="normal" type="link"/>
+            <layout:LayoutParameter name="link-size" value="lg" type="link"/>
+            <layout:LayoutParameter name="show" value="icon" type="link"/>
+            <layout:LayoutParameter name="icon-class" value="glyphicon glyphicon-info-sign" type="link"/>
+          </layout:Link>
+          <layout:Link link="sv4#page8#pwu11#ln79">
+            <layout:LayoutParameter name="link-style" value="normal" type="link"/>
+            <layout:LayoutParameter name="link-size" value="lg" type="link"/>
+            <layout:LayoutParameter name="show" value="icon" type="link"/>
+            <layout:LayoutParameter name="icon-class" value="glyphicon glyphicon-tags" type="link"/>
+          </layout:Link>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell colspan="5">
+      <layout:Cell colspan="3">
         <layout:Unit unitId="sv4#page8#dau12">
           <layout:Attribute attribute="ent1#att2"/>
           <layout:Attribute attribute="ent1#att3"/>
@@ -48,28 +58,29 @@
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell colspan="5">
+      <layout:Cell colspan="3" rowspan="2">
         <layout:Unit unitId="sv4#page8#mssu9" manualLinks="true" layout:unitVisibilityConditionVariable="sv4#page8#var2" layout:attributeVisibilityConditionVariable="sv4#page8#var2" layout:fieldVisibilityConditionVariable="sv4#page8#var2" layout:fieldDisableConditionVariable="sv4#page8#var2" layout:fieldDisableConditionNegated="true" layout:linkVisibilityConditionVariable="sv4#page8#var2" layout:linkDisableConditionVariable="sv4#page8#var2" layout:linkDisableConditionNegated="true">
           <layout:LayoutParameter name="contentType" value="text/html" type="unit"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -77,10 +88,9 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell colspan="5"/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
