@@ -8,7 +8,7 @@
       <Link id="sv1#page19#pwu15#ln81" name="View all models" to="sv1#page4#pwu3" type="normal" automaticCoupling="true" validate="true"/>
     </PowerIndexUnit>
     <MultiMessageUnit id="sv1#page19#mssu15" name="View on Map" gr:x="150" gr:y="145">
-      <Message xml:space="preserve">&lt;iframe width="400" height="400" src="https://maps.google.com/maps?width=400&amp;height=600&amp;hl=es&amp;q=$$address$$+()&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"&gt;&lt;/iframe&gt;</Message>
+      <Message xml:space="preserve">&lt;iframe width="100%" height="500" src="https://maps.google.com/maps?width=400&amp;height=600&amp;hl=es&amp;q=$$address$$+()&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"&gt;&lt;/iframe&gt;</Message>
     </MultiMessageUnit>
     <DataUnit id="sv1#page19#dau14" name="Details" gr:x="155" gr:y="0" entity="ent1" displayAll="true">
       <Selector id="sv1#page19#dau14#su35" defaultPolicy="fill" booleanOperator="and">
@@ -22,54 +22,64 @@
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell rowspan="3" colspan="7">
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+      <layout:Cell rowspan="3" colspan="5">
         <layout:Unit unitId="sv1#page19#pwu15">
           <layout:Attribute attribute="ent1#att2"/>
           <layout:Attribute attribute="ent1#att3"/>
           <layout:Attribute attribute="ent1#att29"/>
-          <layout:Link link="sv1#page19#pwu15#ln72"/>
-          <layout:Link link="sv1#page19#pwu15#ln81"/>
+          <layout:Link link="sv1#page19#pwu15#ln72">
+            <layout:LayoutParameter name="link-size" value="lg" type="link"/>
+            <layout:LayoutParameter name="show" value="icon" type="link"/>
+            <layout:LayoutParameter name="icon-class" value="glyphicon glyphicon-info-sign" type="link"/>
+          </layout:Link>
+          <layout:Link link="sv1#page19#pwu15#ln81">
+            <layout:LayoutParameter name="link-size" value="lg" type="link"/>
+            <layout:LayoutParameter name="show" value="icon" type="link"/>
+            <layout:LayoutParameter name="icon-class" value="glyphicon glyphicon-tags" type="link"/>
+          </layout:Link>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell colspan="5">
+      <layout:Cell colspan="3">
         <layout:Unit unitId="sv1#page19#dau14">
           <layout:Attribute attribute="ent1#att2"/>
           <layout:Attribute attribute="ent1#att3"/>
           <layout:Attribute attribute="ent1#att5"/>
           <layout:Attribute attribute="ent1#att29"/>
           <layout:Attribute attribute="ent1#att19"/>
+          <layout:LayoutParameter name="label-width" value="4" type="unit"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell colspan="5">
+      <layout:Cell colspan="3" rowspan="2">
         <layout:Unit unitId="sv1#page19#mssu15" manualLinks="true" layout:unitVisibilityConditionVariable="sv1#page19#var3" layout:attributeVisibilityConditionVariable="sv1#page19#var3" layout:fieldVisibilityConditionVariable="sv1#page19#var3" layout:fieldDisableConditionVariable="sv1#page19#var3" layout:fieldDisableConditionNegated="true" layout:linkVisibilityConditionVariable="sv1#page19#var3" layout:linkDisableConditionVariable="sv1#page19#var3" layout:linkDisableConditionNegated="true">
           <layout:LayoutParameter name="contentType" value="text/html" type="unit"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -77,10 +87,9 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell colspan="5"/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>

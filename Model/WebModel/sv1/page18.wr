@@ -1,7 +1,9 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page18" name="Welcome" landmark="true" gr:x="70" gr:y="20" ajaxEnabled="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page18" name="Welcome" landmark="true" gr:x="70" gr:y="20" ajaxEnabled="false" layout:style="AdminLTE">
   <ContentUnits>
-    <MultiMessageUnit id="sv1#page18#mssu8" name="Welcome to GSM World" gr:x="0" gr:y="5">
+    <MultiMessageUnit id="sv1#page18#mssu8" name="Welcome to GSM World" gr:x="0" gr:y="5" linkOrder="sv1#page18#mssu8#ln105 sv1#page18#mssu8#ln106">
       <Message xml:space="preserve">Welcome to GSM World. A world-leading smartphone website for everything thats related to mobile phones.</Message>
+      <Link id="sv1#page18#mssu8#ln105" name="Login" to="sv1#page6" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="391,4,-264,-516;366,299,-289,-221;379,424,-276,-96"/>
+      <Link id="sv1#page18#mssu8#ln106" name="Register" to="sv1#page9" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="400,9,-480,-511;373,306,-507,-214;387,422,-493,-98"/>
     </MultiMessageUnit>
     <DataUnit id="sv1#page18#dau8" name="Phone 1" gr:x="25" gr:y="105" entity="ent2" displayAttributes="ent2#att7 ent2#att8 ent2#att17 ent2#att20 ent2#att24 ent2#att18 ent2#att4 ent2#att12 ent2#att28">
       <Selector id="sv1#page18#dau8#su19" defaultPolicy="fill" booleanOperator="and">
@@ -9,10 +11,10 @@
       </Selector>
     </DataUnit>
     <PowerIndexUnit id="sv1#page18#pwu10" name="Phone list" linkOrder="sv1#page18#pwu10#ln42 sv1#page18#pwu10#ln44 sv1#page18#pwu10#ln46 sv1#page18#pwu10#ln74" gr:x="190" gr:y="5" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att12 ent2#att7 ent2#att8">
-      <Link id="sv1#page18#pwu10#ln42" name="phone 1" to="sv1#page18#dau8" type="normal" automaticCoupling="true" validate="true"/>
-      <Link id="sv1#page18#pwu10#ln44" name="phone 2" to="sv1#page18#dau9" type="normal" automaticCoupling="true" validate="true"/>
-      <Link id="sv1#page18#pwu10#ln46" name="details" to="sv1#page5#dau1" type="normal" automaticCoupling="true" validate="true"/>
-      <Link id="sv1#page18#pwu10#ln74" name="image" to="sv1#page18#dau4" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#page18#pwu10#ln42" name="Compare1" to="sv1#page18#dau8" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv1#page18#pwu10#ln44" name="Compare2" to="sv1#page18#dau9" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv1#page18#pwu10#ln46" name="Details" to="sv1#page5#dau1" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv1#page18#pwu10#ln74" name="Image" to="sv1#page18#dau4" automaticCoupling="true" type="normal" validate="true"/>
     </PowerIndexUnit>
     <DataUnit id="sv1#page18#dau9" name="Phone 2" gr:x="340" gr:y="0" entity="ent2" displayAttributes="ent2#att7 ent2#att8 ent2#att17 ent2#att20 ent2#att24 ent2#att18 ent2#att4 ent2#att12 ent2#att28">
       <Selector id="sv1#page18#dau9#su20" defaultPolicy="fill" booleanOperator="and">
@@ -32,45 +34,62 @@
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#page18#mssu8"/>
-      </layout:Cell>
+      <layout:Cell colspan="2"/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="9">
-        <layout:Unit unitId="sv1#page18#pwu10">
-          <layout:Link link="sv1#page18#pwu10#ln42">
+      <layout:Cell colspan="8">
+        <layout:Unit unitId="sv1#page18#mssu8">
+          <layout:Link link="sv1#page18#mssu8#ln105">
             <layout:LayoutParameter name="link-style" value="button" type="link"/>
+            <layout:LayoutParameter name="link-size" value="normal" type="link"/>
+            <layout:LayoutParameter name="btn-style" value="success" type="link"/>
           </layout:Link>
-          <layout:Link link="sv1#page18#pwu10#ln44">
+          <layout:Link unitId="sv1#mpage1#dau2" link="sv1#page18#mssu8#ln106">
             <layout:LayoutParameter name="link-style" value="button" type="link"/>
+            <layout:LayoutParameter name="link-size" value="normal" type="link"/>
+            <layout:LayoutParameter name="btn-style" value="warning" type="link"/>
           </layout:Link>
-          <layout:Link link="sv1#page18#pwu10#ln46">
-            <layout:LayoutParameter name="link-style" value="button" type="link"/>
-          </layout:Link>
-          <layout:Link link="sv1#page18#pwu10#ln74">
-            <layout:LayoutParameter name="link-style" value="button" type="link"/>
-          </layout:Link>
-          <layout:Attribute attribute="ent2#att12"/>
-          <layout:Attribute attribute="ent2#att7"/>
-          <layout:Attribute attribute="ent2#att8"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
+      <layout:Cell colspan="5">
+        <layout:Unit unitId="sv1#page18#pwu10">
+          <layout:Link link="sv1#page18#pwu10#ln42">
+            <layout:LayoutParameter name="link-size" value="lg" type="link"/>
+            <layout:LayoutParameter name="show" value="icon" type="link"/>
+            <layout:LayoutParameter name="icon-class" value="glyphicon glyphicon-download-alt" type="link"/>
+          </layout:Link>
+          <layout:Link link="sv1#page18#pwu10#ln44">
+            <layout:LayoutParameter name="link-size" value="lg" type="link"/>
+            <layout:LayoutParameter name="show" value="icon" type="link"/>
+            <layout:LayoutParameter name="icon-class" value="glyphicon glyphicon-download-alt" type="link"/>
+          </layout:Link>
+          <layout:Link link="sv1#page18#pwu10#ln46">
+            <layout:LayoutParameter name="link-size" value="lg" type="link"/>
+            <layout:LayoutParameter name="show" value="icon" type="link"/>
+            <layout:LayoutParameter name="icon-class" value="glyphicon glyphicon-eye-open" type="link"/>
+          </layout:Link>
+          <layout:Link link="sv1#page18#pwu10#ln74">
+            <layout:LayoutParameter name="link-size" value="lg" type="link"/>
+            <layout:LayoutParameter name="show" value="icon" type="link"/>
+            <layout:LayoutParameter name="icon-class" value="glyphicon glyphicon-resize-full" type="link"/>
+          </layout:Link>
+          <layout:Attribute attribute="ent2#att12"/>
+          <layout:Attribute attribute="ent2#att7"/>
+          <layout:Attribute attribute="ent2#att8"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -143,9 +162,14 @@
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
+      <layout:Cell colspan="2"/>
+      <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="9">
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
         <layout:Unit unitId="sv1#page18#pwu12">
           <layout:Attribute attribute="ent2#att12"/>
           <layout:Attribute attribute="ent2#att7"/>
@@ -159,15 +183,15 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
       <layout:Cell colspan="3"/>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="6">
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="3">
         <layout:Unit unitId="sv1#page18#dau8">
           <layout:Attribute attribute="ent2#att7"/>
           <layout:Attribute attribute="ent2#att8"/>
@@ -178,14 +202,12 @@
           <layout:Attribute attribute="ent2#att4"/>
           <layout:Attribute attribute="ent2#att12"/>
           <layout:Attribute attribute="ent2#att28"/>
+          <layout:LayoutParameter name="label-width" value="5" type="unit"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell colspan="6">
+      <layout:Cell colspan="3">
         <layout:Unit unitId="sv1#page18#dau9">
           <layout:Attribute attribute="ent2#att7"/>
           <layout:Attribute attribute="ent2#att8"/>
@@ -196,53 +218,12 @@
           <layout:Attribute attribute="ent2#att4"/>
           <layout:Attribute attribute="ent2#att12"/>
           <layout:Attribute attribute="ent2#att28"/>
+          <layout:LayoutParameter name="label-width" value="4" type="unit"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12"/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12"/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12"/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="3"/>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>

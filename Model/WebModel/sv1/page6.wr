@@ -14,7 +14,10 @@
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
         <layout:Unit unitId="sv1#page6#enu2">
           <layout:Field field="sv1#page6#enu2#fld2"/>
           <layout:Field field="sv1#page6#enu2#fld3"/>
@@ -26,10 +29,7 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="3"/>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>

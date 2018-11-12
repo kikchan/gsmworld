@@ -7,7 +7,7 @@
       <Link id="sv1#page5#dau1#ln37" name="Flow37" to="sv1#page5#inu5" automaticCoupling="true" type="transport" validate="true"/>
       <Link id="sv1#page5#dau1#ln48" name="Flow48" to="sv1#page5#inu4" automaticCoupling="true" type="transport" validate="true"/>
     </DataUnit>
-    <IndexUnit id="sv1#page5#inu4" name="Ratings list" gr:x="130" gr:y="135" entity="ent8" displayAttributes="ent8#att31 ent8#att32">
+    <IndexUnit id="sv1#page5#inu4" name="Ratings list" gr:x="130" gr:y="135" entity="ent8" displayAttributes="rel4#role8.userName ent8#att32">
       <Selector id="sv1#page5#inu4#su29" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#page5#inu4#su29#rcond9" name="RoleCondition6" predicate="in" implied="false" role="rel10#role9"/>
       </Selector>
@@ -22,7 +22,10 @@
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="4" rowspan="2">
         <layout:Unit unitId="sv1#page5#dau1">
           <layout:Attribute attribute="ent2#att6"/>
           <layout:Attribute attribute="ent2#att7"/>
@@ -38,22 +41,43 @@
           <layout:Attribute attribute="ent2#att12"/>
           <layout:Attribute attribute="ent2#att28"/>
           <layout:Attribute attribute="ent2#att33"/>
+          <layout:LayoutParameter name="label-width" value="6" type="unit"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
+      <layout:Cell colspan="2" rowspan="2">
+        <layout:Unit unitId="sv1#page5#inu4">
+          <layout:Attribute attribute="rel4#role8.userName"/>
+          <layout:Attribute attribute="ent8#att32"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="3"/>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="3"/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="4"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="4" rowspan="2">
         <layout:Unit unitId="sv1#page5#inu5">
           <layout:Attribute attribute="ent9#att25"/>
           <layout:Attribute attribute="ent9#att30"/>
@@ -62,22 +86,13 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="4"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#page5#inu4">
-          <layout:Attribute attribute="ent8#att31"/>
-          <layout:Attribute attribute="ent8#att32"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="4"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -85,21 +100,7 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12"/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="4"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
