@@ -1,22 +1,22 @@
-oid,name,origin,created,website,address
-1,Apple,United States,1976,https://www.apple.com/,Cupertino en California
-2,Samsung,South Korea,1938,https://www.samsung.com/,Samsung Town en ciudad de Seul 
-3,Nokia,Finland,1865,https://www.nokia.com/, Espoo districto de Keilaniemi
-4,Sony,Japan,1946,https://www.sony.com/, Minato en Tokio
-5,LG,South Korea,1958,https://www.lg.com/, Seúl
-6,HTC,Taiwan,1997,https://www.htc.com/, Taoyuan en Taiwán
-7,Motorola,United States,1928,https://www.motorola.com, Schaumburg en Illinois
-8,Huawei,China,1987,https://www.huawei.com/, Longgang en Shenzhen
-9,Microsoft,United States,1975,https://www.microsoft.com/, Redmond en Washington
-10,Lenovo,China,1984,https://www.lenovo.com/, Distrito Haidian de Pekín
-11,Xiaomi,China,2010,https://www.mi.com/, Pekín
-12,Google,United States,1998,https://www.google.com/, Mountain View, California
-13,Acer,Taiwan,1976,https://www.acer.com/, Taipéi
-14,Asus,Taiwan,1989,https://www.asus.com/, Taipéi
-15,Oppo,China,2001,https://www.oppo.com/, Mountain View
-16,OnePlus,China,2013,https://www.oneplus.com/, Shenzhen
-17,Meizu,China,2003,https://www.meizu.com/, Zhuhai
-18,Blackberry,Canada,1999,https://www.blackberry.com/, Waterloo en Ontario
-19,Alcatel,France,2004,https://www.alcatelmobile.com/, Paris en 54 rue la Boetie
-20,ZTE,China,1985,https://www.zte.com/, Shenzhen
-21,Wiko,France,2011,https://www.world.wikomobile.com/, Marsella
+"oid";"name";"origin";"created";"website";"address"
+1;"Apple";"United States";"1976";"https://www.apple.com/";"Cupertino en California"
+2;"Samsung";"South Korea";"1938";"https://www.samsung.com/";"Samsung Town en ciudad de Seul "
+3;"Nokia";"Finland";"1865";"https://www.nokia.com/";"Espoo districto de Keilaniemi"
+4;"Sony";"Japan";"1946";"https://www.sony.com/";"Minato en Tokio"
+5;"LG";"South Korea";"1958";"https://www.lg.com/";"SeÃºl"
+6;"HTC";"Taiwan";"1997";"https://www.htc.com/";"Taoyuan en TaiwÃ¡n"
+7;"Motorola";"United States";"1928";"https://www.motorola.com";"Schaumburg en Illinois"
+8;"Huawei";"China";"1987";"https://www.huawei.com/";"Longgang en Shenzhen"
+9;"Microsoft";"United States";"1975";"https://www.microsoft.com/";"Redmond en Washington"
+10;"Lenovo";"China";"1984";"https://www.lenovo.com/";"Distrito Haidian de PekÃ­n"
+11;"Xiaomi";"China";"2010";"https://www.mi.com/";"PekÃ­n"
+12;"Google";"United States";"1998";"https://www.google.com/";"Mountain ViewCalifornia"
+13;"Hacer";"Taiwan";"1976";"https://www.acer.com/";"TaipÃ©i"
+14;"Asus";"Taiwan";"1989";"https://www.asus.com/";"TaipÃ©i"
+15;"Oppo";"China";"2001";"https://www.oppo.com/";"Mountain View"
+16;"OnePlus";"China";"2013";"https://www.oneplus.com/";"Shenzhen"
+17;"Meizu";"China";"2003";"https://www.meizu.com/";"Zhuhai"
+18;"Blackberry";"Canada";"1999";"https://www.blackberry.com/";"Waterloo en Ontario"
+19;"Alcatel";"France";"2004";"https://www.alcatelmobile.com/";"Paris en 54 rue la Boetie"
+20;"ZTE";"China";"1985";"https://www.zte.com/";"Shenzhen"
+21;"Wiko";"France";"2011";"https://www.world.wikomobile.com/";"Marsella"
